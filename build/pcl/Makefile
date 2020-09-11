@@ -56,18 +56,6 @@ CMAKE_BINARY_DIR = /home/robo/ros/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -112,6 +100,18 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+pcl/CMakeFiles/convert_file.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/convert_file.dir/rule
+.PHONY : pcl/CMakeFiles/convert_file.dir/rule
+
+# Convenience name for target.
+convert_file: pcl/CMakeFiles/convert_file.dir/rule
+
+.PHONY : convert_file
+
+# fast build rule for target.
+convert_file/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/convert_file.dir/build.make pcl/CMakeFiles/convert_file.dir/build
+.PHONY : convert_file/fast
+
+# Convenience name for target.
 pcl/CMakeFiles/write_file.dir/rule:
 	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/write_file.dir/rule
 .PHONY : pcl/CMakeFiles/write_file.dir/rule
@@ -211,6 +226,33 @@ _catkin_empty_exported_target: pcl/CMakeFiles/_catkin_empty_exported_target.dir/
 _catkin_empty_exported_target/fast:
 	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/_catkin_empty_exported_target.dir/build.make pcl/CMakeFiles/_catkin_empty_exported_target.dir/build
 .PHONY : _catkin_empty_exported_target/fast
+
+src/convert_file.o: src/convert_file.cpp.o
+
+.PHONY : src/convert_file.o
+
+# target to build an object file
+src/convert_file.cpp.o:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/convert_file.dir/build.make pcl/CMakeFiles/convert_file.dir/src/convert_file.cpp.o
+.PHONY : src/convert_file.cpp.o
+
+src/convert_file.i: src/convert_file.cpp.i
+
+.PHONY : src/convert_file.i
+
+# target to preprocess a source file
+src/convert_file.cpp.i:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/convert_file.dir/build.make pcl/CMakeFiles/convert_file.dir/src/convert_file.cpp.i
+.PHONY : src/convert_file.cpp.i
+
+src/convert_file.s: src/convert_file.cpp.s
+
+.PHONY : src/convert_file.s
+
+# target to generate assembly for a file
+src/convert_file.cpp.s:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/convert_file.dir/build.make pcl/CMakeFiles/convert_file.dir/src/convert_file.cpp.s
+.PHONY : src/convert_file.cpp.s
 
 src/read_file.o: src/read_file.cpp.o
 
@@ -272,16 +314,20 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... install/strip"
+	@echo "... convert_file"
 	@echo "... write_file"
 	@echo "... edit_cache"
 	@echo "... test"
 	@echo "... read_file"
 	@echo "... _catkin_empty_exported_target"
+	@echo "... src/convert_file.o"
+	@echo "... src/convert_file.i"
+	@echo "... src/convert_file.s"
 	@echo "... src/read_file.o"
 	@echo "... src/read_file.i"
 	@echo "... src/read_file.s"

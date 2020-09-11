@@ -223,3 +223,11 @@ target_link_libraries(write_file
     ${catkin_LIBRARIES}
     ${PCL_LIBRARIES}
 )
+
+
+# convert_file node
+add_executable(convert_file src/convert_file.cpp)
+target_link_libraries(convert_file 
+    ${catkin_LIBRARIES}
+    ${PCL_LIBRARIES}
+)

@@ -35,11 +35,12 @@
 /home/robo/ros/build/gtest/googletest/CMakeFiles/test.dir
 /home/robo/ros/build/gtest/googletest/CMakeFiles/gtest_main.dir
 /home/robo/ros/build/gtest/googletest/CMakeFiles/gtest.dir
-/home/robo/ros/build/pcl/CMakeFiles/install/strip.dir
 /home/robo/ros/build/pcl/CMakeFiles/install/local.dir
 /home/robo/ros/build/pcl/CMakeFiles/install.dir
 /home/robo/ros/build/pcl/CMakeFiles/list_install_components.dir
 /home/robo/ros/build/pcl/CMakeFiles/rebuild_cache.dir
+/home/robo/ros/build/pcl/CMakeFiles/install/strip.dir
+/home/robo/ros/build/pcl/CMakeFiles/convert_file.dir
 /home/robo/ros/build/pcl/CMakeFiles/write_file.dir
 /home/robo/ros/build/pcl/CMakeFiles/edit_cache.dir
 /home/robo/ros/build/pcl/CMakeFiles/test.dir

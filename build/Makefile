@@ -285,6 +285,19 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named convert_file
+
+# Build rule for target.
+convert_file: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 convert_file
+.PHONY : convert_file
+
+# fast build rule for target.
+convert_file/fast:
+	$(MAKE) -f pcl/CMakeFiles/convert_file.dir/build.make pcl/CMakeFiles/convert_file.dir/build
+.PHONY : convert_file/fast
+
+#=============================================================================
 # Target rules for targets named write_file
 
 # Build rule for target.
@@ -553,6 +566,7 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... convert_file"
 	@echo "... write_file"
 	@echo "... read_file"
 	@echo "... _catkin_empty_exported_target"
