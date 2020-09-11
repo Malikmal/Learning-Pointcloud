@@ -1,0 +1,2 @@
+pcl:test_one
+-DCATKIN_DEVEL_PREFIX=/home/robo/ros/devel -DCMAKE_INSTALL_PREFIX=/home/robo/ros/install -G Unix Makefiles
