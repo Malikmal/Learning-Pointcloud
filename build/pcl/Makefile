@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+pcl/CMakeFiles/write_file.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/write_file.dir/rule
+.PHONY : pcl/CMakeFiles/write_file.dir/rule
+
+# Convenience name for target.
+write_file: pcl/CMakeFiles/write_file.dir/rule
+
+.PHONY : write_file
+
+# fast build rule for target.
+write_file/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/write_file.dir/build.make pcl/CMakeFiles/write_file.dir/build
+.PHONY : write_file/fast
+
+# Convenience name for target.
 pcl/CMakeFiles/read_file.dir/rule:
 	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/read_file.dir/rule
 .PHONY : pcl/CMakeFiles/read_file.dir/rule
@@ -224,6 +239,33 @@ src/read_file.cpp.s:
 	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/read_file.dir/build.make pcl/CMakeFiles/read_file.dir/src/read_file.cpp.s
 .PHONY : src/read_file.cpp.s
 
+src/write_file.o: src/write_file.cpp.o
+
+.PHONY : src/write_file.o
+
+# target to build an object file
+src/write_file.cpp.o:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/write_file.dir/build.make pcl/CMakeFiles/write_file.dir/src/write_file.cpp.o
+.PHONY : src/write_file.cpp.o
+
+src/write_file.i: src/write_file.cpp.i
+
+.PHONY : src/write_file.i
+
+# target to preprocess a source file
+src/write_file.cpp.i:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/write_file.dir/build.make pcl/CMakeFiles/write_file.dir/src/write_file.cpp.i
+.PHONY : src/write_file.cpp.i
+
+src/write_file.s: src/write_file.cpp.s
+
+.PHONY : src/write_file.s
+
+# target to generate assembly for a file
+src/write_file.cpp.s:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/write_file.dir/build.make pcl/CMakeFiles/write_file.dir/src/write_file.cpp.s
+.PHONY : src/write_file.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -235,6 +277,7 @@ help:
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... write_file"
 	@echo "... edit_cache"
 	@echo "... test"
 	@echo "... read_file"
@@ -242,6 +285,9 @@ help:
 	@echo "... src/read_file.o"
 	@echo "... src/read_file.i"
 	@echo "... src/read_file.s"
+	@echo "... src/write_file.o"
+	@echo "... src/write_file.i"
+	@echo "... src/write_file.s"
 .PHONY : help
 
 

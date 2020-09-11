@@ -285,6 +285,19 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named write_file
+
+# Build rule for target.
+write_file: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 write_file
+.PHONY : write_file
+
+# fast build rule for target.
+write_file/fast:
+	$(MAKE) -f pcl/CMakeFiles/write_file.dir/build.make pcl/CMakeFiles/write_file.dir/build
+.PHONY : write_file/fast
+
+#=============================================================================
 # Target rules for targets named read_file
 
 # Build rule for target.
@@ -540,6 +553,7 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... write_file"
 	@echo "... read_file"
 	@echo "... _catkin_empty_exported_target"
 	@echo "... hello_world"

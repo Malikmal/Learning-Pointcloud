@@ -210,8 +210,16 @@ include_directories(${PCL_INCLUDE_DIRS})
 link_directories(${PCL_LIBRARY_DIRS})
 add_definitions(${PCL_DEFINITIONS})
 
+# read_file node
 add_executable(read_file src/read_file.cpp)
 target_link_libraries(read_file 
+    ${catkin_LIBRARIES}
+    ${PCL_LIBRARIES}
+)
+
+# write_file node
+add_executable(write_file src/write_file.cpp)
+target_link_libraries(write_file 
     ${catkin_LIBRARIES}
     ${PCL_LIBRARIES}
 )
