@@ -1,0 +1,8 @@
+prefix=/home/robo/ros/devel_isolated/test_one
+
+Name: test_one
+Description: Description of test_one
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/robo/ros/devel
+
+Name: segmentation1
+Description: Description of segmentation1
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

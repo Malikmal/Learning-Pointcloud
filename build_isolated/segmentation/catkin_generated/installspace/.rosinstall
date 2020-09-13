@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/robo/ros/install_isolated/setup.sh

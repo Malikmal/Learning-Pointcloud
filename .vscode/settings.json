@@ -4,5 +4,7 @@
     ],
     "files.associations": {
         "iostream": "cpp"
-    }
+    },
+    "ros.distro": "noetic",
+    "cmake.sourceDirectory": "${workspaceFolder}/src"
 }

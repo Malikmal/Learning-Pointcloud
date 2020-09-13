@@ -279,6 +279,8 @@ set(CMAKE_DEPEND_INFO_FILES
   "gtest/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
   "gtest/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   "gtest/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "pcl/CMakeFiles/test_hello.dir/DependInfo.cmake"
+  "pcl/CMakeFiles/pcd_cropping.dir/DependInfo.cmake"
   "pcl/CMakeFiles/convert_file.dir/DependInfo.cmake"
   "pcl/CMakeFiles/write_file.dir/DependInfo.cmake"
   "pcl/CMakeFiles/read_file.dir/DependInfo.cmake"

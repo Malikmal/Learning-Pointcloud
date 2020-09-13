@@ -1,0 +1,8 @@
+prefix=/home/robo/ros/install_isolated
+
+Name: pcl
+Description: Description of pcl
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

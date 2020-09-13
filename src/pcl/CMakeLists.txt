@@ -231,3 +231,18 @@ target_link_libraries(convert_file
     ${catkin_LIBRARIES}
     ${PCL_LIBRARIES}
 )
+
+# pcd_cropping node
+add_executable(pcd_cropping src/pcd_cropping.cpp)
+target_link_libraries(pcd_cropping 
+    ${catkin_LIBRARIES}
+    ${PCL_LIBRARIES}
+)
+
+
+# test_hello node
+add_executable(test_hello src/test_hello.cpp)
+target_link_libraries(test_hello 
+    ${catkin_LIBRARIES}
+    ${PCL_LIBRARIES}
+)

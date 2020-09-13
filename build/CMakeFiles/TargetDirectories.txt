@@ -39,6 +39,8 @@
 /home/robo/ros/build/pcl/CMakeFiles/install.dir
 /home/robo/ros/build/pcl/CMakeFiles/list_install_components.dir
 /home/robo/ros/build/pcl/CMakeFiles/rebuild_cache.dir
+/home/robo/ros/build/pcl/CMakeFiles/test_hello.dir
+/home/robo/ros/build/pcl/CMakeFiles/pcd_cropping.dir
 /home/robo/ros/build/pcl/CMakeFiles/install/strip.dir
 /home/robo/ros/build/pcl/CMakeFiles/convert_file.dir
 /home/robo/ros/build/pcl/CMakeFiles/write_file.dir

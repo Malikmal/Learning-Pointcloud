@@ -285,6 +285,32 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named test_hello
+
+# Build rule for target.
+test_hello: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_hello
+.PHONY : test_hello
+
+# fast build rule for target.
+test_hello/fast:
+	$(MAKE) -f pcl/CMakeFiles/test_hello.dir/build.make pcl/CMakeFiles/test_hello.dir/build
+.PHONY : test_hello/fast
+
+#=============================================================================
+# Target rules for targets named pcd_cropping
+
+# Build rule for target.
+pcd_cropping: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pcd_cropping
+.PHONY : pcd_cropping
+
+# fast build rule for target.
+pcd_cropping/fast:
+	$(MAKE) -f pcl/CMakeFiles/pcd_cropping.dir/build.make pcl/CMakeFiles/pcd_cropping.dir/build
+.PHONY : pcd_cropping/fast
+
+#=============================================================================
 # Target rules for targets named convert_file
 
 # Build rule for target.
@@ -566,6 +592,8 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... test_hello"
+	@echo "... pcd_cropping"
 	@echo "... convert_file"
 	@echo "... write_file"
 	@echo "... read_file"

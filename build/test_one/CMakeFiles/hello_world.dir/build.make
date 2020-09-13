@@ -60,15 +60,15 @@ include test_one/CMakeFiles/hello_world.dir/flags.make
 test_one/CMakeFiles/hello_world.dir/src/hello_world.cpp.o: test_one/CMakeFiles/hello_world.dir/flags.make
 test_one/CMakeFiles/hello_world.dir/src/hello_world.cpp.o: /home/robo/ros/src/test_one/src/hello_world.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test_one/CMakeFiles/hello_world.dir/src/hello_world.cpp.o"
-	cd /home/robo/ros/build/test_one && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hello_world.dir/src/hello_world.cpp.o -c /home/robo/ros/src/test_one/src/hello_world.cpp
+	cd /home/robo/ros/build/test_one && /bin/x86_64-linux-gnu-g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hello_world.dir/src/hello_world.cpp.o -c /home/robo/ros/src/test_one/src/hello_world.cpp
 
 test_one/CMakeFiles/hello_world.dir/src/hello_world.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hello_world.dir/src/hello_world.cpp.i"
-	cd /home/robo/ros/build/test_one && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robo/ros/src/test_one/src/hello_world.cpp > CMakeFiles/hello_world.dir/src/hello_world.cpp.i
+	cd /home/robo/ros/build/test_one && /bin/x86_64-linux-gnu-g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robo/ros/src/test_one/src/hello_world.cpp > CMakeFiles/hello_world.dir/src/hello_world.cpp.i
 
 test_one/CMakeFiles/hello_world.dir/src/hello_world.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hello_world.dir/src/hello_world.cpp.s"
-	cd /home/robo/ros/build/test_one && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robo/ros/src/test_one/src/hello_world.cpp -o CMakeFiles/hello_world.dir/src/hello_world.cpp.s
+	cd /home/robo/ros/build/test_one && /bin/x86_64-linux-gnu-g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robo/ros/src/test_one/src/hello_world.cpp -o CMakeFiles/hello_world.dir/src/hello_world.cpp.s
 
 # Object files for target hello_world
 hello_world_OBJECTS = \

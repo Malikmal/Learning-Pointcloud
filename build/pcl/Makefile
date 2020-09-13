@@ -168,6 +168,36 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+pcl/CMakeFiles/test_hello.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/test_hello.dir/rule
+.PHONY : pcl/CMakeFiles/test_hello.dir/rule
+
+# Convenience name for target.
+test_hello: pcl/CMakeFiles/test_hello.dir/rule
+
+.PHONY : test_hello
+
+# fast build rule for target.
+test_hello/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/test_hello.dir/build.make pcl/CMakeFiles/test_hello.dir/build
+.PHONY : test_hello/fast
+
+# Convenience name for target.
+pcl/CMakeFiles/pcd_cropping.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/pcd_cropping.dir/rule
+.PHONY : pcl/CMakeFiles/pcd_cropping.dir/rule
+
+# Convenience name for target.
+pcd_cropping: pcl/CMakeFiles/pcd_cropping.dir/rule
+
+.PHONY : pcd_cropping
+
+# fast build rule for target.
+pcd_cropping/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_cropping.dir/build.make pcl/CMakeFiles/pcd_cropping.dir/build
+.PHONY : pcd_cropping/fast
+
+# Convenience name for target.
 pcl/CMakeFiles/convert_file.dir/rule:
 	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/convert_file.dir/rule
 .PHONY : pcl/CMakeFiles/convert_file.dir/rule
@@ -254,6 +284,33 @@ src/convert_file.cpp.s:
 	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/convert_file.dir/build.make pcl/CMakeFiles/convert_file.dir/src/convert_file.cpp.s
 .PHONY : src/convert_file.cpp.s
 
+src/pcd_cropping.o: src/pcd_cropping.cpp.o
+
+.PHONY : src/pcd_cropping.o
+
+# target to build an object file
+src/pcd_cropping.cpp.o:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_cropping.dir/build.make pcl/CMakeFiles/pcd_cropping.dir/src/pcd_cropping.cpp.o
+.PHONY : src/pcd_cropping.cpp.o
+
+src/pcd_cropping.i: src/pcd_cropping.cpp.i
+
+.PHONY : src/pcd_cropping.i
+
+# target to preprocess a source file
+src/pcd_cropping.cpp.i:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_cropping.dir/build.make pcl/CMakeFiles/pcd_cropping.dir/src/pcd_cropping.cpp.i
+.PHONY : src/pcd_cropping.cpp.i
+
+src/pcd_cropping.s: src/pcd_cropping.cpp.s
+
+.PHONY : src/pcd_cropping.s
+
+# target to generate assembly for a file
+src/pcd_cropping.cpp.s:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_cropping.dir/build.make pcl/CMakeFiles/pcd_cropping.dir/src/pcd_cropping.cpp.s
+.PHONY : src/pcd_cropping.cpp.s
+
 src/read_file.o: src/read_file.cpp.o
 
 .PHONY : src/read_file.o
@@ -280,6 +337,33 @@ src/read_file.s: src/read_file.cpp.s
 src/read_file.cpp.s:
 	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/read_file.dir/build.make pcl/CMakeFiles/read_file.dir/src/read_file.cpp.s
 .PHONY : src/read_file.cpp.s
+
+src/test_hello.o: src/test_hello.cpp.o
+
+.PHONY : src/test_hello.o
+
+# target to build an object file
+src/test_hello.cpp.o:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/test_hello.dir/build.make pcl/CMakeFiles/test_hello.dir/src/test_hello.cpp.o
+.PHONY : src/test_hello.cpp.o
+
+src/test_hello.i: src/test_hello.cpp.i
+
+.PHONY : src/test_hello.i
+
+# target to preprocess a source file
+src/test_hello.cpp.i:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/test_hello.dir/build.make pcl/CMakeFiles/test_hello.dir/src/test_hello.cpp.i
+.PHONY : src/test_hello.cpp.i
+
+src/test_hello.s: src/test_hello.cpp.s
+
+.PHONY : src/test_hello.s
+
+# target to generate assembly for a file
+src/test_hello.cpp.s:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/test_hello.dir/build.make pcl/CMakeFiles/test_hello.dir/src/test_hello.cpp.s
+.PHONY : src/test_hello.cpp.s
 
 src/write_file.o: src/write_file.cpp.o
 
@@ -318,6 +402,8 @@ help:
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... test_hello"
+	@echo "... pcd_cropping"
 	@echo "... install/strip"
 	@echo "... convert_file"
 	@echo "... write_file"
@@ -328,9 +414,15 @@ help:
 	@echo "... src/convert_file.o"
 	@echo "... src/convert_file.i"
 	@echo "... src/convert_file.s"
+	@echo "... src/pcd_cropping.o"
+	@echo "... src/pcd_cropping.i"
+	@echo "... src/pcd_cropping.s"
 	@echo "... src/read_file.o"
 	@echo "... src/read_file.i"
 	@echo "... src/read_file.s"
+	@echo "... src/test_hello.o"
+	@echo "... src/test_hello.i"
+	@echo "... src/test_hello.s"
 	@echo "... src/write_file.o"
 	@echo "... src/write_file.i"
 	@echo "... src/write_file.s"

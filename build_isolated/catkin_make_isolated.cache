@@ -1,0 +1,2 @@
+pcl:segmentation12:segmentation2:test_one
+-G Unix Makefiles -DCATKIN_DEVEL_PREFIX=/home/robo/ros/devel_isolated -DCMAKE_INSTALL_PREFIX=/home/robo/ros/install_isolated

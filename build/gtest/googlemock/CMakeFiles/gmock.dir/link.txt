@@ -1,1 +1,1 @@
-/usr/bin/c++ -fPIC   -shared -Wl,-soname,libgmock.so -o ../../lib/libgmock.so CMakeFiles/gmock.dir/src/gmock-all.cc.o  -Wl,-rpath,/home/robo/ros/build/lib ../../lib/libgtest.so -lpthread 
+/bin/x86_64-linux-gnu-g++-7 -fPIC -g  -shared -Wl,-soname,libgmockd.so -o ../../lib/libgmockd.so CMakeFiles/gmock.dir/src/gmock-all.cc.o  -Wl,-rpath,/home/robo/ros/build/lib ../../lib/libgtestd.so -lpthread 

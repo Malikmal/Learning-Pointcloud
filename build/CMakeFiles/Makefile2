@@ -139,6 +139,8 @@ gtest/googletest/clean: gtest/googletest/CMakeFiles/gtest.dir/clean
 # Directory level rules for directory pcl
 
 # Recursive "all" directory target.
+pcl/all: pcl/CMakeFiles/test_hello.dir/all
+pcl/all: pcl/CMakeFiles/pcd_cropping.dir/all
 pcl/all: pcl/CMakeFiles/convert_file.dir/all
 pcl/all: pcl/CMakeFiles/write_file.dir/all
 pcl/all: pcl/CMakeFiles/read_file.dir/all
@@ -151,6 +153,8 @@ pcl/preinstall:
 .PHONY : pcl/preinstall
 
 # Recursive "clean" directory target.
+pcl/clean: pcl/CMakeFiles/test_hello.dir/clean
+pcl/clean: pcl/CMakeFiles/pcd_cropping.dir/clean
 pcl/clean: pcl/CMakeFiles/convert_file.dir/clean
 pcl/clean: pcl/CMakeFiles/write_file.dir/clean
 pcl/clean: pcl/CMakeFiles/read_file.dir/clean
@@ -436,6 +440,60 @@ gtest/googletest/CMakeFiles/gtest.dir/clean:
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/clean
 
 #=============================================================================
+# Target rules for target pcl/CMakeFiles/test_hello.dir
+
+# All Build rule for target.
+pcl/CMakeFiles/test_hello.dir/all:
+	$(MAKE) -f pcl/CMakeFiles/test_hello.dir/build.make pcl/CMakeFiles/test_hello.dir/depend
+	$(MAKE) -f pcl/CMakeFiles/test_hello.dir/build.make pcl/CMakeFiles/test_hello.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=17,18 "Built target test_hello"
+.PHONY : pcl/CMakeFiles/test_hello.dir/all
+
+# Build rule for subdir invocation for target.
+pcl/CMakeFiles/test_hello.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/test_hello.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+.PHONY : pcl/CMakeFiles/test_hello.dir/rule
+
+# Convenience name for target.
+test_hello: pcl/CMakeFiles/test_hello.dir/rule
+
+.PHONY : test_hello
+
+# clean rule for target.
+pcl/CMakeFiles/test_hello.dir/clean:
+	$(MAKE) -f pcl/CMakeFiles/test_hello.dir/build.make pcl/CMakeFiles/test_hello.dir/clean
+.PHONY : pcl/CMakeFiles/test_hello.dir/clean
+
+#=============================================================================
+# Target rules for target pcl/CMakeFiles/pcd_cropping.dir
+
+# All Build rule for target.
+pcl/CMakeFiles/pcd_cropping.dir/all:
+	$(MAKE) -f pcl/CMakeFiles/pcd_cropping.dir/build.make pcl/CMakeFiles/pcd_cropping.dir/depend
+	$(MAKE) -f pcl/CMakeFiles/pcd_cropping.dir/build.make pcl/CMakeFiles/pcd_cropping.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=13,14 "Built target pcd_cropping"
+.PHONY : pcl/CMakeFiles/pcd_cropping.dir/all
+
+# Build rule for subdir invocation for target.
+pcl/CMakeFiles/pcd_cropping.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/pcd_cropping.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+.PHONY : pcl/CMakeFiles/pcd_cropping.dir/rule
+
+# Convenience name for target.
+pcd_cropping: pcl/CMakeFiles/pcd_cropping.dir/rule
+
+.PHONY : pcd_cropping
+
+# clean rule for target.
+pcl/CMakeFiles/pcd_cropping.dir/clean:
+	$(MAKE) -f pcl/CMakeFiles/pcd_cropping.dir/build.make pcl/CMakeFiles/pcd_cropping.dir/clean
+.PHONY : pcl/CMakeFiles/pcd_cropping.dir/clean
+
+#=============================================================================
 # Target rules for target pcl/CMakeFiles/convert_file.dir
 
 # All Build rule for target.
@@ -469,7 +527,7 @@ pcl/CMakeFiles/convert_file.dir/clean:
 pcl/CMakeFiles/write_file.dir/all:
 	$(MAKE) -f pcl/CMakeFiles/write_file.dir/build.make pcl/CMakeFiles/write_file.dir/depend
 	$(MAKE) -f pcl/CMakeFiles/write_file.dir/build.make pcl/CMakeFiles/write_file.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=15,16 "Built target write_file"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=19,20 "Built target write_file"
 .PHONY : pcl/CMakeFiles/write_file.dir/all
 
 # Build rule for subdir invocation for target.
@@ -496,7 +554,7 @@ pcl/CMakeFiles/write_file.dir/clean:
 pcl/CMakeFiles/read_file.dir/all:
 	$(MAKE) -f pcl/CMakeFiles/read_file.dir/build.make pcl/CMakeFiles/read_file.dir/depend
 	$(MAKE) -f pcl/CMakeFiles/read_file.dir/build.make pcl/CMakeFiles/read_file.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=13,14 "Built target read_file"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=15,16 "Built target read_file"
 .PHONY : pcl/CMakeFiles/read_file.dir/all
 
 # Build rule for subdir invocation for target.
