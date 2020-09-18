@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+test_one/CMakeFiles/correspondence_grouping.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 test_one/CMakeFiles/correspondence_grouping.dir/rule
+.PHONY : test_one/CMakeFiles/correspondence_grouping.dir/rule
+
+# Convenience name for target.
+correspondence_grouping: test_one/CMakeFiles/correspondence_grouping.dir/rule
+
+.PHONY : correspondence_grouping
+
+# fast build rule for target.
+correspondence_grouping/fast:
+	cd /home/robo/ros/build && $(MAKE) -f test_one/CMakeFiles/correspondence_grouping.dir/build.make test_one/CMakeFiles/correspondence_grouping.dir/build
+.PHONY : correspondence_grouping/fast
+
+# Convenience name for target.
 test_one/CMakeFiles/hello_world.dir/rule:
 	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 test_one/CMakeFiles/hello_world.dir/rule
 .PHONY : test_one/CMakeFiles/hello_world.dir/rule
@@ -407,6 +422,33 @@ rosgraph_msgs_generate_messages_py/fast:
 	cd /home/robo/ros/build && $(MAKE) -f test_one/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make test_one/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
+src/correspondence_grouping.o: src/correspondence_grouping.cpp.o
+
+.PHONY : src/correspondence_grouping.o
+
+# target to build an object file
+src/correspondence_grouping.cpp.o:
+	cd /home/robo/ros/build && $(MAKE) -f test_one/CMakeFiles/correspondence_grouping.dir/build.make test_one/CMakeFiles/correspondence_grouping.dir/src/correspondence_grouping.cpp.o
+.PHONY : src/correspondence_grouping.cpp.o
+
+src/correspondence_grouping.i: src/correspondence_grouping.cpp.i
+
+.PHONY : src/correspondence_grouping.i
+
+# target to preprocess a source file
+src/correspondence_grouping.cpp.i:
+	cd /home/robo/ros/build && $(MAKE) -f test_one/CMakeFiles/correspondence_grouping.dir/build.make test_one/CMakeFiles/correspondence_grouping.dir/src/correspondence_grouping.cpp.i
+.PHONY : src/correspondence_grouping.cpp.i
+
+src/correspondence_grouping.s: src/correspondence_grouping.cpp.s
+
+.PHONY : src/correspondence_grouping.s
+
+# target to generate assembly for a file
+src/correspondence_grouping.cpp.s:
+	cd /home/robo/ros/build && $(MAKE) -f test_one/CMakeFiles/correspondence_grouping.dir/build.make test_one/CMakeFiles/correspondence_grouping.dir/src/correspondence_grouping.cpp.s
+.PHONY : src/correspondence_grouping.cpp.s
+
 src/hello_world.o: src/hello_world.cpp.o
 
 .PHONY : src/hello_world.o
@@ -444,6 +486,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... correspondence_grouping"
 	@echo "... hello_world"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... std_msgs_generate_messages_nodejs"
@@ -463,6 +506,9 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... src/correspondence_grouping.o"
+	@echo "... src/correspondence_grouping.i"
+	@echo "... src/correspondence_grouping.s"
 	@echo "... src/hello_world.o"
 	@echo "... src/hello_world.i"
 	@echo "... src/hello_world.s"

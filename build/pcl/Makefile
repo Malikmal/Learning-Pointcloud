@@ -56,17 +56,60 @@ CMAKE_BINARY_DIR = /home/robo/ros/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target install
 install: preinstall
@@ -80,60 +123,17 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,49 +168,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-pcl/CMakeFiles/test_hello.dir/rule:
-	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/test_hello.dir/rule
-.PHONY : pcl/CMakeFiles/test_hello.dir/rule
+pcl/CMakeFiles/read_file.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/read_file.dir/rule
+.PHONY : pcl/CMakeFiles/read_file.dir/rule
 
 # Convenience name for target.
-test_hello: pcl/CMakeFiles/test_hello.dir/rule
+read_file: pcl/CMakeFiles/read_file.dir/rule
 
-.PHONY : test_hello
+.PHONY : read_file
 
 # fast build rule for target.
-test_hello/fast:
-	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/test_hello.dir/build.make pcl/CMakeFiles/test_hello.dir/build
-.PHONY : test_hello/fast
-
-# Convenience name for target.
-pcl/CMakeFiles/pcd_cropping.dir/rule:
-	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/pcd_cropping.dir/rule
-.PHONY : pcl/CMakeFiles/pcd_cropping.dir/rule
-
-# Convenience name for target.
-pcd_cropping: pcl/CMakeFiles/pcd_cropping.dir/rule
-
-.PHONY : pcd_cropping
-
-# fast build rule for target.
-pcd_cropping/fast:
-	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_cropping.dir/build.make pcl/CMakeFiles/pcd_cropping.dir/build
-.PHONY : pcd_cropping/fast
-
-# Convenience name for target.
-pcl/CMakeFiles/convert_file.dir/rule:
-	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/convert_file.dir/rule
-.PHONY : pcl/CMakeFiles/convert_file.dir/rule
-
-# Convenience name for target.
-convert_file: pcl/CMakeFiles/convert_file.dir/rule
-
-.PHONY : convert_file
-
-# fast build rule for target.
-convert_file/fast:
-	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/convert_file.dir/build.make pcl/CMakeFiles/convert_file.dir/build
-.PHONY : convert_file/fast
+read_file/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/read_file.dir/build.make pcl/CMakeFiles/read_file.dir/build
+.PHONY : read_file/fast
 
 # Convenience name for target.
 pcl/CMakeFiles/write_file.dir/rule:
@@ -228,19 +198,34 @@ write_file/fast:
 .PHONY : write_file/fast
 
 # Convenience name for target.
-pcl/CMakeFiles/read_file.dir/rule:
-	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/read_file.dir/rule
-.PHONY : pcl/CMakeFiles/read_file.dir/rule
+pcl/CMakeFiles/convert_file.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/convert_file.dir/rule
+.PHONY : pcl/CMakeFiles/convert_file.dir/rule
 
 # Convenience name for target.
-read_file: pcl/CMakeFiles/read_file.dir/rule
+convert_file: pcl/CMakeFiles/convert_file.dir/rule
 
-.PHONY : read_file
+.PHONY : convert_file
 
 # fast build rule for target.
-read_file/fast:
-	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/read_file.dir/build.make pcl/CMakeFiles/read_file.dir/build
-.PHONY : read_file/fast
+convert_file/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/convert_file.dir/build.make pcl/CMakeFiles/convert_file.dir/build
+.PHONY : convert_file/fast
+
+# Convenience name for target.
+pcl/CMakeFiles/pcd_cropping.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/pcd_cropping.dir/rule
+.PHONY : pcl/CMakeFiles/pcd_cropping.dir/rule
+
+# Convenience name for target.
+pcd_cropping: pcl/CMakeFiles/pcd_cropping.dir/rule
+
+.PHONY : pcd_cropping
+
+# fast build rule for target.
+pcd_cropping/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_cropping.dir/build.make pcl/CMakeFiles/pcd_cropping.dir/build
+.PHONY : pcd_cropping/fast
 
 # Convenience name for target.
 pcl/CMakeFiles/_catkin_empty_exported_target.dir/rule:
@@ -256,6 +241,36 @@ _catkin_empty_exported_target: pcl/CMakeFiles/_catkin_empty_exported_target.dir/
 _catkin_empty_exported_target/fast:
 	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/_catkin_empty_exported_target.dir/build.make pcl/CMakeFiles/_catkin_empty_exported_target.dir/build
 .PHONY : _catkin_empty_exported_target/fast
+
+# Convenience name for target.
+pcl/CMakeFiles/test_hello.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/test_hello.dir/rule
+.PHONY : pcl/CMakeFiles/test_hello.dir/rule
+
+# Convenience name for target.
+test_hello: pcl/CMakeFiles/test_hello.dir/rule
+
+.PHONY : test_hello
+
+# fast build rule for target.
+test_hello/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/test_hello.dir/build.make pcl/CMakeFiles/test_hello.dir/build
+.PHONY : test_hello/fast
+
+# Convenience name for target.
+pcl/CMakeFiles/euclidian_cluster.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/euclidian_cluster.dir/rule
+.PHONY : pcl/CMakeFiles/euclidian_cluster.dir/rule
+
+# Convenience name for target.
+euclidian_cluster: pcl/CMakeFiles/euclidian_cluster.dir/rule
+
+.PHONY : euclidian_cluster
+
+# fast build rule for target.
+euclidian_cluster/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/euclidian_cluster.dir/build.make pcl/CMakeFiles/euclidian_cluster.dir/build
+.PHONY : euclidian_cluster/fast
 
 src/convert_file.o: src/convert_file.cpp.o
 
@@ -283,6 +298,33 @@ src/convert_file.s: src/convert_file.cpp.s
 src/convert_file.cpp.s:
 	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/convert_file.dir/build.make pcl/CMakeFiles/convert_file.dir/src/convert_file.cpp.s
 .PHONY : src/convert_file.cpp.s
+
+src/euclidian_cluster.o: src/euclidian_cluster.cpp.o
+
+.PHONY : src/euclidian_cluster.o
+
+# target to build an object file
+src/euclidian_cluster.cpp.o:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/euclidian_cluster.dir/build.make pcl/CMakeFiles/euclidian_cluster.dir/src/euclidian_cluster.cpp.o
+.PHONY : src/euclidian_cluster.cpp.o
+
+src/euclidian_cluster.i: src/euclidian_cluster.cpp.i
+
+.PHONY : src/euclidian_cluster.i
+
+# target to preprocess a source file
+src/euclidian_cluster.cpp.i:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/euclidian_cluster.dir/build.make pcl/CMakeFiles/euclidian_cluster.dir/src/euclidian_cluster.cpp.i
+.PHONY : src/euclidian_cluster.cpp.i
+
+src/euclidian_cluster.s: src/euclidian_cluster.cpp.s
+
+.PHONY : src/euclidian_cluster.s
+
+# target to generate assembly for a file
+src/euclidian_cluster.cpp.s:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/euclidian_cluster.dir/build.make pcl/CMakeFiles/euclidian_cluster.dir/src/euclidian_cluster.cpp.s
+.PHONY : src/euclidian_cluster.cpp.s
 
 src/pcd_cropping.o: src/pcd_cropping.cpp.o
 
@@ -398,22 +440,26 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/local"
-	@echo "... install"
-	@echo "... list_install_components"
-	@echo "... rebuild_cache"
-	@echo "... test_hello"
-	@echo "... pcd_cropping"
 	@echo "... install/strip"
-	@echo "... convert_file"
-	@echo "... write_file"
-	@echo "... edit_cache"
-	@echo "... test"
 	@echo "... read_file"
+	@echo "... test"
+	@echo "... write_file"
+	@echo "... convert_file"
+	@echo "... pcd_cropping"
 	@echo "... _catkin_empty_exported_target"
+	@echo "... test_hello"
+	@echo "... euclidian_cluster"
+	@echo "... edit_cache"
+	@echo "... rebuild_cache"
+	@echo "... list_install_components"
+	@echo "... install"
+	@echo "... install/local"
 	@echo "... src/convert_file.o"
 	@echo "... src/convert_file.i"
 	@echo "... src/convert_file.s"
+	@echo "... src/euclidian_cluster.o"
+	@echo "... src/euclidian_cluster.i"
+	@echo "... src/euclidian_cluster.s"
 	@echo "... src/pcd_cropping.o"
 	@echo "... src/pcd_cropping.i"
 	@echo "... src/pcd_cropping.s"

@@ -13,6 +13,9 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
 )
 
+# Find PointCLoud Libraries
+find_package(PCL 1.2 REQUIRED)
+
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 
@@ -207,6 +210,22 @@ include_directories(
 
 
 
+include_directories(${PCL_INCLUDE_DIRS})
+link_directories(${PCL_LIBRARY_DIRS})
+add_definitions(${PCL_DEFINITIONS})
+
+
+
 add_executable(hello_world src/hello_world.cpp)
 # add_dependencies(hello_world test_one_msg)
 target_link_libraries(hello_world ${catkin_LIBRARIES})
+
+
+
+
+# correspondence_grouping node
+add_executable(correspondence_grouping src/correspondence_grouping.cpp)
+target_link_libraries(correspondence_grouping 
+    ${catkin_LIBRARIES}
+    ${PCL_LIBRARIES}
+)

@@ -285,43 +285,17 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
-# Target rules for targets named test_hello
+# Target rules for targets named read_file
 
 # Build rule for target.
-test_hello: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_hello
-.PHONY : test_hello
+read_file: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 read_file
+.PHONY : read_file
 
 # fast build rule for target.
-test_hello/fast:
-	$(MAKE) -f pcl/CMakeFiles/test_hello.dir/build.make pcl/CMakeFiles/test_hello.dir/build
-.PHONY : test_hello/fast
-
-#=============================================================================
-# Target rules for targets named pcd_cropping
-
-# Build rule for target.
-pcd_cropping: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pcd_cropping
-.PHONY : pcd_cropping
-
-# fast build rule for target.
-pcd_cropping/fast:
-	$(MAKE) -f pcl/CMakeFiles/pcd_cropping.dir/build.make pcl/CMakeFiles/pcd_cropping.dir/build
-.PHONY : pcd_cropping/fast
-
-#=============================================================================
-# Target rules for targets named convert_file
-
-# Build rule for target.
-convert_file: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 convert_file
-.PHONY : convert_file
-
-# fast build rule for target.
-convert_file/fast:
-	$(MAKE) -f pcl/CMakeFiles/convert_file.dir/build.make pcl/CMakeFiles/convert_file.dir/build
-.PHONY : convert_file/fast
+read_file/fast:
+	$(MAKE) -f pcl/CMakeFiles/read_file.dir/build.make pcl/CMakeFiles/read_file.dir/build
+.PHONY : read_file/fast
 
 #=============================================================================
 # Target rules for targets named write_file
@@ -337,17 +311,30 @@ write_file/fast:
 .PHONY : write_file/fast
 
 #=============================================================================
-# Target rules for targets named read_file
+# Target rules for targets named convert_file
 
 # Build rule for target.
-read_file: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 read_file
-.PHONY : read_file
+convert_file: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 convert_file
+.PHONY : convert_file
 
 # fast build rule for target.
-read_file/fast:
-	$(MAKE) -f pcl/CMakeFiles/read_file.dir/build.make pcl/CMakeFiles/read_file.dir/build
-.PHONY : read_file/fast
+convert_file/fast:
+	$(MAKE) -f pcl/CMakeFiles/convert_file.dir/build.make pcl/CMakeFiles/convert_file.dir/build
+.PHONY : convert_file/fast
+
+#=============================================================================
+# Target rules for targets named pcd_cropping
+
+# Build rule for target.
+pcd_cropping: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pcd_cropping
+.PHONY : pcd_cropping
+
+# fast build rule for target.
+pcd_cropping/fast:
+	$(MAKE) -f pcl/CMakeFiles/pcd_cropping.dir/build.make pcl/CMakeFiles/pcd_cropping.dir/build
+.PHONY : pcd_cropping/fast
 
 #=============================================================================
 # Target rules for targets named _catkin_empty_exported_target
@@ -361,6 +348,45 @@ _catkin_empty_exported_target: cmake_check_build_system
 _catkin_empty_exported_target/fast:
 	$(MAKE) -f pcl/CMakeFiles/_catkin_empty_exported_target.dir/build.make pcl/CMakeFiles/_catkin_empty_exported_target.dir/build
 .PHONY : _catkin_empty_exported_target/fast
+
+#=============================================================================
+# Target rules for targets named test_hello
+
+# Build rule for target.
+test_hello: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_hello
+.PHONY : test_hello
+
+# fast build rule for target.
+test_hello/fast:
+	$(MAKE) -f pcl/CMakeFiles/test_hello.dir/build.make pcl/CMakeFiles/test_hello.dir/build
+.PHONY : test_hello/fast
+
+#=============================================================================
+# Target rules for targets named euclidian_cluster
+
+# Build rule for target.
+euclidian_cluster: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 euclidian_cluster
+.PHONY : euclidian_cluster
+
+# fast build rule for target.
+euclidian_cluster/fast:
+	$(MAKE) -f pcl/CMakeFiles/euclidian_cluster.dir/build.make pcl/CMakeFiles/euclidian_cluster.dir/build
+.PHONY : euclidian_cluster/fast
+
+#=============================================================================
+# Target rules for targets named correspondence_grouping
+
+# Build rule for target.
+correspondence_grouping: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 correspondence_grouping
+.PHONY : correspondence_grouping
+
+# fast build rule for target.
+correspondence_grouping/fast:
+	$(MAKE) -f test_one/CMakeFiles/correspondence_grouping.dir/build.make test_one/CMakeFiles/correspondence_grouping.dir/build
+.PHONY : correspondence_grouping/fast
 
 #=============================================================================
 # Target rules for targets named hello_world
@@ -592,12 +618,14 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
-	@echo "... test_hello"
-	@echo "... pcd_cropping"
-	@echo "... convert_file"
-	@echo "... write_file"
 	@echo "... read_file"
+	@echo "... write_file"
+	@echo "... convert_file"
+	@echo "... pcd_cropping"
 	@echo "... _catkin_empty_exported_target"
+	@echo "... test_hello"
+	@echo "... euclidian_cluster"
+	@echo "... correspondence_grouping"
 	@echo "... hello_world"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... std_msgs_generate_messages_nodejs"

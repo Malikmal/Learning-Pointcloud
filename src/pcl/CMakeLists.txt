@@ -246,3 +246,12 @@ target_link_libraries(test_hello
     ${catkin_LIBRARIES}
     ${PCL_LIBRARIES}
 )
+
+
+
+# euclidian_cluster node
+add_executable(euclidian_cluster src/euclidian_cluster.cpp)
+target_link_libraries(euclidian_cluster 
+    ${catkin_LIBRARIES}
+    ${PCL_LIBRARIES}
+)

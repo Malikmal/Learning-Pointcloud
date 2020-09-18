@@ -3,7 +3,17 @@
         "/opt/ros/noetic/lib/python3/dist-packages"
     ],
     "files.associations": {
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "array": "cpp",
+        "bitset": "cpp",
+        "string_view": "cpp",
+        "hash_map": "cpp",
+        "hash_set": "cpp",
+        "initializer_list": "cpp",
+        "utility": "cpp",
+        "valarray": "cpp",
+        "core": "cpp",
+        "numericaldiff": "cpp"
     },
     "ros.distro": "noetic",
     "cmake.sourceDirectory": "${workspaceFolder}/src"
