@@ -36,9 +36,12 @@
 /home/robo/ros/build/gtest/googletest/CMakeFiles/gtest_main.dir
 /home/robo/ros/build/gtest/googletest/CMakeFiles/gtest.dir
 /home/robo/ros/build/pcl/CMakeFiles/install/strip.dir
+/home/robo/ros/build/pcl/CMakeFiles/install/local.dir
+/home/robo/ros/build/pcl/CMakeFiles/install.dir
 /home/robo/ros/build/pcl/CMakeFiles/read_file.dir
 /home/robo/ros/build/pcl/CMakeFiles/test.dir
 /home/robo/ros/build/pcl/CMakeFiles/write_file.dir
+/home/robo/ros/build/pcl/CMakeFiles/pcd_vfh.dir
 /home/robo/ros/build/pcl/CMakeFiles/convert_file.dir
 /home/robo/ros/build/pcl/CMakeFiles/pcd_cropping.dir
 /home/robo/ros/build/pcl/CMakeFiles/_catkin_empty_exported_target.dir
@@ -47,12 +50,12 @@
 /home/robo/ros/build/pcl/CMakeFiles/edit_cache.dir
 /home/robo/ros/build/pcl/CMakeFiles/rebuild_cache.dir
 /home/robo/ros/build/pcl/CMakeFiles/list_install_components.dir
-/home/robo/ros/build/pcl/CMakeFiles/install.dir
-/home/robo/ros/build/pcl/CMakeFiles/install/local.dir
+/home/robo/ros/build/pcl/CMakeFiles/pcd_normal.dir
 /home/robo/ros/build/test_one/CMakeFiles/install/local.dir
 /home/robo/ros/build/test_one/CMakeFiles/rebuild_cache.dir
 /home/robo/ros/build/test_one/CMakeFiles/edit_cache.dir
 /home/robo/ros/build/test_one/CMakeFiles/test.dir
+/home/robo/ros/build/test_one/CMakeFiles/just_test.dir
 /home/robo/ros/build/test_one/CMakeFiles/correspondence_grouping.dir
 /home/robo/ros/build/test_one/CMakeFiles/hello_world.dir
 /home/robo/ros/build/test_one/CMakeFiles/std_msgs_generate_messages_py.dir

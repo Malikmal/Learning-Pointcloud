@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+test_one/CMakeFiles/just_test.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 test_one/CMakeFiles/just_test.dir/rule
+.PHONY : test_one/CMakeFiles/just_test.dir/rule
+
+# Convenience name for target.
+just_test: test_one/CMakeFiles/just_test.dir/rule
+
+.PHONY : just_test
+
+# fast build rule for target.
+just_test/fast:
+	cd /home/robo/ros/build && $(MAKE) -f test_one/CMakeFiles/just_test.dir/build.make test_one/CMakeFiles/just_test.dir/build
+.PHONY : just_test/fast
+
+# Convenience name for target.
 test_one/CMakeFiles/correspondence_grouping.dir/rule:
 	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 test_one/CMakeFiles/correspondence_grouping.dir/rule
 .PHONY : test_one/CMakeFiles/correspondence_grouping.dir/rule
@@ -476,6 +491,33 @@ src/hello_world.cpp.s:
 	cd /home/robo/ros/build && $(MAKE) -f test_one/CMakeFiles/hello_world.dir/build.make test_one/CMakeFiles/hello_world.dir/src/hello_world.cpp.s
 .PHONY : src/hello_world.cpp.s
 
+src/just_test.o: src/just_test.cpp.o
+
+.PHONY : src/just_test.o
+
+# target to build an object file
+src/just_test.cpp.o:
+	cd /home/robo/ros/build && $(MAKE) -f test_one/CMakeFiles/just_test.dir/build.make test_one/CMakeFiles/just_test.dir/src/just_test.cpp.o
+.PHONY : src/just_test.cpp.o
+
+src/just_test.i: src/just_test.cpp.i
+
+.PHONY : src/just_test.i
+
+# target to preprocess a source file
+src/just_test.cpp.i:
+	cd /home/robo/ros/build && $(MAKE) -f test_one/CMakeFiles/just_test.dir/build.make test_one/CMakeFiles/just_test.dir/src/just_test.cpp.i
+.PHONY : src/just_test.cpp.i
+
+src/just_test.s: src/just_test.cpp.s
+
+.PHONY : src/just_test.s
+
+# target to generate assembly for a file
+src/just_test.cpp.s:
+	cd /home/robo/ros/build && $(MAKE) -f test_one/CMakeFiles/just_test.dir/build.make test_one/CMakeFiles/just_test.dir/src/just_test.cpp.s
+.PHONY : src/just_test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -486,6 +528,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... just_test"
 	@echo "... correspondence_grouping"
 	@echo "... hello_world"
 	@echo "... std_msgs_generate_messages_py"
@@ -512,6 +555,9 @@ help:
 	@echo "... src/hello_world.o"
 	@echo "... src/hello_world.i"
 	@echo "... src/hello_world.s"
+	@echo "... src/just_test.o"
+	@echo "... src/just_test.i"
+	@echo "... src/just_test.s"
 .PHONY : help
 
 

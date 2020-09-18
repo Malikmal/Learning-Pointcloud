@@ -229,3 +229,11 @@ target_link_libraries(correspondence_grouping
     ${catkin_LIBRARIES}
     ${PCL_LIBRARIES}
 )
+
+
+# just_test node
+add_executable(just_test src/just_test.cpp)
+target_link_libraries(just_test 
+    ${catkin_LIBRARIES}
+    ${PCL_LIBRARIES}
+)

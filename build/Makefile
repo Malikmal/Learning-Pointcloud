@@ -311,6 +311,19 @@ write_file/fast:
 .PHONY : write_file/fast
 
 #=============================================================================
+# Target rules for targets named pcd_vfh
+
+# Build rule for target.
+pcd_vfh: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pcd_vfh
+.PHONY : pcd_vfh
+
+# fast build rule for target.
+pcd_vfh/fast:
+	$(MAKE) -f pcl/CMakeFiles/pcd_vfh.dir/build.make pcl/CMakeFiles/pcd_vfh.dir/build
+.PHONY : pcd_vfh/fast
+
+#=============================================================================
 # Target rules for targets named convert_file
 
 # Build rule for target.
@@ -374,6 +387,32 @@ euclidian_cluster: cmake_check_build_system
 euclidian_cluster/fast:
 	$(MAKE) -f pcl/CMakeFiles/euclidian_cluster.dir/build.make pcl/CMakeFiles/euclidian_cluster.dir/build
 .PHONY : euclidian_cluster/fast
+
+#=============================================================================
+# Target rules for targets named pcd_normal
+
+# Build rule for target.
+pcd_normal: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pcd_normal
+.PHONY : pcd_normal
+
+# fast build rule for target.
+pcd_normal/fast:
+	$(MAKE) -f pcl/CMakeFiles/pcd_normal.dir/build.make pcl/CMakeFiles/pcd_normal.dir/build
+.PHONY : pcd_normal/fast
+
+#=============================================================================
+# Target rules for targets named just_test
+
+# Build rule for target.
+just_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 just_test
+.PHONY : just_test
+
+# fast build rule for target.
+just_test/fast:
+	$(MAKE) -f test_one/CMakeFiles/just_test.dir/build.make test_one/CMakeFiles/just_test.dir/build
+.PHONY : just_test/fast
 
 #=============================================================================
 # Target rules for targets named correspondence_grouping
@@ -620,11 +659,14 @@ help:
 	@echo "... gtest"
 	@echo "... read_file"
 	@echo "... write_file"
+	@echo "... pcd_vfh"
 	@echo "... convert_file"
 	@echo "... pcd_cropping"
 	@echo "... _catkin_empty_exported_target"
 	@echo "... test_hello"
 	@echo "... euclidian_cluster"
+	@echo "... pcd_normal"
+	@echo "... just_test"
 	@echo "... correspondence_grouping"
 	@echo "... hello_world"
 	@echo "... std_msgs_generate_messages_py"

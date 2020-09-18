@@ -31,6 +31,11 @@
 },
 {
   "directory": "/home/robo/ros/build/pcl",
+  "command": "/bin/x86_64-linux-gnu-g++-7  -DDISABLE_LIBUSB_1_0 -DDISABLE_PCAP -DDISABLE_PNG -DROS_BUILD_SHARED_LIBS=1 -DvtkRenderingContext2D_AUTOINIT=\"1(vtkRenderingContextOpenGL2)\" -DvtkRenderingCore_AUTOINIT=\"3(vtkInteractionStyle,vtkRenderingFreeType,vtkRenderingOpenGL2)\" -isystem /usr/include/vtk-7.1 -isystem /usr/include/freetype2 -isystem /usr/local/include/pcl-1.11 -isystem /usr/include/eigen3 -isystem /usr/include/ni -isystem /usr/include/openni2    -g   -march=native -msse4.2 -mfpmath=sse -o CMakeFiles/pcd_vfh.dir/src/pcd_vfh.cpp.o -c /home/robo/ros/src/pcl/src/pcd_vfh.cpp",
+  "file": "/home/robo/ros/src/pcl/src/pcd_vfh.cpp"
+},
+{
+  "directory": "/home/robo/ros/build/pcl",
   "command": "/bin/x86_64-linux-gnu-g++-7  -DDISABLE_LIBUSB_1_0 -DDISABLE_PCAP -DDISABLE_PNG -DROS_BUILD_SHARED_LIBS=1 -DvtkRenderingContext2D_AUTOINIT=\"1(vtkRenderingContextOpenGL2)\" -DvtkRenderingCore_AUTOINIT=\"3(vtkInteractionStyle,vtkRenderingFreeType,vtkRenderingOpenGL2)\" -isystem /usr/include/vtk-7.1 -isystem /usr/include/freetype2 -isystem /usr/local/include/pcl-1.11 -isystem /usr/include/eigen3 -isystem /usr/include/ni -isystem /usr/include/openni2    -g   -march=native -msse4.2 -mfpmath=sse -o CMakeFiles/convert_file.dir/src/convert_file.cpp.o -c /home/robo/ros/src/pcl/src/convert_file.cpp",
   "file": "/home/robo/ros/src/pcl/src/convert_file.cpp"
 },
@@ -48,6 +53,16 @@
   "directory": "/home/robo/ros/build/pcl",
   "command": "/bin/x86_64-linux-gnu-g++-7  -DDISABLE_LIBUSB_1_0 -DDISABLE_PCAP -DDISABLE_PNG -DROS_BUILD_SHARED_LIBS=1 -DvtkRenderingContext2D_AUTOINIT=\"1(vtkRenderingContextOpenGL2)\" -DvtkRenderingCore_AUTOINIT=\"3(vtkInteractionStyle,vtkRenderingFreeType,vtkRenderingOpenGL2)\" -isystem /usr/include/vtk-7.1 -isystem /usr/include/freetype2 -isystem /usr/local/include/pcl-1.11 -isystem /usr/include/eigen3 -isystem /usr/include/ni -isystem /usr/include/openni2    -g   -march=native -msse4.2 -mfpmath=sse -o CMakeFiles/euclidian_cluster.dir/src/euclidian_cluster.cpp.o -c /home/robo/ros/src/pcl/src/euclidian_cluster.cpp",
   "file": "/home/robo/ros/src/pcl/src/euclidian_cluster.cpp"
+},
+{
+  "directory": "/home/robo/ros/build/pcl",
+  "command": "/bin/x86_64-linux-gnu-g++-7  -DDISABLE_LIBUSB_1_0 -DDISABLE_PCAP -DDISABLE_PNG -DROS_BUILD_SHARED_LIBS=1 -DvtkRenderingContext2D_AUTOINIT=\"1(vtkRenderingContextOpenGL2)\" -DvtkRenderingCore_AUTOINIT=\"3(vtkInteractionStyle,vtkRenderingFreeType,vtkRenderingOpenGL2)\" -isystem /usr/include/vtk-7.1 -isystem /usr/include/freetype2 -isystem /usr/local/include/pcl-1.11 -isystem /usr/include/eigen3 -isystem /usr/include/ni -isystem /usr/include/openni2    -g   -march=native -msse4.2 -mfpmath=sse -o CMakeFiles/pcd_normal.dir/src/pcd_normal.cpp.o -c /home/robo/ros/src/pcl/src/pcd_normal.cpp",
+  "file": "/home/robo/ros/src/pcl/src/pcd_normal.cpp"
+},
+{
+  "directory": "/home/robo/ros/build/test_one",
+  "command": "/bin/x86_64-linux-gnu-g++-7  -DDISABLE_LIBUSB_1_0 -DDISABLE_PCAP -DDISABLE_PNG -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"test_one\\\" -DvtkRenderingContext2D_AUTOINIT=\"1(vtkRenderingContextOpenGL2)\" -DvtkRenderingCore_AUTOINIT=\"3(vtkInteractionStyle,vtkRenderingFreeType,vtkRenderingOpenGL2)\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /usr/include/vtk-7.1 -isystem /usr/include/freetype2 -isystem /usr/local/include/pcl-1.11 -isystem /usr/include/eigen3 -isystem /usr/include/ni -isystem /usr/include/openni2    -g   -march=native -msse4.2 -mfpmath=sse -o CMakeFiles/just_test.dir/src/just_test.cpp.o -c /home/robo/ros/src/test_one/src/just_test.cpp",
+  "file": "/home/robo/ros/src/test_one/src/just_test.cpp"
 },
 {
   "directory": "/home/robo/ros/build/test_one",

@@ -255,3 +255,19 @@ target_link_libraries(euclidian_cluster
     ${catkin_LIBRARIES}
     ${PCL_LIBRARIES}
 )
+
+
+# pcd_normal node
+add_executable(pcd_normal src/pcd_normal.cpp)
+target_link_libraries(pcd_normal 
+    ${catkin_LIBRARIES}
+    ${PCL_LIBRARIES}
+)
+
+
+# pcd_vfh node
+add_executable(pcd_vfh src/pcd_vfh.cpp)
+target_link_libraries(pcd_vfh 
+    ${catkin_LIBRARIES}
+    ${PCL_LIBRARIES}
+)

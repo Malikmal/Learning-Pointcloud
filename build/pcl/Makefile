@@ -68,6 +68,30 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -110,30 +134,6 @@ list_install_components:
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -196,6 +196,21 @@ write_file: pcl/CMakeFiles/write_file.dir/rule
 write_file/fast:
 	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/write_file.dir/build.make pcl/CMakeFiles/write_file.dir/build
 .PHONY : write_file/fast
+
+# Convenience name for target.
+pcl/CMakeFiles/pcd_vfh.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/pcd_vfh.dir/rule
+.PHONY : pcl/CMakeFiles/pcd_vfh.dir/rule
+
+# Convenience name for target.
+pcd_vfh: pcl/CMakeFiles/pcd_vfh.dir/rule
+
+.PHONY : pcd_vfh
+
+# fast build rule for target.
+pcd_vfh/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_vfh.dir/build.make pcl/CMakeFiles/pcd_vfh.dir/build
+.PHONY : pcd_vfh/fast
 
 # Convenience name for target.
 pcl/CMakeFiles/convert_file.dir/rule:
@@ -271,6 +286,21 @@ euclidian_cluster: pcl/CMakeFiles/euclidian_cluster.dir/rule
 euclidian_cluster/fast:
 	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/euclidian_cluster.dir/build.make pcl/CMakeFiles/euclidian_cluster.dir/build
 .PHONY : euclidian_cluster/fast
+
+# Convenience name for target.
+pcl/CMakeFiles/pcd_normal.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/pcd_normal.dir/rule
+.PHONY : pcl/CMakeFiles/pcd_normal.dir/rule
+
+# Convenience name for target.
+pcd_normal: pcl/CMakeFiles/pcd_normal.dir/rule
+
+.PHONY : pcd_normal
+
+# fast build rule for target.
+pcd_normal/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_normal.dir/build.make pcl/CMakeFiles/pcd_normal.dir/build
+.PHONY : pcd_normal/fast
 
 src/convert_file.o: src/convert_file.cpp.o
 
@@ -352,6 +382,60 @@ src/pcd_cropping.s: src/pcd_cropping.cpp.s
 src/pcd_cropping.cpp.s:
 	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_cropping.dir/build.make pcl/CMakeFiles/pcd_cropping.dir/src/pcd_cropping.cpp.s
 .PHONY : src/pcd_cropping.cpp.s
+
+src/pcd_normal.o: src/pcd_normal.cpp.o
+
+.PHONY : src/pcd_normal.o
+
+# target to build an object file
+src/pcd_normal.cpp.o:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_normal.dir/build.make pcl/CMakeFiles/pcd_normal.dir/src/pcd_normal.cpp.o
+.PHONY : src/pcd_normal.cpp.o
+
+src/pcd_normal.i: src/pcd_normal.cpp.i
+
+.PHONY : src/pcd_normal.i
+
+# target to preprocess a source file
+src/pcd_normal.cpp.i:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_normal.dir/build.make pcl/CMakeFiles/pcd_normal.dir/src/pcd_normal.cpp.i
+.PHONY : src/pcd_normal.cpp.i
+
+src/pcd_normal.s: src/pcd_normal.cpp.s
+
+.PHONY : src/pcd_normal.s
+
+# target to generate assembly for a file
+src/pcd_normal.cpp.s:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_normal.dir/build.make pcl/CMakeFiles/pcd_normal.dir/src/pcd_normal.cpp.s
+.PHONY : src/pcd_normal.cpp.s
+
+src/pcd_vfh.o: src/pcd_vfh.cpp.o
+
+.PHONY : src/pcd_vfh.o
+
+# target to build an object file
+src/pcd_vfh.cpp.o:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_vfh.dir/build.make pcl/CMakeFiles/pcd_vfh.dir/src/pcd_vfh.cpp.o
+.PHONY : src/pcd_vfh.cpp.o
+
+src/pcd_vfh.i: src/pcd_vfh.cpp.i
+
+.PHONY : src/pcd_vfh.i
+
+# target to preprocess a source file
+src/pcd_vfh.cpp.i:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_vfh.dir/build.make pcl/CMakeFiles/pcd_vfh.dir/src/pcd_vfh.cpp.i
+.PHONY : src/pcd_vfh.cpp.i
+
+src/pcd_vfh.s: src/pcd_vfh.cpp.s
+
+.PHONY : src/pcd_vfh.s
+
+# target to generate assembly for a file
+src/pcd_vfh.cpp.s:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_vfh.dir/build.make pcl/CMakeFiles/pcd_vfh.dir/src/pcd_vfh.cpp.s
+.PHONY : src/pcd_vfh.cpp.s
 
 src/read_file.o: src/read_file.cpp.o
 
@@ -441,9 +525,12 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
+	@echo "... install/local"
+	@echo "... install"
 	@echo "... read_file"
 	@echo "... test"
 	@echo "... write_file"
+	@echo "... pcd_vfh"
 	@echo "... convert_file"
 	@echo "... pcd_cropping"
 	@echo "... _catkin_empty_exported_target"
@@ -452,8 +539,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... list_install_components"
-	@echo "... install"
-	@echo "... install/local"
+	@echo "... pcd_normal"
 	@echo "... src/convert_file.o"
 	@echo "... src/convert_file.i"
 	@echo "... src/convert_file.s"
@@ -463,6 +549,12 @@ help:
 	@echo "... src/pcd_cropping.o"
 	@echo "... src/pcd_cropping.i"
 	@echo "... src/pcd_cropping.s"
+	@echo "... src/pcd_normal.o"
+	@echo "... src/pcd_normal.i"
+	@echo "... src/pcd_normal.s"
+	@echo "... src/pcd_vfh.o"
+	@echo "... src/pcd_vfh.i"
+	@echo "... src/pcd_vfh.s"
 	@echo "... src/read_file.o"
 	@echo "... src/read_file.i"
 	@echo "... src/read_file.s"
