@@ -92,6 +92,16 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -102,17 +112,6 @@ test:
 test/fast: test
 
 .PHONY : test/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -125,15 +124,16 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
 
-.PHONY : list_install_components/fast
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -288,6 +288,21 @@ euclidian_cluster/fast:
 .PHONY : euclidian_cluster/fast
 
 # Convenience name for target.
+pcl/CMakeFiles/pcd_shot.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/pcd_shot.dir/rule
+.PHONY : pcl/CMakeFiles/pcd_shot.dir/rule
+
+# Convenience name for target.
+pcd_shot: pcl/CMakeFiles/pcd_shot.dir/rule
+
+.PHONY : pcd_shot
+
+# fast build rule for target.
+pcd_shot/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_shot.dir/build.make pcl/CMakeFiles/pcd_shot.dir/build
+.PHONY : pcd_shot/fast
+
+# Convenience name for target.
 pcl/CMakeFiles/pcd_normal.dir/rule:
 	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/pcd_normal.dir/rule
 .PHONY : pcl/CMakeFiles/pcd_normal.dir/rule
@@ -301,6 +316,21 @@ pcd_normal: pcl/CMakeFiles/pcd_normal.dir/rule
 pcd_normal/fast:
 	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_normal.dir/build.make pcl/CMakeFiles/pcd_normal.dir/build
 .PHONY : pcd_normal/fast
+
+# Convenience name for target.
+pcl/CMakeFiles/pcd_pfh.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/pcd_pfh.dir/rule
+.PHONY : pcl/CMakeFiles/pcd_pfh.dir/rule
+
+# Convenience name for target.
+pcd_pfh: pcl/CMakeFiles/pcd_pfh.dir/rule
+
+.PHONY : pcd_pfh
+
+# fast build rule for target.
+pcd_pfh/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_pfh.dir/build.make pcl/CMakeFiles/pcd_pfh.dir/build
+.PHONY : pcd_pfh/fast
 
 src/convert_file.o: src/convert_file.cpp.o
 
@@ -409,6 +439,60 @@ src/pcd_normal.s: src/pcd_normal.cpp.s
 src/pcd_normal.cpp.s:
 	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_normal.dir/build.make pcl/CMakeFiles/pcd_normal.dir/src/pcd_normal.cpp.s
 .PHONY : src/pcd_normal.cpp.s
+
+src/pcd_pfh.o: src/pcd_pfh.cpp.o
+
+.PHONY : src/pcd_pfh.o
+
+# target to build an object file
+src/pcd_pfh.cpp.o:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_pfh.dir/build.make pcl/CMakeFiles/pcd_pfh.dir/src/pcd_pfh.cpp.o
+.PHONY : src/pcd_pfh.cpp.o
+
+src/pcd_pfh.i: src/pcd_pfh.cpp.i
+
+.PHONY : src/pcd_pfh.i
+
+# target to preprocess a source file
+src/pcd_pfh.cpp.i:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_pfh.dir/build.make pcl/CMakeFiles/pcd_pfh.dir/src/pcd_pfh.cpp.i
+.PHONY : src/pcd_pfh.cpp.i
+
+src/pcd_pfh.s: src/pcd_pfh.cpp.s
+
+.PHONY : src/pcd_pfh.s
+
+# target to generate assembly for a file
+src/pcd_pfh.cpp.s:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_pfh.dir/build.make pcl/CMakeFiles/pcd_pfh.dir/src/pcd_pfh.cpp.s
+.PHONY : src/pcd_pfh.cpp.s
+
+src/pcd_shot.o: src/pcd_shot.cpp.o
+
+.PHONY : src/pcd_shot.o
+
+# target to build an object file
+src/pcd_shot.cpp.o:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_shot.dir/build.make pcl/CMakeFiles/pcd_shot.dir/src/pcd_shot.cpp.o
+.PHONY : src/pcd_shot.cpp.o
+
+src/pcd_shot.i: src/pcd_shot.cpp.i
+
+.PHONY : src/pcd_shot.i
+
+# target to preprocess a source file
+src/pcd_shot.cpp.i:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_shot.dir/build.make pcl/CMakeFiles/pcd_shot.dir/src/pcd_shot.cpp.i
+.PHONY : src/pcd_shot.cpp.i
+
+src/pcd_shot.s: src/pcd_shot.cpp.s
+
+.PHONY : src/pcd_shot.s
+
+# target to generate assembly for a file
+src/pcd_shot.cpp.s:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_shot.dir/build.make pcl/CMakeFiles/pcd_shot.dir/src/pcd_shot.cpp.s
+.PHONY : src/pcd_shot.cpp.s
 
 src/pcd_vfh.o: src/pcd_vfh.cpp.o
 
@@ -527,8 +611,11 @@ help:
 	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... read_file"
 	@echo "... test"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
 	@echo "... write_file"
 	@echo "... pcd_vfh"
 	@echo "... convert_file"
@@ -536,10 +623,9 @@ help:
 	@echo "... _catkin_empty_exported_target"
 	@echo "... test_hello"
 	@echo "... euclidian_cluster"
-	@echo "... edit_cache"
-	@echo "... rebuild_cache"
-	@echo "... list_install_components"
+	@echo "... pcd_shot"
 	@echo "... pcd_normal"
+	@echo "... pcd_pfh"
 	@echo "... src/convert_file.o"
 	@echo "... src/convert_file.i"
 	@echo "... src/convert_file.s"
@@ -552,6 +638,12 @@ help:
 	@echo "... src/pcd_normal.o"
 	@echo "... src/pcd_normal.i"
 	@echo "... src/pcd_normal.s"
+	@echo "... src/pcd_pfh.o"
+	@echo "... src/pcd_pfh.i"
+	@echo "... src/pcd_pfh.s"
+	@echo "... src/pcd_shot.o"
+	@echo "... src/pcd_shot.i"
+	@echo "... src/pcd_shot.s"
 	@echo "... src/pcd_vfh.o"
 	@echo "... src/pcd_vfh.i"
 	@echo "... src/pcd_vfh.s"

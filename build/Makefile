@@ -389,6 +389,19 @@ euclidian_cluster/fast:
 .PHONY : euclidian_cluster/fast
 
 #=============================================================================
+# Target rules for targets named pcd_shot
+
+# Build rule for target.
+pcd_shot: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pcd_shot
+.PHONY : pcd_shot
+
+# fast build rule for target.
+pcd_shot/fast:
+	$(MAKE) -f pcl/CMakeFiles/pcd_shot.dir/build.make pcl/CMakeFiles/pcd_shot.dir/build
+.PHONY : pcd_shot/fast
+
+#=============================================================================
 # Target rules for targets named pcd_normal
 
 # Build rule for target.
@@ -400,6 +413,19 @@ pcd_normal: cmake_check_build_system
 pcd_normal/fast:
 	$(MAKE) -f pcl/CMakeFiles/pcd_normal.dir/build.make pcl/CMakeFiles/pcd_normal.dir/build
 .PHONY : pcd_normal/fast
+
+#=============================================================================
+# Target rules for targets named pcd_pfh
+
+# Build rule for target.
+pcd_pfh: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pcd_pfh
+.PHONY : pcd_pfh
+
+# fast build rule for target.
+pcd_pfh/fast:
+	$(MAKE) -f pcl/CMakeFiles/pcd_pfh.dir/build.make pcl/CMakeFiles/pcd_pfh.dir/build
+.PHONY : pcd_pfh/fast
 
 #=============================================================================
 # Target rules for targets named just_test
@@ -665,7 +691,9 @@ help:
 	@echo "... _catkin_empty_exported_target"
 	@echo "... test_hello"
 	@echo "... euclidian_cluster"
+	@echo "... pcd_shot"
 	@echo "... pcd_normal"
+	@echo "... pcd_pfh"
 	@echo "... just_test"
 	@echo "... correspondence_grouping"
 	@echo "... hello_world"

@@ -271,3 +271,19 @@ target_link_libraries(pcd_vfh
     ${catkin_LIBRARIES}
     ${PCL_LIBRARIES}
 )
+
+
+# pcd_shot node
+add_executable(pcd_shot src/pcd_shot.cpp)
+target_link_libraries(pcd_shot 
+    ${catkin_LIBRARIES}
+    ${PCL_LIBRARIES}
+)
+
+
+# pcd_pfh node
+add_executable(pcd_pfh src/pcd_pfh.cpp)
+target_link_libraries(pcd_pfh 
+    ${catkin_LIBRARIES}
+    ${PCL_LIBRARIES}
+)
