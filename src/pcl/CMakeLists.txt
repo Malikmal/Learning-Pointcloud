@@ -287,3 +287,10 @@ target_link_libraries(pcd_pfh
     ${catkin_LIBRARIES}
     ${PCL_LIBRARIES}
 )
+
+# pcd_fpfh node
+add_executable(pcd_fpfh src/pcd_fpfh.cpp)
+target_link_libraries(pcd_fpfh 
+    ${catkin_LIBRARIES}
+    ${PCL_LIBRARIES}
+)

@@ -337,19 +337,6 @@ convert_file/fast:
 .PHONY : convert_file/fast
 
 #=============================================================================
-# Target rules for targets named pcd_cropping
-
-# Build rule for target.
-pcd_cropping: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pcd_cropping
-.PHONY : pcd_cropping
-
-# fast build rule for target.
-pcd_cropping/fast:
-	$(MAKE) -f pcl/CMakeFiles/pcd_cropping.dir/build.make pcl/CMakeFiles/pcd_cropping.dir/build
-.PHONY : pcd_cropping/fast
-
-#=============================================================================
 # Target rules for targets named _catkin_empty_exported_target
 
 # Build rule for target.
@@ -426,6 +413,32 @@ pcd_pfh: cmake_check_build_system
 pcd_pfh/fast:
 	$(MAKE) -f pcl/CMakeFiles/pcd_pfh.dir/build.make pcl/CMakeFiles/pcd_pfh.dir/build
 .PHONY : pcd_pfh/fast
+
+#=============================================================================
+# Target rules for targets named pcd_cropping
+
+# Build rule for target.
+pcd_cropping: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pcd_cropping
+.PHONY : pcd_cropping
+
+# fast build rule for target.
+pcd_cropping/fast:
+	$(MAKE) -f pcl/CMakeFiles/pcd_cropping.dir/build.make pcl/CMakeFiles/pcd_cropping.dir/build
+.PHONY : pcd_cropping/fast
+
+#=============================================================================
+# Target rules for targets named pcd_fpfh
+
+# Build rule for target.
+pcd_fpfh: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pcd_fpfh
+.PHONY : pcd_fpfh
+
+# fast build rule for target.
+pcd_fpfh/fast:
+	$(MAKE) -f pcl/CMakeFiles/pcd_fpfh.dir/build.make pcl/CMakeFiles/pcd_fpfh.dir/build
+.PHONY : pcd_fpfh/fast
 
 #=============================================================================
 # Target rules for targets named just_test
@@ -687,13 +700,14 @@ help:
 	@echo "... write_file"
 	@echo "... pcd_vfh"
 	@echo "... convert_file"
-	@echo "... pcd_cropping"
 	@echo "... _catkin_empty_exported_target"
 	@echo "... test_hello"
 	@echo "... euclidian_cluster"
 	@echo "... pcd_shot"
 	@echo "... pcd_normal"
 	@echo "... pcd_pfh"
+	@echo "... pcd_cropping"
+	@echo "... pcd_fpfh"
 	@echo "... just_test"
 	@echo "... correspondence_grouping"
 	@echo "... hello_world"

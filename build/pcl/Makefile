@@ -102,17 +102,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -134,6 +123,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -228,21 +228,6 @@ convert_file/fast:
 .PHONY : convert_file/fast
 
 # Convenience name for target.
-pcl/CMakeFiles/pcd_cropping.dir/rule:
-	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/pcd_cropping.dir/rule
-.PHONY : pcl/CMakeFiles/pcd_cropping.dir/rule
-
-# Convenience name for target.
-pcd_cropping: pcl/CMakeFiles/pcd_cropping.dir/rule
-
-.PHONY : pcd_cropping
-
-# fast build rule for target.
-pcd_cropping/fast:
-	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_cropping.dir/build.make pcl/CMakeFiles/pcd_cropping.dir/build
-.PHONY : pcd_cropping/fast
-
-# Convenience name for target.
 pcl/CMakeFiles/_catkin_empty_exported_target.dir/rule:
 	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/_catkin_empty_exported_target.dir/rule
 .PHONY : pcl/CMakeFiles/_catkin_empty_exported_target.dir/rule
@@ -332,6 +317,36 @@ pcd_pfh/fast:
 	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_pfh.dir/build.make pcl/CMakeFiles/pcd_pfh.dir/build
 .PHONY : pcd_pfh/fast
 
+# Convenience name for target.
+pcl/CMakeFiles/pcd_cropping.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/pcd_cropping.dir/rule
+.PHONY : pcl/CMakeFiles/pcd_cropping.dir/rule
+
+# Convenience name for target.
+pcd_cropping: pcl/CMakeFiles/pcd_cropping.dir/rule
+
+.PHONY : pcd_cropping
+
+# fast build rule for target.
+pcd_cropping/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_cropping.dir/build.make pcl/CMakeFiles/pcd_cropping.dir/build
+.PHONY : pcd_cropping/fast
+
+# Convenience name for target.
+pcl/CMakeFiles/pcd_fpfh.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/pcd_fpfh.dir/rule
+.PHONY : pcl/CMakeFiles/pcd_fpfh.dir/rule
+
+# Convenience name for target.
+pcd_fpfh: pcl/CMakeFiles/pcd_fpfh.dir/rule
+
+.PHONY : pcd_fpfh
+
+# fast build rule for target.
+pcd_fpfh/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_fpfh.dir/build.make pcl/CMakeFiles/pcd_fpfh.dir/build
+.PHONY : pcd_fpfh/fast
+
 src/convert_file.o: src/convert_file.cpp.o
 
 .PHONY : src/convert_file.o
@@ -412,6 +427,33 @@ src/pcd_cropping.s: src/pcd_cropping.cpp.s
 src/pcd_cropping.cpp.s:
 	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_cropping.dir/build.make pcl/CMakeFiles/pcd_cropping.dir/src/pcd_cropping.cpp.s
 .PHONY : src/pcd_cropping.cpp.s
+
+src/pcd_fpfh.o: src/pcd_fpfh.cpp.o
+
+.PHONY : src/pcd_fpfh.o
+
+# target to build an object file
+src/pcd_fpfh.cpp.o:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_fpfh.dir/build.make pcl/CMakeFiles/pcd_fpfh.dir/src/pcd_fpfh.cpp.o
+.PHONY : src/pcd_fpfh.cpp.o
+
+src/pcd_fpfh.i: src/pcd_fpfh.cpp.i
+
+.PHONY : src/pcd_fpfh.i
+
+# target to preprocess a source file
+src/pcd_fpfh.cpp.i:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_fpfh.dir/build.make pcl/CMakeFiles/pcd_fpfh.dir/src/pcd_fpfh.cpp.i
+.PHONY : src/pcd_fpfh.cpp.i
+
+src/pcd_fpfh.s: src/pcd_fpfh.cpp.s
+
+.PHONY : src/pcd_fpfh.s
+
+# target to generate assembly for a file
+src/pcd_fpfh.cpp.s:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_fpfh.dir/build.make pcl/CMakeFiles/pcd_fpfh.dir/src/pcd_fpfh.cpp.s
+.PHONY : src/pcd_fpfh.cpp.s
 
 src/pcd_normal.o: src/pcd_normal.cpp.o
 
@@ -612,20 +654,21 @@ help:
 	@echo "... install/local"
 	@echo "... install"
 	@echo "... list_install_components"
-	@echo "... read_file"
-	@echo "... test"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... read_file"
+	@echo "... test"
 	@echo "... write_file"
 	@echo "... pcd_vfh"
 	@echo "... convert_file"
-	@echo "... pcd_cropping"
 	@echo "... _catkin_empty_exported_target"
 	@echo "... test_hello"
 	@echo "... euclidian_cluster"
 	@echo "... pcd_shot"
 	@echo "... pcd_normal"
 	@echo "... pcd_pfh"
+	@echo "... pcd_cropping"
+	@echo "... pcd_fpfh"
 	@echo "... src/convert_file.o"
 	@echo "... src/convert_file.i"
 	@echo "... src/convert_file.s"
@@ -635,6 +678,9 @@ help:
 	@echo "... src/pcd_cropping.o"
 	@echo "... src/pcd_cropping.i"
 	@echo "... src/pcd_cropping.s"
+	@echo "... src/pcd_fpfh.o"
+	@echo "... src/pcd_fpfh.i"
+	@echo "... src/pcd_fpfh.s"
 	@echo "... src/pcd_normal.o"
 	@echo "... src/pcd_normal.i"
 	@echo "... src/pcd_normal.s"
