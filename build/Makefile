@@ -285,6 +285,58 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named project_inliers
+
+# Build rule for target.
+project_inliers: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 project_inliers
+.PHONY : project_inliers
+
+# fast build rule for target.
+project_inliers/fast:
+	$(MAKE) -f filtering/CMakeFiles/project_inliers.dir/build.make filtering/CMakeFiles/project_inliers.dir/build
+.PHONY : project_inliers/fast
+
+#=============================================================================
+# Target rules for targets named outlier_removal
+
+# Build rule for target.
+outlier_removal: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 outlier_removal
+.PHONY : outlier_removal
+
+# fast build rule for target.
+outlier_removal/fast:
+	$(MAKE) -f filtering/CMakeFiles/outlier_removal.dir/build.make filtering/CMakeFiles/outlier_removal.dir/build
+.PHONY : outlier_removal/fast
+
+#=============================================================================
+# Target rules for targets named passthrough
+
+# Build rule for target.
+passthrough: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 passthrough
+.PHONY : passthrough
+
+# fast build rule for target.
+passthrough/fast:
+	$(MAKE) -f filtering/CMakeFiles/passthrough.dir/build.make filtering/CMakeFiles/passthrough.dir/build
+.PHONY : passthrough/fast
+
+#=============================================================================
+# Target rules for targets named _catkin_empty_exported_target
+
+# Build rule for target.
+_catkin_empty_exported_target: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _catkin_empty_exported_target
+.PHONY : _catkin_empty_exported_target
+
+# fast build rule for target.
+_catkin_empty_exported_target/fast:
+	$(MAKE) -f filtering/CMakeFiles/_catkin_empty_exported_target.dir/build.make filtering/CMakeFiles/_catkin_empty_exported_target.dir/build
+.PHONY : _catkin_empty_exported_target/fast
+
+#=============================================================================
 # Target rules for targets named read_file
 
 # Build rule for target.
@@ -337,17 +389,17 @@ convert_file/fast:
 .PHONY : convert_file/fast
 
 #=============================================================================
-# Target rules for targets named _catkin_empty_exported_target
+# Target rules for targets named pcd_narf
 
 # Build rule for target.
-_catkin_empty_exported_target: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _catkin_empty_exported_target
-.PHONY : _catkin_empty_exported_target
+pcd_narf: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pcd_narf
+.PHONY : pcd_narf
 
 # fast build rule for target.
-_catkin_empty_exported_target/fast:
-	$(MAKE) -f pcl/CMakeFiles/_catkin_empty_exported_target.dir/build.make pcl/CMakeFiles/_catkin_empty_exported_target.dir/build
-.PHONY : _catkin_empty_exported_target/fast
+pcd_narf/fast:
+	$(MAKE) -f pcl/CMakeFiles/pcd_narf.dir/build.make pcl/CMakeFiles/pcd_narf.dir/build
+.PHONY : pcd_narf/fast
 
 #=============================================================================
 # Target rules for targets named test_hello
@@ -389,19 +441,6 @@ pcd_shot/fast:
 .PHONY : pcd_shot/fast
 
 #=============================================================================
-# Target rules for targets named pcd_normal
-
-# Build rule for target.
-pcd_normal: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pcd_normal
-.PHONY : pcd_normal
-
-# fast build rule for target.
-pcd_normal/fast:
-	$(MAKE) -f pcl/CMakeFiles/pcd_normal.dir/build.make pcl/CMakeFiles/pcd_normal.dir/build
-.PHONY : pcd_normal/fast
-
-#=============================================================================
 # Target rules for targets named pcd_pfh
 
 # Build rule for target.
@@ -439,6 +478,32 @@ pcd_fpfh: cmake_check_build_system
 pcd_fpfh/fast:
 	$(MAKE) -f pcl/CMakeFiles/pcd_fpfh.dir/build.make pcl/CMakeFiles/pcd_fpfh.dir/build
 .PHONY : pcd_fpfh/fast
+
+#=============================================================================
+# Target rules for targets named pcd_normal
+
+# Build rule for target.
+pcd_normal: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pcd_normal
+.PHONY : pcd_normal
+
+# fast build rule for target.
+pcd_normal/fast:
+	$(MAKE) -f pcl/CMakeFiles/pcd_normal.dir/build.make pcl/CMakeFiles/pcd_normal.dir/build
+.PHONY : pcd_normal/fast
+
+#=============================================================================
+# Target rules for targets named pcd_correspondence
+
+# Build rule for target.
+pcd_correspondence: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pcd_correspondence
+.PHONY : pcd_correspondence
+
+# fast build rule for target.
+pcd_correspondence/fast:
+	$(MAKE) -f pcl/CMakeFiles/pcd_correspondence.dir/build.make pcl/CMakeFiles/pcd_correspondence.dir/build
+.PHONY : pcd_correspondence/fast
 
 #=============================================================================
 # Target rules for targets named just_test
@@ -696,18 +761,23 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... project_inliers"
+	@echo "... outlier_removal"
+	@echo "... passthrough"
+	@echo "... _catkin_empty_exported_target"
 	@echo "... read_file"
 	@echo "... write_file"
 	@echo "... pcd_vfh"
 	@echo "... convert_file"
-	@echo "... _catkin_empty_exported_target"
+	@echo "... pcd_narf"
 	@echo "... test_hello"
 	@echo "... euclidian_cluster"
 	@echo "... pcd_shot"
-	@echo "... pcd_normal"
 	@echo "... pcd_pfh"
 	@echo "... pcd_cropping"
 	@echo "... pcd_fpfh"
+	@echo "... pcd_normal"
+	@echo "... pcd_correspondence"
 	@echo "... just_test"
 	@echo "... correspondence_grouping"
 	@echo "... hello_world"

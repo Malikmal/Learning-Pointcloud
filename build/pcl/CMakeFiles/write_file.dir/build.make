@@ -60,15 +60,15 @@ include pcl/CMakeFiles/write_file.dir/flags.make
 pcl/CMakeFiles/write_file.dir/src/write_file.cpp.o: pcl/CMakeFiles/write_file.dir/flags.make
 pcl/CMakeFiles/write_file.dir/src/write_file.cpp.o: /home/robo/ros/src/pcl/src/write_file.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object pcl/CMakeFiles/write_file.dir/src/write_file.cpp.o"
-	cd /home/robo/ros/build/pcl && /bin/x86_64-linux-gnu-g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/write_file.dir/src/write_file.cpp.o -c /home/robo/ros/src/pcl/src/write_file.cpp
+	cd /home/robo/ros/build/pcl && /bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/write_file.dir/src/write_file.cpp.o -c /home/robo/ros/src/pcl/src/write_file.cpp
 
 pcl/CMakeFiles/write_file.dir/src/write_file.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/write_file.dir/src/write_file.cpp.i"
-	cd /home/robo/ros/build/pcl && /bin/x86_64-linux-gnu-g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robo/ros/src/pcl/src/write_file.cpp > CMakeFiles/write_file.dir/src/write_file.cpp.i
+	cd /home/robo/ros/build/pcl && /bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robo/ros/src/pcl/src/write_file.cpp > CMakeFiles/write_file.dir/src/write_file.cpp.i
 
 pcl/CMakeFiles/write_file.dir/src/write_file.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/write_file.dir/src/write_file.cpp.s"
-	cd /home/robo/ros/build/pcl && /bin/x86_64-linux-gnu-g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robo/ros/src/pcl/src/write_file.cpp -o CMakeFiles/write_file.dir/src/write_file.cpp.s
+	cd /home/robo/ros/build/pcl && /bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robo/ros/src/pcl/src/write_file.cpp -o CMakeFiles/write_file.dir/src/write_file.cpp.s
 
 # Object files for target write_file
 write_file_OBJECTS = \

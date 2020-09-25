@@ -116,7 +116,7 @@ catkin_package(
 ## Your package locations should be listed before other locations
 include_directories(
 # include
-# ${catkin_INCLUDE_DIRS}
+${catkin_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
@@ -291,6 +291,25 @@ target_link_libraries(pcd_pfh
 # pcd_fpfh node
 add_executable(pcd_fpfh src/pcd_fpfh.cpp)
 target_link_libraries(pcd_fpfh 
+    ${catkin_LIBRARIES}
+    ${PCL_LIBRARIES}
+)
+
+
+# pcd_narf node
+add_executable(pcd_narf src/pcd_narf.cpp)
+target_link_libraries(pcd_narf 
+    ${catkin_LIBRARIES}
+    ${PCL_LIBRARIES}
+)
+
+
+
+
+
+# pcd_correspondence node
+add_executable(pcd_correspondence src/pcd_correspondence.cpp)
+target_link_libraries(pcd_correspondence 
     ${catkin_LIBRARIES}
     ${PCL_LIBRARIES}
 )

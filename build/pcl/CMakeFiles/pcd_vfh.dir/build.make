@@ -60,15 +60,15 @@ include pcl/CMakeFiles/pcd_vfh.dir/flags.make
 pcl/CMakeFiles/pcd_vfh.dir/src/pcd_vfh.cpp.o: pcl/CMakeFiles/pcd_vfh.dir/flags.make
 pcl/CMakeFiles/pcd_vfh.dir/src/pcd_vfh.cpp.o: /home/robo/ros/src/pcl/src/pcd_vfh.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object pcl/CMakeFiles/pcd_vfh.dir/src/pcd_vfh.cpp.o"
-	cd /home/robo/ros/build/pcl && /bin/x86_64-linux-gnu-g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pcd_vfh.dir/src/pcd_vfh.cpp.o -c /home/robo/ros/src/pcl/src/pcd_vfh.cpp
+	cd /home/robo/ros/build/pcl && /bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pcd_vfh.dir/src/pcd_vfh.cpp.o -c /home/robo/ros/src/pcl/src/pcd_vfh.cpp
 
 pcl/CMakeFiles/pcd_vfh.dir/src/pcd_vfh.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pcd_vfh.dir/src/pcd_vfh.cpp.i"
-	cd /home/robo/ros/build/pcl && /bin/x86_64-linux-gnu-g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robo/ros/src/pcl/src/pcd_vfh.cpp > CMakeFiles/pcd_vfh.dir/src/pcd_vfh.cpp.i
+	cd /home/robo/ros/build/pcl && /bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robo/ros/src/pcl/src/pcd_vfh.cpp > CMakeFiles/pcd_vfh.dir/src/pcd_vfh.cpp.i
 
 pcl/CMakeFiles/pcd_vfh.dir/src/pcd_vfh.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pcd_vfh.dir/src/pcd_vfh.cpp.s"
-	cd /home/robo/ros/build/pcl && /bin/x86_64-linux-gnu-g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robo/ros/src/pcl/src/pcd_vfh.cpp -o CMakeFiles/pcd_vfh.dir/src/pcd_vfh.cpp.s
+	cd /home/robo/ros/build/pcl && /bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robo/ros/src/pcl/src/pcd_vfh.cpp -o CMakeFiles/pcd_vfh.dir/src/pcd_vfh.cpp.s
 
 # Object files for target pcd_vfh
 pcd_vfh_OBJECTS = \

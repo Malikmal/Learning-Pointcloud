@@ -97,7 +97,7 @@ CMAKE_BUILD_TYPE:STRING=Debug
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
 //No help, variable specified on the command line.
-CMAKE_CXX_COMPILER:FILEPATH=/bin/x86_64-linux-gnu-g++-7
+CMAKE_CXX_COMPILER:FILEPATH=/bin/g++-7
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -123,7 +123,7 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //No help, variable specified on the command line.
-CMAKE_C_COMPILER:FILEPATH=/bin/x86_64-linux-gnu-gcc-7
+CMAKE_C_COMPILER:FILEPATH=/bin/gcc-7
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -780,6 +780,12 @@ catkin_DIR:PATH=/opt/ros/noetic/share/catkin/cmake
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/noetic/share/cpp_common/cmake
 
+//Value Computed by CMake
+filtering_BINARY_DIR:STATIC=/home/robo/ros/build/filtering
+
+//Value Computed by CMake
+filtering_SOURCE_DIR:STATIC=/home/robo/ros/src/filtering
+
 //The directory containing a CMake configuration file for flann.
 flann_DIR:PATH=flann_DIR-NOTFOUND
 
@@ -880,26 +886,26 @@ rospy_DIR:PATH=/opt/ros/noetic/share/rospy/cmake
 //The directory containing a CMake configuration file for rostime.
 rostime_DIR:PATH=/opt/ros/noetic/share/rostime/cmake
 
-//Value Computed by CMake
-segmentation1_BINARY_DIR:STATIC=/home/robo/ros/build/segmentation12
-
-//Value Computed by CMake
-segmentation1_SOURCE_DIR:STATIC=/home/robo/ros/src/segmentation12
-
-//Value Computed by CMake
-segmentation_BINARY_DIR:STATIC=/home/robo/ros/build/segmentation2
-
-//Value Computed by CMake
-segmentation_SOURCE_DIR:STATIC=/home/robo/ros/src/segmentation2
-
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/noetic/share/std_msgs/cmake
+
+//Value Computed by CMake
+test_BINARY_DIR:STATIC=/home/robo/ros/build/test
+
+//Value Computed by CMake
+test_SOURCE_DIR:STATIC=/home/robo/ros/src/test
 
 //Value Computed by CMake
 test_one_BINARY_DIR:STATIC=/home/robo/ros/build/test_one
 
 //Value Computed by CMake
 test_one_SOURCE_DIR:STATIC=/home/robo/ros/src/test_one
+
+//Value Computed by CMake
+wkwk_BINARY_DIR:STATIC=/home/robo/ros/build/wkwk
+
+//Value Computed by CMake
+wkwk_SOURCE_DIR:STATIC=/home/robo/ros/src/wkwk
 
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/noetic/share/xmlrpcpp/cmake
@@ -1084,7 +1090,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=6
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

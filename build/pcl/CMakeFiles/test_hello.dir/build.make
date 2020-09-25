@@ -60,15 +60,15 @@ include pcl/CMakeFiles/test_hello.dir/flags.make
 pcl/CMakeFiles/test_hello.dir/src/test_hello.cpp.o: pcl/CMakeFiles/test_hello.dir/flags.make
 pcl/CMakeFiles/test_hello.dir/src/test_hello.cpp.o: /home/robo/ros/src/pcl/src/test_hello.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object pcl/CMakeFiles/test_hello.dir/src/test_hello.cpp.o"
-	cd /home/robo/ros/build/pcl && /bin/x86_64-linux-gnu-g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_hello.dir/src/test_hello.cpp.o -c /home/robo/ros/src/pcl/src/test_hello.cpp
+	cd /home/robo/ros/build/pcl && /bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_hello.dir/src/test_hello.cpp.o -c /home/robo/ros/src/pcl/src/test_hello.cpp
 
 pcl/CMakeFiles/test_hello.dir/src/test_hello.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_hello.dir/src/test_hello.cpp.i"
-	cd /home/robo/ros/build/pcl && /bin/x86_64-linux-gnu-g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robo/ros/src/pcl/src/test_hello.cpp > CMakeFiles/test_hello.dir/src/test_hello.cpp.i
+	cd /home/robo/ros/build/pcl && /bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robo/ros/src/pcl/src/test_hello.cpp > CMakeFiles/test_hello.dir/src/test_hello.cpp.i
 
 pcl/CMakeFiles/test_hello.dir/src/test_hello.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_hello.dir/src/test_hello.cpp.s"
-	cd /home/robo/ros/build/pcl && /bin/x86_64-linux-gnu-g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robo/ros/src/pcl/src/test_hello.cpp -o CMakeFiles/test_hello.dir/src/test_hello.cpp.s
+	cd /home/robo/ros/build/pcl && /bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robo/ros/src/pcl/src/test_hello.cpp -o CMakeFiles/test_hello.dir/src/test_hello.cpp.s
 
 # Object files for target test_hello
 test_hello_OBJECTS = \

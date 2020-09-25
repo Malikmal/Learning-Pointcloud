@@ -60,15 +60,15 @@ include pcl/CMakeFiles/euclidian_cluster.dir/flags.make
 pcl/CMakeFiles/euclidian_cluster.dir/src/euclidian_cluster.cpp.o: pcl/CMakeFiles/euclidian_cluster.dir/flags.make
 pcl/CMakeFiles/euclidian_cluster.dir/src/euclidian_cluster.cpp.o: /home/robo/ros/src/pcl/src/euclidian_cluster.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object pcl/CMakeFiles/euclidian_cluster.dir/src/euclidian_cluster.cpp.o"
-	cd /home/robo/ros/build/pcl && /bin/x86_64-linux-gnu-g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/euclidian_cluster.dir/src/euclidian_cluster.cpp.o -c /home/robo/ros/src/pcl/src/euclidian_cluster.cpp
+	cd /home/robo/ros/build/pcl && /bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/euclidian_cluster.dir/src/euclidian_cluster.cpp.o -c /home/robo/ros/src/pcl/src/euclidian_cluster.cpp
 
 pcl/CMakeFiles/euclidian_cluster.dir/src/euclidian_cluster.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/euclidian_cluster.dir/src/euclidian_cluster.cpp.i"
-	cd /home/robo/ros/build/pcl && /bin/x86_64-linux-gnu-g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robo/ros/src/pcl/src/euclidian_cluster.cpp > CMakeFiles/euclidian_cluster.dir/src/euclidian_cluster.cpp.i
+	cd /home/robo/ros/build/pcl && /bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robo/ros/src/pcl/src/euclidian_cluster.cpp > CMakeFiles/euclidian_cluster.dir/src/euclidian_cluster.cpp.i
 
 pcl/CMakeFiles/euclidian_cluster.dir/src/euclidian_cluster.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/euclidian_cluster.dir/src/euclidian_cluster.cpp.s"
-	cd /home/robo/ros/build/pcl && /bin/x86_64-linux-gnu-g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robo/ros/src/pcl/src/euclidian_cluster.cpp -o CMakeFiles/euclidian_cluster.dir/src/euclidian_cluster.cpp.s
+	cd /home/robo/ros/build/pcl && /bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robo/ros/src/pcl/src/euclidian_cluster.cpp -o CMakeFiles/euclidian_cluster.dir/src/euclidian_cluster.cpp.s
 
 # Object files for target euclidian_cluster
 euclidian_cluster_OBJECTS = \

@@ -60,15 +60,15 @@ include test_one/CMakeFiles/just_test.dir/flags.make
 test_one/CMakeFiles/just_test.dir/src/just_test.cpp.o: test_one/CMakeFiles/just_test.dir/flags.make
 test_one/CMakeFiles/just_test.dir/src/just_test.cpp.o: /home/robo/ros/src/test_one/src/just_test.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test_one/CMakeFiles/just_test.dir/src/just_test.cpp.o"
-	cd /home/robo/ros/build/test_one && /bin/x86_64-linux-gnu-g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/just_test.dir/src/just_test.cpp.o -c /home/robo/ros/src/test_one/src/just_test.cpp
+	cd /home/robo/ros/build/test_one && /bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/just_test.dir/src/just_test.cpp.o -c /home/robo/ros/src/test_one/src/just_test.cpp
 
 test_one/CMakeFiles/just_test.dir/src/just_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/just_test.dir/src/just_test.cpp.i"
-	cd /home/robo/ros/build/test_one && /bin/x86_64-linux-gnu-g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robo/ros/src/test_one/src/just_test.cpp > CMakeFiles/just_test.dir/src/just_test.cpp.i
+	cd /home/robo/ros/build/test_one && /bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robo/ros/src/test_one/src/just_test.cpp > CMakeFiles/just_test.dir/src/just_test.cpp.i
 
 test_one/CMakeFiles/just_test.dir/src/just_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/just_test.dir/src/just_test.cpp.s"
-	cd /home/robo/ros/build/test_one && /bin/x86_64-linux-gnu-g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robo/ros/src/test_one/src/just_test.cpp -o CMakeFiles/just_test.dir/src/just_test.cpp.s
+	cd /home/robo/ros/build/test_one && /bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robo/ros/src/test_one/src/just_test.cpp -o CMakeFiles/just_test.dir/src/just_test.cpp.s
 
 # Object files for target just_test
 just_test_OBJECTS = \
