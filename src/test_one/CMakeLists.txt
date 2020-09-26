@@ -215,6 +215,19 @@ link_directories(${PCL_LIBRARY_DIRS})
 add_definitions(${PCL_DEFINITIONS})
 
 
+find_package(HDF5 REQUIRED)
+find_package(FLANN REQUIRED)
+find_package(FANN REQUIRED)
+
+include_directories(SYSTEM
+  ${HDF5_INCLUDE_DIR}
+)
+
+include_directories(SYSTEM
+  ${FANN_INCLUDE_DIR}
+)
+
+
 
 add_executable(hello_world src/hello_world.cpp)
 # add_dependencies(hello_world test_one_msg)
@@ -236,4 +249,34 @@ add_executable(just_test src/just_test.cpp)
 target_link_libraries(just_test 
     ${catkin_LIBRARIES}
     ${PCL_LIBRARIES}
+)
+
+
+
+# build_tree node
+add_executable(build_tree src/build_tree.cpp)
+target_link_libraries(build_tree 
+    ${catkin_LIBRARIES}
+    ${PCL_LIBRARIES}
+    ${Boost_LIBRARIES}
+    FLANN::FLANN ${HDF5_LIBRARIES}
+)
+
+
+# nearest_neighbors node
+add_executable(nearest_neighbors src/nearest_neighbors.cpp)
+target_link_libraries(nearest_neighbors 
+    ${catkin_LIBRARIES}
+    ${PCL_LIBRARIES}
+    ${Boost_LIBRARIES}
+    FLANN::FLANN ${HDF5_LIBRARIES}
+)
+
+
+# fann node
+add_executable(fann src/fann.cpp)
+target_link_libraries(fann 
+    ${catkin_LIBRARIES}
+    ${PCL_LIBRARIES}
+    ${FANN_INCLUDE_DIR}
 )

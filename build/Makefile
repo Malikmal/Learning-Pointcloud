@@ -506,6 +506,45 @@ pcd_correspondence/fast:
 .PHONY : pcd_correspondence/fast
 
 #=============================================================================
+# Target rules for targets named fann
+
+# Build rule for target.
+fann: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 fann
+.PHONY : fann
+
+# fast build rule for target.
+fann/fast:
+	$(MAKE) -f test_one/CMakeFiles/fann.dir/build.make test_one/CMakeFiles/fann.dir/build
+.PHONY : fann/fast
+
+#=============================================================================
+# Target rules for targets named nearest_neighbors
+
+# Build rule for target.
+nearest_neighbors: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nearest_neighbors
+.PHONY : nearest_neighbors
+
+# fast build rule for target.
+nearest_neighbors/fast:
+	$(MAKE) -f test_one/CMakeFiles/nearest_neighbors.dir/build.make test_one/CMakeFiles/nearest_neighbors.dir/build
+.PHONY : nearest_neighbors/fast
+
+#=============================================================================
+# Target rules for targets named build_tree
+
+# Build rule for target.
+build_tree: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 build_tree
+.PHONY : build_tree
+
+# fast build rule for target.
+build_tree/fast:
+	$(MAKE) -f test_one/CMakeFiles/build_tree.dir/build.make test_one/CMakeFiles/build_tree.dir/build
+.PHONY : build_tree/fast
+
+#=============================================================================
 # Target rules for targets named just_test
 
 # Build rule for target.
@@ -778,6 +817,9 @@ help:
 	@echo "... pcd_fpfh"
 	@echo "... pcd_normal"
 	@echo "... pcd_correspondence"
+	@echo "... fann"
+	@echo "... nearest_neighbors"
+	@echo "... build_tree"
 	@echo "... just_test"
 	@echo "... correspondence_grouping"
 	@echo "... hello_world"

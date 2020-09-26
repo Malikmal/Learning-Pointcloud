@@ -66,10 +66,13 @@
 /home/robo/ros/build/pcl/CMakeFiles/pcd_fpfh.dir
 /home/robo/ros/build/pcl/CMakeFiles/pcd_normal.dir
 /home/robo/ros/build/pcl/CMakeFiles/pcd_correspondence.dir
-/home/robo/ros/build/test_one/CMakeFiles/install/local.dir
 /home/robo/ros/build/test_one/CMakeFiles/rebuild_cache.dir
 /home/robo/ros/build/test_one/CMakeFiles/edit_cache.dir
 /home/robo/ros/build/test_one/CMakeFiles/test.dir
+/home/robo/ros/build/test_one/CMakeFiles/fann.dir
+/home/robo/ros/build/test_one/CMakeFiles/nearest_neighbors.dir
+/home/robo/ros/build/test_one/CMakeFiles/install/local.dir
+/home/robo/ros/build/test_one/CMakeFiles/build_tree.dir
 /home/robo/ros/build/test_one/CMakeFiles/just_test.dir
 /home/robo/ros/build/test_one/CMakeFiles/correspondence_grouping.dir
 /home/robo/ros/build/test_one/CMakeFiles/hello_world.dir

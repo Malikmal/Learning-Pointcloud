@@ -158,6 +158,15 @@ int main (int argc, char** argv)
     pcl::visualization::PCLVisualizer viewer ("Correspondence Groupping");
     viewer.addPointCloud(scene, "Scene_cloud");
 
+    pcl::PointCloud<PointType>::Ptr offSceneModel (new pcl::PointCloud<PointType> ());
+    // pcl::PointCloud<PointType>::Ptr offSceneModelKeypoints (new pcl::PointCloud<PointType> ());
+
+    pcl::transformPointCloud(*model, *offSceneModel, Eigen::Vector3f(1,0,0), Eigen::Quaternionf(1,0,0,0));
+    // pcl::transformPointCloud(*modelKeypoints, *offSceneModelKeypoints,Eigen::Vector3f(-1,0,0), Eigen::Quternionf(1,0,0,0) )
+
+    pcl::visualization::PointCloudColorHandlerCustom<PointType> handler(offSceneModel, 255, 255, 128);
+    viewer.addPointCloud(offSceneModel, handler, "offSceneModel");
+
     // pcl::PointCloud
     for (std::size_t i = 0; i < rototranslations.size (); ++i)
     {
@@ -167,7 +176,7 @@ int main (int argc, char** argv)
         std::stringstream ss_cloud;
         ss_cloud << "instance" << i;
 
-        pcl::visualization::PointCloudColorHandlerCustom<PointType> rotated_model_color_handler (rotated_model, 255, 0, 0);
+        pcl::visualization::PointCloudColorHandlerCustom<PointType> rotated_model_color_handler (rotated_model, 0, 255, 0);
         viewer.addPointCloud (rotated_model, rotated_model_color_handler, ss_cloud.str ());
     }
 
