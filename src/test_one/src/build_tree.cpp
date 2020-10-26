@@ -85,6 +85,7 @@ loadFeatureModels (const boost::filesystem::path &base_dir, const std::string &e
         models.push_back (m);
     }
   }
+
 }
 
 int
@@ -112,6 +113,9 @@ main (int argc, char** argv)
 
   // Convert data into FLANN format
   flann::Matrix<float> data (new float[models.size () * models[0].second.size ()], models.size (), models[0].second.size ());
+
+  // std::cout << models.size() << std::endl;
+  // pcl::console::print_highlight("size model : %d \n", models.size());
 
   for (std::size_t i = 0; i < data.rows; ++i)
     for (std::size_t j = 0; j < data.cols; ++j)

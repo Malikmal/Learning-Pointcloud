@@ -1,2 +1,2 @@
-filtering:pcl:test_one
+filtering:pcl:test_one:test_opencv
 -DCATKIN_DEVEL_PREFIX=/home/robo/ros/devel -DCMAKE_INSTALL_PREFIX=/home/robo/ros/install -G Unix Makefiles

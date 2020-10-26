@@ -1,0 +1,14 @@
+\subsubsection usage Usage
+\verbatim
+<node name="robot_vision" pkg="robot_vision" type="robot_vision">
+  <param name="voxelLeafSize" type="double" value="0.005" />
+  <param name="removePlaneIterations" type="int" value="100" />
+  <param name="distanceThreshold" type="double" value="0.02" />
+  <param name="PercentageCloud" type="double" value="40.0" />
+  <param name="tolerance" type="double" value="0.03" />
+  <param name="minClustersSize" type="int" value="100" />
+  <param name="maxClustersSize" type="int" value="25000" />
+  <param name="size" type="int" value="1" />
+</node>
+\endverbatim
+

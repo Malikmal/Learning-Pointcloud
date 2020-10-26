@@ -7,7 +7,11 @@ project(pcl)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED)
+find_package(catkin REQUIRED COMPONENTS
+  roscpp
+  rospy
+  std_msgs
+)
 
 # Find PointCLoud Libraries
 find_package(PCL 1.2 REQUIRED)
@@ -210,6 +214,18 @@ include_directories(${PCL_INCLUDE_DIRS})
 link_directories(${PCL_LIBRARY_DIRS})
 add_definitions(${PCL_DEFINITIONS})
 
+find_package(HDF5 REQUIRED)
+find_package(FLANN REQUIRED)
+
+
+include_directories(SYSTEM
+  ${HDF5_INCLUDE_DIR}
+)
+
+include_directories(/Fann/include)
+link_directories(/Fann/lib)
+
+
 # read_file node
 add_executable(read_file src/read_file.cpp)
 target_link_libraries(read_file 
@@ -313,3 +329,25 @@ target_link_libraries(pcd_correspondence
     ${catkin_LIBRARIES}
     ${PCL_LIBRARIES}
 )
+
+
+
+# training node
+add_executable(training src/training.cpp)
+target_link_libraries(training 
+    ${catkin_LIBRARIES}
+    ${PCL_LIBRARIES}
+    ${Boost_LIBRARIES}
+    FLANN::FLANN ${HDF5_LIBRARIES}
+)
+
+
+# testing node
+add_executable(testing src/testing.cpp)
+target_link_libraries(testing 
+    ${catkin_LIBRARIES}
+    ${PCL_LIBRARIES}
+    ${Boost_LIBRARIES}
+    FLANN::FLANN ${HDF5_LIBRARIES}
+)
+

@@ -1,0 +1,2 @@
+set(cnn_pointcloud_MESSAGE_FILES "msg/pointcloudVector.msg;msg/SVMclassifierAction.msg;msg/SVMclassifierActionGoal.msg;msg/SVMclassifierActionResult.msg;msg/SVMclassifierActionFeedback.msg;msg/SVMclassifierGoal.msg;msg/SVMclassifierResult.msg;msg/SVMclassifierFeedback.msg")
+set(cnn_pointcloud_SERVICE_FILES "")

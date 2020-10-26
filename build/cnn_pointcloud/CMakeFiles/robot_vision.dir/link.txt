@@ -1,0 +1,1 @@
+/bin/g++-7 -fPIC   -g   -shared -Wl,-soname,librobot_vision.so -o /home/robo/ros/devel/lib/librobot_vision.so CMakeFiles/robot_vision.dir/src/visualizer.cpp.o CMakeFiles/robot_vision.dir/src/robot_vision_common.cpp.o   -L/usr/local/lib 

@@ -68,18 +68,6 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -102,6 +90,29 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -123,17 +134,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,79 +168,49 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-pcl/CMakeFiles/read_file.dir/rule:
-	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/read_file.dir/rule
-.PHONY : pcl/CMakeFiles/read_file.dir/rule
+pcl/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+.PHONY : pcl/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-read_file: pcl/CMakeFiles/read_file.dir/rule
+rosgraph_msgs_generate_messages_py: pcl/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 
-.PHONY : read_file
+.PHONY : rosgraph_msgs_generate_messages_py
 
 # fast build rule for target.
-read_file/fast:
-	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/read_file.dir/build.make pcl/CMakeFiles/read_file.dir/build
-.PHONY : read_file/fast
+rosgraph_msgs_generate_messages_py/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make pcl/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+.PHONY : rosgraph_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-pcl/CMakeFiles/write_file.dir/rule:
-	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/write_file.dir/rule
-.PHONY : pcl/CMakeFiles/write_file.dir/rule
+pcl/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+.PHONY : pcl/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-write_file: pcl/CMakeFiles/write_file.dir/rule
+roscpp_generate_messages_lisp: pcl/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 
-.PHONY : write_file
+.PHONY : roscpp_generate_messages_lisp
 
 # fast build rule for target.
-write_file/fast:
-	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/write_file.dir/build.make pcl/CMakeFiles/write_file.dir/build
-.PHONY : write_file/fast
+roscpp_generate_messages_lisp/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make pcl/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+.PHONY : roscpp_generate_messages_lisp/fast
 
 # Convenience name for target.
-pcl/CMakeFiles/pcd_vfh.dir/rule:
-	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/pcd_vfh.dir/rule
-.PHONY : pcl/CMakeFiles/pcd_vfh.dir/rule
+pcl/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+.PHONY : pcl/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-pcd_vfh: pcl/CMakeFiles/pcd_vfh.dir/rule
+rosgraph_msgs_generate_messages_eus: pcl/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
 
-.PHONY : pcd_vfh
+.PHONY : rosgraph_msgs_generate_messages_eus
 
 # fast build rule for target.
-pcd_vfh/fast:
-	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_vfh.dir/build.make pcl/CMakeFiles/pcd_vfh.dir/build
-.PHONY : pcd_vfh/fast
-
-# Convenience name for target.
-pcl/CMakeFiles/convert_file.dir/rule:
-	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/convert_file.dir/rule
-.PHONY : pcl/CMakeFiles/convert_file.dir/rule
-
-# Convenience name for target.
-convert_file: pcl/CMakeFiles/convert_file.dir/rule
-
-.PHONY : convert_file
-
-# fast build rule for target.
-convert_file/fast:
-	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/convert_file.dir/build.make pcl/CMakeFiles/convert_file.dir/build
-.PHONY : convert_file/fast
-
-# Convenience name for target.
-pcl/CMakeFiles/pcd_narf.dir/rule:
-	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/pcd_narf.dir/rule
-.PHONY : pcl/CMakeFiles/pcd_narf.dir/rule
-
-# Convenience name for target.
-pcd_narf: pcl/CMakeFiles/pcd_narf.dir/rule
-
-.PHONY : pcd_narf
-
-# fast build rule for target.
-pcd_narf/fast:
-	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_narf.dir/build.make pcl/CMakeFiles/pcd_narf.dir/build
-.PHONY : pcd_narf/fast
+rosgraph_msgs_generate_messages_eus/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make pcl/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+.PHONY : rosgraph_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 pcl/CMakeFiles/test_hello.dir/rule:
@@ -258,49 +228,259 @@ test_hello/fast:
 .PHONY : test_hello/fast
 
 # Convenience name for target.
-pcl/CMakeFiles/euclidian_cluster.dir/rule:
-	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/euclidian_cluster.dir/rule
-.PHONY : pcl/CMakeFiles/euclidian_cluster.dir/rule
+pcl/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+.PHONY : pcl/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-euclidian_cluster: pcl/CMakeFiles/euclidian_cluster.dir/rule
+std_msgs_generate_messages_cpp: pcl/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 
-.PHONY : euclidian_cluster
+.PHONY : std_msgs_generate_messages_cpp
 
 # fast build rule for target.
-euclidian_cluster/fast:
-	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/euclidian_cluster.dir/build.make pcl/CMakeFiles/euclidian_cluster.dir/build
-.PHONY : euclidian_cluster/fast
+std_msgs_generate_messages_cpp/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make pcl/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+.PHONY : std_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
-pcl/CMakeFiles/pcd_shot.dir/rule:
-	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/pcd_shot.dir/rule
-.PHONY : pcl/CMakeFiles/pcd_shot.dir/rule
+pcl/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+.PHONY : pcl/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-pcd_shot: pcl/CMakeFiles/pcd_shot.dir/rule
+rosgraph_msgs_generate_messages_cpp: pcl/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 
-.PHONY : pcd_shot
+.PHONY : rosgraph_msgs_generate_messages_cpp
 
 # fast build rule for target.
-pcd_shot/fast:
-	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_shot.dir/build.make pcl/CMakeFiles/pcd_shot.dir/build
-.PHONY : pcd_shot/fast
+rosgraph_msgs_generate_messages_cpp/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make pcl/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
-pcl/CMakeFiles/pcd_pfh.dir/rule:
-	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/pcd_pfh.dir/rule
-.PHONY : pcl/CMakeFiles/pcd_pfh.dir/rule
+pcl/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+.PHONY : pcl/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-pcd_pfh: pcl/CMakeFiles/pcd_pfh.dir/rule
+roscpp_generate_messages_nodejs: pcl/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 
-.PHONY : pcd_pfh
+.PHONY : roscpp_generate_messages_nodejs
 
 # fast build rule for target.
-pcd_pfh/fast:
-	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_pfh.dir/build.make pcl/CMakeFiles/pcd_pfh.dir/build
-.PHONY : pcd_pfh/fast
+roscpp_generate_messages_nodejs/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make pcl/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+.PHONY : roscpp_generate_messages_nodejs/fast
+
+# Convenience name for target.
+pcl/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+.PHONY : pcl/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_eus: pcl/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+
+.PHONY : std_msgs_generate_messages_eus
+
+# fast build rule for target.
+std_msgs_generate_messages_eus/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make pcl/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+.PHONY : std_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+pcl/CMakeFiles/roscpp_generate_messages_py.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/roscpp_generate_messages_py.dir/rule
+.PHONY : pcl/CMakeFiles/roscpp_generate_messages_py.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_py: pcl/CMakeFiles/roscpp_generate_messages_py.dir/rule
+
+.PHONY : roscpp_generate_messages_py
+
+# fast build rule for target.
+roscpp_generate_messages_py/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/roscpp_generate_messages_py.dir/build.make pcl/CMakeFiles/roscpp_generate_messages_py.dir/build
+.PHONY : roscpp_generate_messages_py/fast
+
+# Convenience name for target.
+pcl/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+.PHONY : pcl/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_lisp: pcl/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : std_msgs_generate_messages_lisp
+
+# fast build rule for target.
+std_msgs_generate_messages_lisp/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make pcl/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+.PHONY : std_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+pcl/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+.PHONY : pcl/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_nodejs: pcl/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_nodejs/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make pcl/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+.PHONY : rosgraph_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+pcl/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+.PHONY : pcl/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_eus: pcl/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+
+.PHONY : roscpp_generate_messages_eus
+
+# fast build rule for target.
+roscpp_generate_messages_eus/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/roscpp_generate_messages_eus.dir/build.make pcl/CMakeFiles/roscpp_generate_messages_eus.dir/build
+.PHONY : roscpp_generate_messages_eus/fast
+
+# Convenience name for target.
+pcl/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+.PHONY : pcl/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_cpp: pcl/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+.PHONY : roscpp_generate_messages_cpp
+
+# fast build rule for target.
+roscpp_generate_messages_cpp/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make pcl/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+.PHONY : roscpp_generate_messages_cpp/fast
+
+# Convenience name for target.
+pcl/CMakeFiles/pcd_vfh.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/pcd_vfh.dir/rule
+.PHONY : pcl/CMakeFiles/pcd_vfh.dir/rule
+
+# Convenience name for target.
+pcd_vfh: pcl/CMakeFiles/pcd_vfh.dir/rule
+
+.PHONY : pcd_vfh
+
+# fast build rule for target.
+pcd_vfh/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_vfh.dir/build.make pcl/CMakeFiles/pcd_vfh.dir/build
+.PHONY : pcd_vfh/fast
+
+# Convenience name for target.
+pcl/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+.PHONY : pcl/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_nodejs: pcl/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : std_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+std_msgs_generate_messages_nodejs/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make pcl/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+.PHONY : std_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+pcl/CMakeFiles/pcd_normal.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/pcd_normal.dir/rule
+.PHONY : pcl/CMakeFiles/pcd_normal.dir/rule
+
+# Convenience name for target.
+pcd_normal: pcl/CMakeFiles/pcd_normal.dir/rule
+
+.PHONY : pcd_normal
+
+# fast build rule for target.
+pcd_normal/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_normal.dir/build.make pcl/CMakeFiles/pcd_normal.dir/build
+.PHONY : pcd_normal/fast
+
+# Convenience name for target.
+pcl/CMakeFiles/pcd_correspondence.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/pcd_correspondence.dir/rule
+.PHONY : pcl/CMakeFiles/pcd_correspondence.dir/rule
+
+# Convenience name for target.
+pcd_correspondence: pcl/CMakeFiles/pcd_correspondence.dir/rule
+
+.PHONY : pcd_correspondence
+
+# fast build rule for target.
+pcd_correspondence/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_correspondence.dir/build.make pcl/CMakeFiles/pcd_correspondence.dir/build
+.PHONY : pcd_correspondence/fast
+
+# Convenience name for target.
+pcl/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+.PHONY : pcl/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_py: pcl/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+
+.PHONY : std_msgs_generate_messages_py
+
+# fast build rule for target.
+std_msgs_generate_messages_py/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/std_msgs_generate_messages_py.dir/build.make pcl/CMakeFiles/std_msgs_generate_messages_py.dir/build
+.PHONY : std_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+pcl/CMakeFiles/write_file.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/write_file.dir/rule
+.PHONY : pcl/CMakeFiles/write_file.dir/rule
+
+# Convenience name for target.
+write_file: pcl/CMakeFiles/write_file.dir/rule
+
+.PHONY : write_file
+
+# fast build rule for target.
+write_file/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/write_file.dir/build.make pcl/CMakeFiles/write_file.dir/build
+.PHONY : write_file/fast
+
+# Convenience name for target.
+pcl/CMakeFiles/read_file.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/read_file.dir/rule
+.PHONY : pcl/CMakeFiles/read_file.dir/rule
+
+# Convenience name for target.
+read_file: pcl/CMakeFiles/read_file.dir/rule
+
+.PHONY : read_file
+
+# fast build rule for target.
+read_file/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/read_file.dir/build.make pcl/CMakeFiles/read_file.dir/build
+.PHONY : read_file/fast
+
+# Convenience name for target.
+pcl/CMakeFiles/convert_file.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/convert_file.dir/rule
+.PHONY : pcl/CMakeFiles/convert_file.dir/rule
+
+# Convenience name for target.
+convert_file: pcl/CMakeFiles/convert_file.dir/rule
+
+.PHONY : convert_file
+
+# fast build rule for target.
+convert_file/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/convert_file.dir/build.make pcl/CMakeFiles/convert_file.dir/build
+.PHONY : convert_file/fast
 
 # Convenience name for target.
 pcl/CMakeFiles/pcd_cropping.dir/rule:
@@ -333,34 +513,109 @@ pcd_fpfh/fast:
 .PHONY : pcd_fpfh/fast
 
 # Convenience name for target.
-pcl/CMakeFiles/pcd_normal.dir/rule:
-	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/pcd_normal.dir/rule
-.PHONY : pcl/CMakeFiles/pcd_normal.dir/rule
+pcl/CMakeFiles/testing.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/testing.dir/rule
+.PHONY : pcl/CMakeFiles/testing.dir/rule
 
 # Convenience name for target.
-pcd_normal: pcl/CMakeFiles/pcd_normal.dir/rule
+testing: pcl/CMakeFiles/testing.dir/rule
 
-.PHONY : pcd_normal
+.PHONY : testing
 
 # fast build rule for target.
-pcd_normal/fast:
-	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_normal.dir/build.make pcl/CMakeFiles/pcd_normal.dir/build
-.PHONY : pcd_normal/fast
+testing/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/testing.dir/build.make pcl/CMakeFiles/testing.dir/build
+.PHONY : testing/fast
 
 # Convenience name for target.
-pcl/CMakeFiles/pcd_correspondence.dir/rule:
-	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/pcd_correspondence.dir/rule
-.PHONY : pcl/CMakeFiles/pcd_correspondence.dir/rule
+pcl/CMakeFiles/euclidian_cluster.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/euclidian_cluster.dir/rule
+.PHONY : pcl/CMakeFiles/euclidian_cluster.dir/rule
 
 # Convenience name for target.
-pcd_correspondence: pcl/CMakeFiles/pcd_correspondence.dir/rule
+euclidian_cluster: pcl/CMakeFiles/euclidian_cluster.dir/rule
 
-.PHONY : pcd_correspondence
+.PHONY : euclidian_cluster
 
 # fast build rule for target.
-pcd_correspondence/fast:
-	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_correspondence.dir/build.make pcl/CMakeFiles/pcd_correspondence.dir/build
-.PHONY : pcd_correspondence/fast
+euclidian_cluster/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/euclidian_cluster.dir/build.make pcl/CMakeFiles/euclidian_cluster.dir/build
+.PHONY : euclidian_cluster/fast
+
+# Convenience name for target.
+pcl/CMakeFiles/pcd_shot.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/pcd_shot.dir/rule
+.PHONY : pcl/CMakeFiles/pcd_shot.dir/rule
+
+# Convenience name for target.
+pcd_shot: pcl/CMakeFiles/pcd_shot.dir/rule
+
+.PHONY : pcd_shot
+
+# fast build rule for target.
+pcd_shot/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_shot.dir/build.make pcl/CMakeFiles/pcd_shot.dir/build
+.PHONY : pcd_shot/fast
+
+# Convenience name for target.
+pcl/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+.PHONY : pcl/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_lisp: pcl/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_lisp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_lisp/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make pcl/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+pcl/CMakeFiles/pcd_pfh.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/pcd_pfh.dir/rule
+.PHONY : pcl/CMakeFiles/pcd_pfh.dir/rule
+
+# Convenience name for target.
+pcd_pfh: pcl/CMakeFiles/pcd_pfh.dir/rule
+
+.PHONY : pcd_pfh
+
+# fast build rule for target.
+pcd_pfh/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_pfh.dir/build.make pcl/CMakeFiles/pcd_pfh.dir/build
+.PHONY : pcd_pfh/fast
+
+# Convenience name for target.
+pcl/CMakeFiles/pcd_narf.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/pcd_narf.dir/rule
+.PHONY : pcl/CMakeFiles/pcd_narf.dir/rule
+
+# Convenience name for target.
+pcd_narf: pcl/CMakeFiles/pcd_narf.dir/rule
+
+.PHONY : pcd_narf
+
+# fast build rule for target.
+pcd_narf/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/pcd_narf.dir/build.make pcl/CMakeFiles/pcd_narf.dir/build
+.PHONY : pcd_narf/fast
+
+# Convenience name for target.
+pcl/CMakeFiles/training.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/training.dir/rule
+.PHONY : pcl/CMakeFiles/training.dir/rule
+
+# Convenience name for target.
+training: pcl/CMakeFiles/training.dir/rule
+
+.PHONY : training
+
+# fast build rule for target.
+training/fast:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/training.dir/build.make pcl/CMakeFiles/training.dir/build
+.PHONY : training/fast
 
 src/convert_file.o: src/convert_file.cpp.o
 
@@ -686,6 +941,60 @@ src/test_hello.cpp.s:
 	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/test_hello.dir/build.make pcl/CMakeFiles/test_hello.dir/src/test_hello.cpp.s
 .PHONY : src/test_hello.cpp.s
 
+src/testing.o: src/testing.cpp.o
+
+.PHONY : src/testing.o
+
+# target to build an object file
+src/testing.cpp.o:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/testing.dir/build.make pcl/CMakeFiles/testing.dir/src/testing.cpp.o
+.PHONY : src/testing.cpp.o
+
+src/testing.i: src/testing.cpp.i
+
+.PHONY : src/testing.i
+
+# target to preprocess a source file
+src/testing.cpp.i:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/testing.dir/build.make pcl/CMakeFiles/testing.dir/src/testing.cpp.i
+.PHONY : src/testing.cpp.i
+
+src/testing.s: src/testing.cpp.s
+
+.PHONY : src/testing.s
+
+# target to generate assembly for a file
+src/testing.cpp.s:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/testing.dir/build.make pcl/CMakeFiles/testing.dir/src/testing.cpp.s
+.PHONY : src/testing.cpp.s
+
+src/training.o: src/training.cpp.o
+
+.PHONY : src/training.o
+
+# target to build an object file
+src/training.cpp.o:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/training.dir/build.make pcl/CMakeFiles/training.dir/src/training.cpp.o
+.PHONY : src/training.cpp.o
+
+src/training.i: src/training.cpp.i
+
+.PHONY : src/training.i
+
+# target to preprocess a source file
+src/training.cpp.i:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/training.dir/build.make pcl/CMakeFiles/training.dir/src/training.cpp.i
+.PHONY : src/training.cpp.i
+
+src/training.s: src/training.cpp.s
+
+.PHONY : src/training.s
+
+# target to generate assembly for a file
+src/training.cpp.s:
+	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/training.dir/build.make pcl/CMakeFiles/training.dir/src/training.cpp.s
+.PHONY : src/training.cpp.s
+
 src/write_file.o: src/write_file.cpp.o
 
 .PHONY : src/write_file.o
@@ -720,25 +1029,42 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... install/local"
 	@echo "... install"
 	@echo "... list_install_components"
-	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... test"
-	@echo "... read_file"
-	@echo "... write_file"
-	@echo "... pcd_vfh"
-	@echo "... convert_file"
-	@echo "... pcd_narf"
+	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... roscpp_generate_messages_lisp"
+	@echo "... install/local"
+	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... test_hello"
-	@echo "... euclidian_cluster"
-	@echo "... pcd_shot"
-	@echo "... pcd_pfh"
-	@echo "... pcd_cropping"
-	@echo "... pcd_fpfh"
+	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... test"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... roscpp_generate_messages_nodejs"
+	@echo "... std_msgs_generate_messages_eus"
+	@echo "... roscpp_generate_messages_py"
+	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... rosgraph_msgs_generate_messages_nodejs"
+	@echo "... rebuild_cache"
+	@echo "... roscpp_generate_messages_eus"
+	@echo "... roscpp_generate_messages_cpp"
+	@echo "... edit_cache"
+	@echo "... pcd_vfh"
+	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... pcd_normal"
 	@echo "... pcd_correspondence"
+	@echo "... std_msgs_generate_messages_py"
+	@echo "... write_file"
+	@echo "... read_file"
+	@echo "... convert_file"
+	@echo "... pcd_cropping"
+	@echo "... pcd_fpfh"
+	@echo "... testing"
+	@echo "... euclidian_cluster"
+	@echo "... pcd_shot"
+	@echo "... rosgraph_msgs_generate_messages_lisp"
+	@echo "... pcd_pfh"
+	@echo "... pcd_narf"
+	@echo "... training"
 	@echo "... src/convert_file.o"
 	@echo "... src/convert_file.i"
 	@echo "... src/convert_file.s"
@@ -775,6 +1101,12 @@ help:
 	@echo "... src/test_hello.o"
 	@echo "... src/test_hello.i"
 	@echo "... src/test_hello.s"
+	@echo "... src/testing.o"
+	@echo "... src/testing.i"
+	@echo "... src/testing.s"
+	@echo "... src/training.o"
+	@echo "... src/training.i"
+	@echo "... src/training.s"
 	@echo "... src/write_file.o"
 	@echo "... src/write_file.i"
 	@echo "... src/write_file.s"

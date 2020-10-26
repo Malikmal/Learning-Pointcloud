@@ -1,0 +1,8 @@
+prefix=/home/robo/ros/devel
+
+Name: robot_vision
+Description: Description of robot_vision
+Version: 0.0.0
+Cflags: -I/home/robo/ros/devel/include -I/home/robo/ros/src/cnn_pointcloud/include
+Libs: -L${prefix}/lib -lrobot_vision
+Requires: pcl_conversions pcl_ros roscpp sensor_msgs actionlib_msgs message_runtime

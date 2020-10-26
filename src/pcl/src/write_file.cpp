@@ -8,17 +8,23 @@ int main (int argc, char** argv)
 
     pcl::PointCloud<pcl::PointXYZ> cloud; // (new pcl::PointCloud)
 
-    cloud.width = 5;
-    cloud.height = 1;
-    cloud.is_dense = false;
-    cloud.points.resize(cloud.width*cloud.height);
-
-    for(auto& point: cloud)
+    if(pcl::io::loadPCDFile<pcl::PointXYZ> (argv[1], cloud) == -1)
     {
-        point.x = 1024 * rand() / (RAND_MAX + 1.0f);
-        point.y = 1024 * rand() / (RAND_MAX + 1.0f);
-        point.z = 1024 * rand() / (RAND_MAX + 1.0f);
+        PCL_ERROR("Couldnt read the file");
+        return -1;
     }
+
+    // cloud.width = 5;
+    // cloud.height = 1;
+    // cloud.is_dense = false;
+    // cloud.points.resize(cloud.width*cloud.height);
+
+    // for(auto& point: cloud)
+    // {
+    //     point.x = 1024 * rand() / (RAND_MAX + 1.0f);
+    //     point.y = 1024 * rand() / (RAND_MAX + 1.0f);
+    //     point.z = 1024 * rand() / (RAND_MAX + 1.0f);
+    // }
 
     //ascii
     pcl::io::savePCDFileASCII("writing_file_ascii.pcd", cloud);

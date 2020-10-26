@@ -24,6 +24,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
+  "/Fann/include"
   "/usr/include/vtk-7.1"
   "/usr/include/freetype2"
   "/usr/local/include/pcl-1.11"

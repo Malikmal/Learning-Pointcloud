@@ -251,6 +251,7 @@ main (int argc, char *argv[])
   descr_est.setSearchSurface (scene);
   descr_est.compute (*scene_descriptors);
 
+
   //
   //  Find Model-Scene Correspondences with KdTree
   //
@@ -269,6 +270,8 @@ main (int argc, char *argv[])
       continue;
     }
     int found_neighs = match_search.nearestKSearch (scene_descriptors->at (i), 1, neigh_indices, neigh_sqr_dists);
+
+    // std::cout << scene_descriptors->at (i) << endl;
     if(found_neighs == 1 && neigh_sqr_dists[0] < 0.25f) //  add match only if the squared descriptor distance is less than 0.25 (SHOT descriptor distances are between 0 and 1 by design)
     {
       pcl::Correspondence corr (neigh_indices[0], static_cast<int> (i), neigh_sqr_dists[0]);

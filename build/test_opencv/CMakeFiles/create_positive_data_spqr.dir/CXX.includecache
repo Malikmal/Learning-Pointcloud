@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/robo/ros/src/test_opencv/src/create_positive_data_spqr.cpp
+iostream
+-
+string
+-
+stdio.h
+-
+stdlib.h
+-
+fstream
+-
+Winsock2.h
+-
+tchar.h
+-
+strsafe.h
+-
+windows.h
+-
+dirent.h
+-
+
