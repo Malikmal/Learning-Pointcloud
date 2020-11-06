@@ -7,5 +7,6 @@
 subdirs("gtest")
 subdirs("filtering")
 subdirs("pcl")
+subdirs("realsense")
 subdirs("test_one")
 subdirs("test_opencv")

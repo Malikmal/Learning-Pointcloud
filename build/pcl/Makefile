@@ -513,21 +513,6 @@ pcd_fpfh/fast:
 .PHONY : pcd_fpfh/fast
 
 # Convenience name for target.
-pcl/CMakeFiles/testing.dir/rule:
-	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/testing.dir/rule
-.PHONY : pcl/CMakeFiles/testing.dir/rule
-
-# Convenience name for target.
-testing: pcl/CMakeFiles/testing.dir/rule
-
-.PHONY : testing
-
-# fast build rule for target.
-testing/fast:
-	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/testing.dir/build.make pcl/CMakeFiles/testing.dir/build
-.PHONY : testing/fast
-
-# Convenience name for target.
 pcl/CMakeFiles/euclidian_cluster.dir/rule:
 	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/euclidian_cluster.dir/rule
 .PHONY : pcl/CMakeFiles/euclidian_cluster.dir/rule
@@ -941,33 +926,6 @@ src/test_hello.cpp.s:
 	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/test_hello.dir/build.make pcl/CMakeFiles/test_hello.dir/src/test_hello.cpp.s
 .PHONY : src/test_hello.cpp.s
 
-src/testing.o: src/testing.cpp.o
-
-.PHONY : src/testing.o
-
-# target to build an object file
-src/testing.cpp.o:
-	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/testing.dir/build.make pcl/CMakeFiles/testing.dir/src/testing.cpp.o
-.PHONY : src/testing.cpp.o
-
-src/testing.i: src/testing.cpp.i
-
-.PHONY : src/testing.i
-
-# target to preprocess a source file
-src/testing.cpp.i:
-	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/testing.dir/build.make pcl/CMakeFiles/testing.dir/src/testing.cpp.i
-.PHONY : src/testing.cpp.i
-
-src/testing.s: src/testing.cpp.s
-
-.PHONY : src/testing.s
-
-# target to generate assembly for a file
-src/testing.cpp.s:
-	cd /home/robo/ros/build && $(MAKE) -f pcl/CMakeFiles/testing.dir/build.make pcl/CMakeFiles/testing.dir/src/testing.cpp.s
-.PHONY : src/testing.cpp.s
-
 src/training.o: src/training.cpp.o
 
 .PHONY : src/training.o
@@ -1058,7 +1016,6 @@ help:
 	@echo "... convert_file"
 	@echo "... pcd_cropping"
 	@echo "... pcd_fpfh"
-	@echo "... testing"
 	@echo "... euclidian_cluster"
 	@echo "... pcd_shot"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
@@ -1101,9 +1058,6 @@ help:
 	@echo "... src/test_hello.o"
 	@echo "... src/test_hello.i"
 	@echo "... src/test_hello.s"
-	@echo "... src/testing.o"
-	@echo "... src/testing.i"
-	@echo "... src/testing.s"
 	@echo "... src/training.o"
 	@echo "... src/training.i"
 	@echo "... src/training.s"

@@ -1,8 +1,0 @@
-#goal definition
-float32[] order
----
-#result definition
-float32[] sequence
----
-#feedback
-float32[] sequence

@@ -133,6 +133,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/robo/ros/build/gtest/cmake_install.cmake")
   include("/home/robo/ros/build/filtering/cmake_install.cmake")
   include("/home/robo/ros/build/pcl/cmake_install.cmake")
+  include("/home/robo/ros/build/realsense/cmake_install.cmake")
   include("/home/robo/ros/build/test_one/cmake_install.cmake")
   include("/home/robo/ros/build/test_opencv/cmake_install.cmake")
 

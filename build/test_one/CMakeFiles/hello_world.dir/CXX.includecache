@@ -6,3 +6,7 @@
 
 #IncludeRegexTransform: 
 
+/home/robo/ros/src/test_one/src/hello_world.cpp
+iostream
+-
+

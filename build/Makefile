@@ -636,19 +636,6 @@ pcd_fpfh/fast:
 .PHONY : pcd_fpfh/fast
 
 #=============================================================================
-# Target rules for targets named testing
-
-# Build rule for target.
-testing: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 testing
-.PHONY : testing
-
-# fast build rule for target.
-testing/fast:
-	$(MAKE) -f pcl/CMakeFiles/testing.dir/build.make pcl/CMakeFiles/testing.dir/build
-.PHONY : testing/fast
-
-#=============================================================================
 # Target rules for targets named euclidian_cluster
 
 # Build rule for target.
@@ -725,6 +712,201 @@ training: cmake_check_build_system
 training/fast:
 	$(MAKE) -f pcl/CMakeFiles/training.dir/build.make pcl/CMakeFiles/training.dir/build
 .PHONY : training/fast
+
+#=============================================================================
+# Target rules for targets named rs_pcl_color
+
+# Build rule for target.
+rs_pcl_color: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rs_pcl_color
+.PHONY : rs_pcl_color
+
+# fast build rule for target.
+rs_pcl_color/fast:
+	$(MAKE) -f realsense/CMakeFiles/rs_pcl_color.dir/build.make realsense/CMakeFiles/rs_pcl_color.dir/build
+.PHONY : rs_pcl_color/fast
+
+#=============================================================================
+# Target rules for targets named pclVisualizer
+
+# Build rule for target.
+pclVisualizer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pclVisualizer
+.PHONY : pclVisualizer
+
+# fast build rule for target.
+pclVisualizer/fast:
+	$(MAKE) -f realsense/CMakeFiles/pclVisualizer.dir/build.make realsense/CMakeFiles/pclVisualizer.dir/build
+.PHONY : pclVisualizer/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_cpp
+
+# Build rule for target.
+sensor_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_cpp
+.PHONY : sensor_msgs_generate_messages_cpp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f realsense/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make realsense/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+.PHONY : sensor_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_eus
+
+# Build rule for target.
+geometry_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_eus
+.PHONY : geometry_msgs_generate_messages_eus
+
+# fast build rule for target.
+geometry_msgs_generate_messages_eus/fast:
+	$(MAKE) -f realsense/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make realsense/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+.PHONY : geometry_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_lisp
+
+# Build rule for target.
+geometry_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_lisp
+.PHONY : geometry_msgs_generate_messages_lisp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f realsense/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make realsense/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+.PHONY : geometry_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_lisp
+
+# Build rule for target.
+sensor_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_lisp
+.PHONY : sensor_msgs_generate_messages_lisp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f realsense/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make realsense/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+.PHONY : sensor_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_nodejs
+
+# Build rule for target.
+sensor_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_nodejs
+.PHONY : sensor_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+sensor_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f realsense/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make realsense/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+.PHONY : sensor_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_py
+
+# Build rule for target.
+geometry_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_py
+.PHONY : geometry_msgs_generate_messages_py
+
+# fast build rule for target.
+geometry_msgs_generate_messages_py/fast:
+	$(MAKE) -f realsense/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make realsense/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+.PHONY : geometry_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named A_RSpclAcquisition
+
+# Build rule for target.
+A_RSpclAcquisition: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 A_RSpclAcquisition
+.PHONY : A_RSpclAcquisition
+
+# fast build rule for target.
+A_RSpclAcquisition/fast:
+	$(MAKE) -f realsense/CMakeFiles/A_RSpclAcquisition.dir/build.make realsense/CMakeFiles/A_RSpclAcquisition.dir/build
+.PHONY : A_RSpclAcquisition/fast
+
+#=============================================================================
+# Target rules for targets named grabRGB
+
+# Build rule for target.
+grabRGB: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 grabRGB
+.PHONY : grabRGB
+
+# fast build rule for target.
+grabRGB/fast:
+	$(MAKE) -f realsense/CMakeFiles/grabRGB.dir/build.make realsense/CMakeFiles/grabRGB.dir/build
+.PHONY : grabRGB/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_py
+
+# Build rule for target.
+sensor_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_py
+.PHONY : sensor_msgs_generate_messages_py
+
+# fast build rule for target.
+sensor_msgs_generate_messages_py/fast:
+	$(MAKE) -f realsense/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make realsense/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+.PHONY : sensor_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_cpp
+
+# Build rule for target.
+geometry_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_cpp
+.PHONY : geometry_msgs_generate_messages_cpp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f realsense/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make realsense/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+.PHONY : geometry_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_nodejs
+
+# Build rule for target.
+geometry_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_nodejs
+.PHONY : geometry_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+geometry_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f realsense/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make realsense/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+.PHONY : geometry_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_eus
+
+# Build rule for target.
+sensor_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_eus
+.PHONY : sensor_msgs_generate_messages_eus
+
+# fast build rule for target.
+sensor_msgs_generate_messages_eus/fast:
+	$(MAKE) -f realsense/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make realsense/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+.PHONY : sensor_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named grabDepth
+
+# Build rule for target.
+grabDepth: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 grabDepth
+.PHONY : grabDepth
+
+# fast build rule for target.
+grabDepth/fast:
+	$(MAKE) -f realsense/CMakeFiles/grabDepth.dir/build.make realsense/CMakeFiles/grabDepth.dir/build
+.PHONY : grabDepth/fast
 
 #=============================================================================
 # Target rules for targets named hello_world
@@ -830,136 +1012,6 @@ try_fann/fast:
 	$(MAKE) -f test_one/CMakeFiles/try_fann.dir/build.make test_one/CMakeFiles/try_fann.dir/build
 .PHONY : try_fann/fast
 
-#=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_cpp
-
-# Build rule for target.
-sensor_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_cpp
-.PHONY : sensor_msgs_generate_messages_cpp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f test_opencv/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make test_opencv/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-.PHONY : sensor_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_eus
-
-# Build rule for target.
-sensor_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_eus
-.PHONY : sensor_msgs_generate_messages_eus
-
-# fast build rule for target.
-sensor_msgs_generate_messages_eus/fast:
-	$(MAKE) -f test_opencv/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make test_opencv/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
-.PHONY : sensor_msgs_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named geometry_msgs_generate_messages_eus
-
-# Build rule for target.
-geometry_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_eus
-.PHONY : geometry_msgs_generate_messages_eus
-
-# fast build rule for target.
-geometry_msgs_generate_messages_eus/fast:
-	$(MAKE) -f test_opencv/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make test_opencv/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
-.PHONY : geometry_msgs_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named geometry_msgs_generate_messages_lisp
-
-# Build rule for target.
-geometry_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_lisp
-.PHONY : geometry_msgs_generate_messages_lisp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f test_opencv/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make test_opencv/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
-.PHONY : geometry_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_lisp
-
-# Build rule for target.
-sensor_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_lisp
-.PHONY : sensor_msgs_generate_messages_lisp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f test_opencv/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make test_opencv/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
-.PHONY : sensor_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_nodejs
-
-# Build rule for target.
-sensor_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_nodejs
-.PHONY : sensor_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-sensor_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f test_opencv/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make test_opencv/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
-.PHONY : sensor_msgs_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named geometry_msgs_generate_messages_py
-
-# Build rule for target.
-geometry_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_py
-.PHONY : geometry_msgs_generate_messages_py
-
-# fast build rule for target.
-geometry_msgs_generate_messages_py/fast:
-	$(MAKE) -f test_opencv/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make test_opencv/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-.PHONY : geometry_msgs_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_py
-
-# Build rule for target.
-sensor_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_py
-.PHONY : sensor_msgs_generate_messages_py
-
-# fast build rule for target.
-sensor_msgs_generate_messages_py/fast:
-	$(MAKE) -f test_opencv/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make test_opencv/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
-.PHONY : sensor_msgs_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named geometry_msgs_generate_messages_cpp
-
-# Build rule for target.
-geometry_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_cpp
-.PHONY : geometry_msgs_generate_messages_cpp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f test_opencv/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make test_opencv/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-.PHONY : geometry_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named geometry_msgs_generate_messages_nodejs
-
-# Build rule for target.
-geometry_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_nodejs
-.PHONY : geometry_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-geometry_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f test_opencv/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make test_opencv/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
-.PHONY : geometry_msgs_generate_messages_nodejs/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1009,13 +1061,27 @@ help:
 	@echo "... convert_file"
 	@echo "... pcd_cropping"
 	@echo "... pcd_fpfh"
-	@echo "... testing"
 	@echo "... euclidian_cluster"
 	@echo "... pcd_shot"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... pcd_pfh"
 	@echo "... pcd_narf"
 	@echo "... training"
+	@echo "... rs_pcl_color"
+	@echo "... pclVisualizer"
+	@echo "... sensor_msgs_generate_messages_cpp"
+	@echo "... geometry_msgs_generate_messages_eus"
+	@echo "... geometry_msgs_generate_messages_lisp"
+	@echo "... sensor_msgs_generate_messages_lisp"
+	@echo "... sensor_msgs_generate_messages_nodejs"
+	@echo "... geometry_msgs_generate_messages_py"
+	@echo "... A_RSpclAcquisition"
+	@echo "... grabRGB"
+	@echo "... sensor_msgs_generate_messages_py"
+	@echo "... geometry_msgs_generate_messages_cpp"
+	@echo "... geometry_msgs_generate_messages_nodejs"
+	@echo "... sensor_msgs_generate_messages_eus"
+	@echo "... grabDepth"
 	@echo "... hello_world"
 	@echo "... build_tree"
 	@echo "... correspondence_grouping"
@@ -1024,16 +1090,6 @@ help:
 	@echo "... just_test"
 	@echo "... nearest_neighbors"
 	@echo "... try_fann"
-	@echo "... sensor_msgs_generate_messages_cpp"
-	@echo "... sensor_msgs_generate_messages_eus"
-	@echo "... geometry_msgs_generate_messages_eus"
-	@echo "... geometry_msgs_generate_messages_lisp"
-	@echo "... sensor_msgs_generate_messages_lisp"
-	@echo "... sensor_msgs_generate_messages_nodejs"
-	@echo "... geometry_msgs_generate_messages_py"
-	@echo "... sensor_msgs_generate_messages_py"
-	@echo "... geometry_msgs_generate_messages_cpp"
-	@echo "... geometry_msgs_generate_messages_nodejs"
 .PHONY : help
 
 

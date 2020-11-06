@@ -131,6 +131,7 @@ testing_EXTERNAL_OBJECTS =
 /home/robo/ros/devel/lib/pcl/testing: /usr/lib/x86_64-linux-gnu/libvtkViewsCore-7.1.so.7.1p.1
 /home/robo/ros/devel/lib/pcl/testing: /usr/lib/x86_64-linux-gnu/libvtkRenderingContextOpenGL2-7.1.so.7.1p.1
 /home/robo/ros/devel/lib/pcl/testing: /usr/lib/x86_64-linux-gnu/libvtkRenderingOpenGL2-7.1.so.7.1p.1
+/home/robo/ros/devel/lib/pcl/testing: /usr/lib/x86_64-linux-gnu/librealsense2.so.2.39.0
 /home/robo/ros/devel/lib/pcl/testing: /usr/lib/x86_64-linux-gnu/libboost_system.so
 /home/robo/ros/devel/lib/pcl/testing: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 /home/robo/ros/devel/lib/pcl/testing: /usr/lib/x86_64-linux-gnu/libboost_date_time.so

@@ -16,6 +16,9 @@ find_package(catkin REQUIRED COMPONENTS
 # Find PointCLoud Libraries
 find_package(PCL 1.2 REQUIRED)
 
+
+find_package(realsense2 REQUIRED)
+
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 
@@ -342,12 +345,22 @@ target_link_libraries(training
 )
 
 
-# testing node
-add_executable(testing src/testing.cpp)
-target_link_libraries(testing 
-    ${catkin_LIBRARIES}
-    ${PCL_LIBRARIES}
-    ${Boost_LIBRARIES}
-    FLANN::FLANN ${HDF5_LIBRARIES}
-)
+# # testing node
+# add_executable(testing src/testing.cpp)
+# target_link_libraries(testing 
+#     ${catkin_LIBRARIES}
+#     ${PCL_LIBRARIES}
+#     ${realsense2_LIBRARY}
+#     ${Boost_LIBRARIES}
+#     FLANN::FLANN ${HDF5_LIBRARIES}
+# )
 
+
+# # test_realsense node
+# add_executable(test_realsense src/test_realsense.cpp)
+# target_link_libraries(test_realsense 
+#     ${catkin_LIBRARIES}
+#     ${PCL_LIBRARIES}
+#     ${Boost_LIBRARIES}
+#     FLANN::FLANN ${HDF5_LIBRARIES}
+# )
