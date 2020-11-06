@@ -230,7 +230,10 @@ pcl/clean: pcl/CMakeFiles/training.dir/clean
 # Directory level rules for directory realsense
 
 # Recursive "all" directory target.
-realsense/all: realsense/CMakeFiles/rs_pcl_color.dir/all
+realsense/all: realsense/CMakeFiles/subsVisualizeNew.cpp.dir/all
+realsense/all: realsense/CMakeFiles/subsRGB.cpp.dir/all
+realsense/all: realsense/CMakeFiles/publishRGBD.cpp.dir/all
+realsense/all: realsense/CMakeFiles/grabPCLRGBD.cpp.dir/all
 realsense/all: realsense/CMakeFiles/pclVisualizer.dir/all
 realsense/all: realsense/CMakeFiles/A_RSpclAcquisition.dir/all
 realsense/all: realsense/CMakeFiles/grabRGB.dir/all
@@ -244,7 +247,10 @@ realsense/preinstall:
 .PHONY : realsense/preinstall
 
 # Recursive "clean" directory target.
-realsense/clean: realsense/CMakeFiles/rs_pcl_color.dir/clean
+realsense/clean: realsense/CMakeFiles/subsVisualizeNew.cpp.dir/clean
+realsense/clean: realsense/CMakeFiles/subsRGB.cpp.dir/clean
+realsense/clean: realsense/CMakeFiles/publishRGBD.cpp.dir/clean
+realsense/clean: realsense/CMakeFiles/grabPCLRGBD.cpp.dir/clean
 realsense/clean: realsense/CMakeFiles/pclVisualizer.dir/clean
 realsense/clean: realsense/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
 realsense/clean: realsense/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
@@ -509,7 +515,7 @@ gtest/googlemock/CMakeFiles/gmock.dir/clean:
 gtest/googletest/CMakeFiles/gtest_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=23,24 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=25,26 "Built target gtest_main"
 .PHONY : gtest/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -536,7 +542,7 @@ gtest/googletest/CMakeFiles/gtest_main.dir/clean:
 gtest/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=21,22 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=23,24 "Built target gtest"
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -563,7 +569,7 @@ gtest/googletest/CMakeFiles/gtest.dir/clean:
 filtering/CMakeFiles/project_inliers.dir/all:
 	$(MAKE) -f filtering/CMakeFiles/project_inliers.dir/build.make filtering/CMakeFiles/project_inliers.dir/depend
 	$(MAKE) -f filtering/CMakeFiles/project_inliers.dir/build.make filtering/CMakeFiles/project_inliers.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=53,54 "Built target project_inliers"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=55,56 "Built target project_inliers"
 .PHONY : filtering/CMakeFiles/project_inliers.dir/all
 
 # Build rule for subdir invocation for target.
@@ -590,7 +596,7 @@ filtering/CMakeFiles/project_inliers.dir/clean:
 filtering/CMakeFiles/outlier_removal.dir/all:
 	$(MAKE) -f filtering/CMakeFiles/outlier_removal.dir/build.make filtering/CMakeFiles/outlier_removal.dir/depend
 	$(MAKE) -f filtering/CMakeFiles/outlier_removal.dir/build.make filtering/CMakeFiles/outlier_removal.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=31,32 "Built target outlier_removal"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=33,34 "Built target outlier_removal"
 .PHONY : filtering/CMakeFiles/outlier_removal.dir/all
 
 # Build rule for subdir invocation for target.
@@ -617,7 +623,7 @@ filtering/CMakeFiles/outlier_removal.dir/clean:
 filtering/CMakeFiles/passthrough.dir/all:
 	$(MAKE) -f filtering/CMakeFiles/passthrough.dir/build.make filtering/CMakeFiles/passthrough.dir/depend
 	$(MAKE) -f filtering/CMakeFiles/passthrough.dir/build.make filtering/CMakeFiles/passthrough.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=33,34 "Built target passthrough"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=35,36 "Built target passthrough"
 .PHONY : filtering/CMakeFiles/passthrough.dir/all
 
 # Build rule for subdir invocation for target.
@@ -752,7 +758,7 @@ pcl/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean:
 pcl/CMakeFiles/test_hello.dir/all:
 	$(MAKE) -f pcl/CMakeFiles/test_hello.dir/build.make pcl/CMakeFiles/test_hello.dir/depend
 	$(MAKE) -f pcl/CMakeFiles/test_hello.dir/build.make pcl/CMakeFiles/test_hello.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=59,60 "Built target test_hello"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=65,66 "Built target test_hello"
 .PHONY : pcl/CMakeFiles/test_hello.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1022,7 +1028,7 @@ pcl/CMakeFiles/roscpp_generate_messages_cpp.dir/clean:
 pcl/CMakeFiles/pcd_vfh.dir/all:
 	$(MAKE) -f pcl/CMakeFiles/pcd_vfh.dir/build.make pcl/CMakeFiles/pcd_vfh.dir/depend
 	$(MAKE) -f pcl/CMakeFiles/pcd_vfh.dir/build.make pcl/CMakeFiles/pcd_vfh.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=49,50 "Built target pcd_vfh"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=51,52 "Built target pcd_vfh"
 .PHONY : pcl/CMakeFiles/pcd_vfh.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1076,7 +1082,7 @@ pcl/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean:
 pcl/CMakeFiles/pcd_normal.dir/all:
 	$(MAKE) -f pcl/CMakeFiles/pcd_normal.dir/build.make pcl/CMakeFiles/pcd_normal.dir/depend
 	$(MAKE) -f pcl/CMakeFiles/pcd_normal.dir/build.make pcl/CMakeFiles/pcd_normal.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=43,44 "Built target pcd_normal"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=45,46 "Built target pcd_normal"
 .PHONY : pcl/CMakeFiles/pcd_normal.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1103,7 +1109,7 @@ pcl/CMakeFiles/pcd_normal.dir/clean:
 pcl/CMakeFiles/pcd_correspondence.dir/all:
 	$(MAKE) -f pcl/CMakeFiles/pcd_correspondence.dir/build.make pcl/CMakeFiles/pcd_correspondence.dir/depend
 	$(MAKE) -f pcl/CMakeFiles/pcd_correspondence.dir/build.make pcl/CMakeFiles/pcd_correspondence.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=35,36 "Built target pcd_correspondence"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=37,38 "Built target pcd_correspondence"
 .PHONY : pcl/CMakeFiles/pcd_correspondence.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1157,7 +1163,7 @@ pcl/CMakeFiles/std_msgs_generate_messages_py.dir/clean:
 pcl/CMakeFiles/write_file.dir/all:
 	$(MAKE) -f pcl/CMakeFiles/write_file.dir/build.make pcl/CMakeFiles/write_file.dir/depend
 	$(MAKE) -f pcl/CMakeFiles/write_file.dir/build.make pcl/CMakeFiles/write_file.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=67,68 "Built target write_file"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=73,74 "Built target write_file"
 .PHONY : pcl/CMakeFiles/write_file.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1184,7 +1190,7 @@ pcl/CMakeFiles/write_file.dir/clean:
 pcl/CMakeFiles/read_file.dir/all:
 	$(MAKE) -f pcl/CMakeFiles/read_file.dir/build.make pcl/CMakeFiles/read_file.dir/depend
 	$(MAKE) -f pcl/CMakeFiles/read_file.dir/build.make pcl/CMakeFiles/read_file.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=55,56 "Built target read_file"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=59,60 "Built target read_file"
 .PHONY : pcl/CMakeFiles/read_file.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1238,7 +1244,7 @@ pcl/CMakeFiles/convert_file.dir/clean:
 pcl/CMakeFiles/pcd_cropping.dir/all:
 	$(MAKE) -f pcl/CMakeFiles/pcd_cropping.dir/build.make pcl/CMakeFiles/pcd_cropping.dir/depend
 	$(MAKE) -f pcl/CMakeFiles/pcd_cropping.dir/build.make pcl/CMakeFiles/pcd_cropping.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=37,38 "Built target pcd_cropping"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=39,40 "Built target pcd_cropping"
 .PHONY : pcl/CMakeFiles/pcd_cropping.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1265,7 +1271,7 @@ pcl/CMakeFiles/pcd_cropping.dir/clean:
 pcl/CMakeFiles/pcd_fpfh.dir/all:
 	$(MAKE) -f pcl/CMakeFiles/pcd_fpfh.dir/build.make pcl/CMakeFiles/pcd_fpfh.dir/depend
 	$(MAKE) -f pcl/CMakeFiles/pcd_fpfh.dir/build.make pcl/CMakeFiles/pcd_fpfh.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=39,40 "Built target pcd_fpfh"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=41,42 "Built target pcd_fpfh"
 .PHONY : pcl/CMakeFiles/pcd_fpfh.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1319,7 +1325,7 @@ pcl/CMakeFiles/euclidian_cluster.dir/clean:
 pcl/CMakeFiles/pcd_shot.dir/all:
 	$(MAKE) -f pcl/CMakeFiles/pcd_shot.dir/build.make pcl/CMakeFiles/pcd_shot.dir/depend
 	$(MAKE) -f pcl/CMakeFiles/pcd_shot.dir/build.make pcl/CMakeFiles/pcd_shot.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=47,48 "Built target pcd_shot"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=49,50 "Built target pcd_shot"
 .PHONY : pcl/CMakeFiles/pcd_shot.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1373,7 +1379,7 @@ pcl/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean:
 pcl/CMakeFiles/pcd_pfh.dir/all:
 	$(MAKE) -f pcl/CMakeFiles/pcd_pfh.dir/build.make pcl/CMakeFiles/pcd_pfh.dir/depend
 	$(MAKE) -f pcl/CMakeFiles/pcd_pfh.dir/build.make pcl/CMakeFiles/pcd_pfh.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=45,46 "Built target pcd_pfh"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=47,48 "Built target pcd_pfh"
 .PHONY : pcl/CMakeFiles/pcd_pfh.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1400,7 +1406,7 @@ pcl/CMakeFiles/pcd_pfh.dir/clean:
 pcl/CMakeFiles/pcd_narf.dir/all:
 	$(MAKE) -f pcl/CMakeFiles/pcd_narf.dir/build.make pcl/CMakeFiles/pcd_narf.dir/depend
 	$(MAKE) -f pcl/CMakeFiles/pcd_narf.dir/build.make pcl/CMakeFiles/pcd_narf.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=41,42 "Built target pcd_narf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=43,44 "Built target pcd_narf"
 .PHONY : pcl/CMakeFiles/pcd_narf.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1427,7 +1433,7 @@ pcl/CMakeFiles/pcd_narf.dir/clean:
 pcl/CMakeFiles/training.dir/all:
 	$(MAKE) -f pcl/CMakeFiles/training.dir/build.make pcl/CMakeFiles/training.dir/depend
 	$(MAKE) -f pcl/CMakeFiles/training.dir/build.make pcl/CMakeFiles/training.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=61,62 "Built target training"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=67,68 "Built target training"
 .PHONY : pcl/CMakeFiles/training.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1448,31 +1454,112 @@ pcl/CMakeFiles/training.dir/clean:
 .PHONY : pcl/CMakeFiles/training.dir/clean
 
 #=============================================================================
-# Target rules for target realsense/CMakeFiles/rs_pcl_color.dir
+# Target rules for target realsense/CMakeFiles/subsVisualizeNew.cpp.dir
 
 # All Build rule for target.
-realsense/CMakeFiles/rs_pcl_color.dir/all:
-	$(MAKE) -f realsense/CMakeFiles/rs_pcl_color.dir/build.make realsense/CMakeFiles/rs_pcl_color.dir/depend
-	$(MAKE) -f realsense/CMakeFiles/rs_pcl_color.dir/build.make realsense/CMakeFiles/rs_pcl_color.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=57,58 "Built target rs_pcl_color"
-.PHONY : realsense/CMakeFiles/rs_pcl_color.dir/all
+realsense/CMakeFiles/subsVisualizeNew.cpp.dir/all:
+	$(MAKE) -f realsense/CMakeFiles/subsVisualizeNew.cpp.dir/build.make realsense/CMakeFiles/subsVisualizeNew.cpp.dir/depend
+	$(MAKE) -f realsense/CMakeFiles/subsVisualizeNew.cpp.dir/build.make realsense/CMakeFiles/subsVisualizeNew.cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=63,64 "Built target subsVisualizeNew.cpp"
+.PHONY : realsense/CMakeFiles/subsVisualizeNew.cpp.dir/all
 
 # Build rule for subdir invocation for target.
-realsense/CMakeFiles/rs_pcl_color.dir/rule: cmake_check_build_system
+realsense/CMakeFiles/subsVisualizeNew.cpp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 realsense/CMakeFiles/rs_pcl_color.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 realsense/CMakeFiles/subsVisualizeNew.cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : realsense/CMakeFiles/rs_pcl_color.dir/rule
+.PHONY : realsense/CMakeFiles/subsVisualizeNew.cpp.dir/rule
 
 # Convenience name for target.
-rs_pcl_color: realsense/CMakeFiles/rs_pcl_color.dir/rule
+subsVisualizeNew.cpp: realsense/CMakeFiles/subsVisualizeNew.cpp.dir/rule
 
-.PHONY : rs_pcl_color
+.PHONY : subsVisualizeNew.cpp
 
 # clean rule for target.
-realsense/CMakeFiles/rs_pcl_color.dir/clean:
-	$(MAKE) -f realsense/CMakeFiles/rs_pcl_color.dir/build.make realsense/CMakeFiles/rs_pcl_color.dir/clean
-.PHONY : realsense/CMakeFiles/rs_pcl_color.dir/clean
+realsense/CMakeFiles/subsVisualizeNew.cpp.dir/clean:
+	$(MAKE) -f realsense/CMakeFiles/subsVisualizeNew.cpp.dir/build.make realsense/CMakeFiles/subsVisualizeNew.cpp.dir/clean
+.PHONY : realsense/CMakeFiles/subsVisualizeNew.cpp.dir/clean
+
+#=============================================================================
+# Target rules for target realsense/CMakeFiles/subsRGB.cpp.dir
+
+# All Build rule for target.
+realsense/CMakeFiles/subsRGB.cpp.dir/all:
+	$(MAKE) -f realsense/CMakeFiles/subsRGB.cpp.dir/build.make realsense/CMakeFiles/subsRGB.cpp.dir/depend
+	$(MAKE) -f realsense/CMakeFiles/subsRGB.cpp.dir/build.make realsense/CMakeFiles/subsRGB.cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=61,62 "Built target subsRGB.cpp"
+.PHONY : realsense/CMakeFiles/subsRGB.cpp.dir/all
+
+# Build rule for subdir invocation for target.
+realsense/CMakeFiles/subsRGB.cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 realsense/CMakeFiles/subsRGB.cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+.PHONY : realsense/CMakeFiles/subsRGB.cpp.dir/rule
+
+# Convenience name for target.
+subsRGB.cpp: realsense/CMakeFiles/subsRGB.cpp.dir/rule
+
+.PHONY : subsRGB.cpp
+
+# clean rule for target.
+realsense/CMakeFiles/subsRGB.cpp.dir/clean:
+	$(MAKE) -f realsense/CMakeFiles/subsRGB.cpp.dir/build.make realsense/CMakeFiles/subsRGB.cpp.dir/clean
+.PHONY : realsense/CMakeFiles/subsRGB.cpp.dir/clean
+
+#=============================================================================
+# Target rules for target realsense/CMakeFiles/publishRGBD.cpp.dir
+
+# All Build rule for target.
+realsense/CMakeFiles/publishRGBD.cpp.dir/all:
+	$(MAKE) -f realsense/CMakeFiles/publishRGBD.cpp.dir/build.make realsense/CMakeFiles/publishRGBD.cpp.dir/depend
+	$(MAKE) -f realsense/CMakeFiles/publishRGBD.cpp.dir/build.make realsense/CMakeFiles/publishRGBD.cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=57,58 "Built target publishRGBD.cpp"
+.PHONY : realsense/CMakeFiles/publishRGBD.cpp.dir/all
+
+# Build rule for subdir invocation for target.
+realsense/CMakeFiles/publishRGBD.cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 realsense/CMakeFiles/publishRGBD.cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+.PHONY : realsense/CMakeFiles/publishRGBD.cpp.dir/rule
+
+# Convenience name for target.
+publishRGBD.cpp: realsense/CMakeFiles/publishRGBD.cpp.dir/rule
+
+.PHONY : publishRGBD.cpp
+
+# clean rule for target.
+realsense/CMakeFiles/publishRGBD.cpp.dir/clean:
+	$(MAKE) -f realsense/CMakeFiles/publishRGBD.cpp.dir/build.make realsense/CMakeFiles/publishRGBD.cpp.dir/clean
+.PHONY : realsense/CMakeFiles/publishRGBD.cpp.dir/clean
+
+#=============================================================================
+# Target rules for target realsense/CMakeFiles/grabPCLRGBD.cpp.dir
+
+# All Build rule for target.
+realsense/CMakeFiles/grabPCLRGBD.cpp.dir/all:
+	$(MAKE) -f realsense/CMakeFiles/grabPCLRGBD.cpp.dir/build.make realsense/CMakeFiles/grabPCLRGBD.cpp.dir/depend
+	$(MAKE) -f realsense/CMakeFiles/grabPCLRGBD.cpp.dir/build.make realsense/CMakeFiles/grabPCLRGBD.cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=19,20 "Built target grabPCLRGBD.cpp"
+.PHONY : realsense/CMakeFiles/grabPCLRGBD.cpp.dir/all
+
+# Build rule for subdir invocation for target.
+realsense/CMakeFiles/grabPCLRGBD.cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 realsense/CMakeFiles/grabPCLRGBD.cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+.PHONY : realsense/CMakeFiles/grabPCLRGBD.cpp.dir/rule
+
+# Convenience name for target.
+grabPCLRGBD.cpp: realsense/CMakeFiles/grabPCLRGBD.cpp.dir/rule
+
+.PHONY : grabPCLRGBD.cpp
+
+# clean rule for target.
+realsense/CMakeFiles/grabPCLRGBD.cpp.dir/clean:
+	$(MAKE) -f realsense/CMakeFiles/grabPCLRGBD.cpp.dir/build.make realsense/CMakeFiles/grabPCLRGBD.cpp.dir/clean
+.PHONY : realsense/CMakeFiles/grabPCLRGBD.cpp.dir/clean
 
 #=============================================================================
 # Target rules for target realsense/CMakeFiles/pclVisualizer.dir
@@ -1481,7 +1568,7 @@ realsense/CMakeFiles/rs_pcl_color.dir/clean:
 realsense/CMakeFiles/pclVisualizer.dir/all:
 	$(MAKE) -f realsense/CMakeFiles/pclVisualizer.dir/build.make realsense/CMakeFiles/pclVisualizer.dir/depend
 	$(MAKE) -f realsense/CMakeFiles/pclVisualizer.dir/build.make realsense/CMakeFiles/pclVisualizer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=51,52 "Built target pclVisualizer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=53,54 "Built target pclVisualizer"
 .PHONY : realsense/CMakeFiles/pclVisualizer.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1697,7 +1784,7 @@ realsense/CMakeFiles/A_RSpclAcquisition.dir/clean:
 realsense/CMakeFiles/grabRGB.dir/all:
 	$(MAKE) -f realsense/CMakeFiles/grabRGB.dir/build.make realsense/CMakeFiles/grabRGB.dir/depend
 	$(MAKE) -f realsense/CMakeFiles/grabRGB.dir/build.make realsense/CMakeFiles/grabRGB.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=19,20 "Built target grabRGB"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=21,22 "Built target grabRGB"
 .PHONY : realsense/CMakeFiles/grabRGB.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1859,7 +1946,7 @@ realsense/CMakeFiles/grabDepth.dir/clean:
 test_one/CMakeFiles/hello_world.dir/all:
 	$(MAKE) -f test_one/CMakeFiles/hello_world.dir/build.make test_one/CMakeFiles/hello_world.dir/depend
 	$(MAKE) -f test_one/CMakeFiles/hello_world.dir/build.make test_one/CMakeFiles/hello_world.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=25,26 "Built target hello_world"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=27,28 "Built target hello_world"
 .PHONY : test_one/CMakeFiles/hello_world.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1940,7 +2027,7 @@ test_one/CMakeFiles/correspondence_grouping.dir/clean:
 test_one/CMakeFiles/try_fann2.dir/all:
 	$(MAKE) -f test_one/CMakeFiles/try_fann2.dir/build.make test_one/CMakeFiles/try_fann2.dir/depend
 	$(MAKE) -f test_one/CMakeFiles/try_fann2.dir/build.make test_one/CMakeFiles/try_fann2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=65,66 "Built target try_fann2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=71,72 "Built target try_fann2"
 .PHONY : test_one/CMakeFiles/try_fann2.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1994,7 +2081,7 @@ test_one/CMakeFiles/complete_with_hv.dir/clean:
 test_one/CMakeFiles/just_test.dir/all:
 	$(MAKE) -f test_one/CMakeFiles/just_test.dir/build.make test_one/CMakeFiles/just_test.dir/depend
 	$(MAKE) -f test_one/CMakeFiles/just_test.dir/build.make test_one/CMakeFiles/just_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=27,28 "Built target just_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=29,30 "Built target just_test"
 .PHONY : test_one/CMakeFiles/just_test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2021,7 +2108,7 @@ test_one/CMakeFiles/just_test.dir/clean:
 test_one/CMakeFiles/nearest_neighbors.dir/all:
 	$(MAKE) -f test_one/CMakeFiles/nearest_neighbors.dir/build.make test_one/CMakeFiles/nearest_neighbors.dir/depend
 	$(MAKE) -f test_one/CMakeFiles/nearest_neighbors.dir/build.make test_one/CMakeFiles/nearest_neighbors.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=29,30 "Built target nearest_neighbors"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=31,32 "Built target nearest_neighbors"
 .PHONY : test_one/CMakeFiles/nearest_neighbors.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2048,7 +2135,7 @@ test_one/CMakeFiles/nearest_neighbors.dir/clean:
 test_one/CMakeFiles/try_fann.dir/all:
 	$(MAKE) -f test_one/CMakeFiles/try_fann.dir/build.make test_one/CMakeFiles/try_fann.dir/depend
 	$(MAKE) -f test_one/CMakeFiles/try_fann.dir/build.make test_one/CMakeFiles/try_fann.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=63,64 "Built target try_fann"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=69,70 "Built target try_fann"
 .PHONY : test_one/CMakeFiles/try_fann.dir/all
 
 # Build rule for subdir invocation for target.

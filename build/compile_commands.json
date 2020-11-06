@@ -106,8 +106,23 @@
 },
 {
   "directory": "/home/robo/ros/build/realsense",
-  "command": "/bin/g++-7  -DDISABLE_LIBUSB_1_0 -DDISABLE_PCAP -DDISABLE_PNG -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"realsense\\\" -DvtkRenderingContext2D_AUTOINIT=\"1(vtkRenderingContextOpenGL2)\" -DvtkRenderingCore_AUTOINIT=\"3(vtkInteractionStyle,vtkRenderingFreeType,vtkRenderingOpenGL2)\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/robo/ros/src/realsense/src/include -I/home/robo/ros/src/realsense/include -isystem /usr/include/vtk-7.1 -isystem /usr/include/freetype2 -isystem /usr/include/opencv4 -isystem /usr/local/include/pcl-1.11 -isystem /usr/include/eigen3 -isystem /usr/include/ni -isystem /usr/include/openni2    -g   -march=native -msse4.2 -mfpmath=sse -o CMakeFiles/rs_pcl_color.dir/src/rs_pcl_color.cpp.o -c /home/robo/ros/src/realsense/src/rs_pcl_color.cpp",
-  "file": "/home/robo/ros/src/realsense/src/rs_pcl_color.cpp"
+  "command": "/bin/g++-7  -DDISABLE_LIBUSB_1_0 -DDISABLE_PCAP -DDISABLE_PNG -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"realsense\\\" -DvtkRenderingContext2D_AUTOINIT=\"1(vtkRenderingContextOpenGL2)\" -DvtkRenderingCore_AUTOINIT=\"3(vtkInteractionStyle,vtkRenderingFreeType,vtkRenderingOpenGL2)\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/robo/ros/src/realsense/src/include -I/home/robo/ros/src/realsense/include -isystem /usr/include/vtk-7.1 -isystem /usr/include/freetype2 -isystem /usr/include/opencv4 -isystem /usr/local/include/pcl-1.11 -isystem /usr/include/eigen3 -isystem /usr/include/ni -isystem /usr/include/openni2    -g   -march=native -msse4.2 -mfpmath=sse -o CMakeFiles/subsVisualizeNew.cpp.dir/src/subsVisualizeNew.cpp.o -c /home/robo/ros/src/realsense/src/subsVisualizeNew.cpp",
+  "file": "/home/robo/ros/src/realsense/src/subsVisualizeNew.cpp"
+},
+{
+  "directory": "/home/robo/ros/build/realsense",
+  "command": "/bin/g++-7  -DDISABLE_LIBUSB_1_0 -DDISABLE_PCAP -DDISABLE_PNG -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"realsense\\\" -DvtkRenderingContext2D_AUTOINIT=\"1(vtkRenderingContextOpenGL2)\" -DvtkRenderingCore_AUTOINIT=\"3(vtkInteractionStyle,vtkRenderingFreeType,vtkRenderingOpenGL2)\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/robo/ros/src/realsense/src/include -I/home/robo/ros/src/realsense/include -isystem /usr/include/vtk-7.1 -isystem /usr/include/freetype2 -isystem /usr/include/opencv4 -isystem /usr/local/include/pcl-1.11 -isystem /usr/include/eigen3 -isystem /usr/include/ni -isystem /usr/include/openni2    -g   -march=native -msse4.2 -mfpmath=sse -o CMakeFiles/subsRGB.cpp.dir/src/subsRGB.cpp.o -c /home/robo/ros/src/realsense/src/subsRGB.cpp",
+  "file": "/home/robo/ros/src/realsense/src/subsRGB.cpp"
+},
+{
+  "directory": "/home/robo/ros/build/realsense",
+  "command": "/bin/g++-7  -DDISABLE_LIBUSB_1_0 -DDISABLE_PCAP -DDISABLE_PNG -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"realsense\\\" -DvtkRenderingContext2D_AUTOINIT=\"1(vtkRenderingContextOpenGL2)\" -DvtkRenderingCore_AUTOINIT=\"3(vtkInteractionStyle,vtkRenderingFreeType,vtkRenderingOpenGL2)\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/robo/ros/src/realsense/src/include -I/home/robo/ros/src/realsense/include -isystem /usr/include/vtk-7.1 -isystem /usr/include/freetype2 -isystem /usr/include/opencv4 -isystem /usr/local/include/pcl-1.11 -isystem /usr/include/eigen3 -isystem /usr/include/ni -isystem /usr/include/openni2    -g   -march=native -msse4.2 -mfpmath=sse -o CMakeFiles/publishRGBD.cpp.dir/src/publishRGBD.cpp.o -c /home/robo/ros/src/realsense/src/publishRGBD.cpp",
+  "file": "/home/robo/ros/src/realsense/src/publishRGBD.cpp"
+},
+{
+  "directory": "/home/robo/ros/build/realsense",
+  "command": "/bin/g++-7  -DDISABLE_LIBUSB_1_0 -DDISABLE_PCAP -DDISABLE_PNG -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"realsense\\\" -DvtkRenderingContext2D_AUTOINIT=\"1(vtkRenderingContextOpenGL2)\" -DvtkRenderingCore_AUTOINIT=\"3(vtkInteractionStyle,vtkRenderingFreeType,vtkRenderingOpenGL2)\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/robo/ros/src/realsense/src/include -I/home/robo/ros/src/realsense/include -isystem /usr/include/vtk-7.1 -isystem /usr/include/freetype2 -isystem /usr/include/opencv4 -isystem /usr/local/include/pcl-1.11 -isystem /usr/include/eigen3 -isystem /usr/include/ni -isystem /usr/include/openni2    -g   -march=native -msse4.2 -mfpmath=sse -o CMakeFiles/grabPCLRGBD.cpp.dir/src/grabPCLRGBD.cpp.o -c /home/robo/ros/src/realsense/src/grabPCLRGBD.cpp",
+  "file": "/home/robo/ros/src/realsense/src/grabPCLRGBD.cpp"
 },
 {
   "directory": "/home/robo/ros/build/realsense",

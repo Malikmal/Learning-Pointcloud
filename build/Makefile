@@ -714,17 +714,56 @@ training/fast:
 .PHONY : training/fast
 
 #=============================================================================
-# Target rules for targets named rs_pcl_color
+# Target rules for targets named subsVisualizeNew.cpp
 
 # Build rule for target.
-rs_pcl_color: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rs_pcl_color
-.PHONY : rs_pcl_color
+subsVisualizeNew.cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 subsVisualizeNew.cpp
+.PHONY : subsVisualizeNew.cpp
 
 # fast build rule for target.
-rs_pcl_color/fast:
-	$(MAKE) -f realsense/CMakeFiles/rs_pcl_color.dir/build.make realsense/CMakeFiles/rs_pcl_color.dir/build
-.PHONY : rs_pcl_color/fast
+subsVisualizeNew.cpp/fast:
+	$(MAKE) -f realsense/CMakeFiles/subsVisualizeNew.cpp.dir/build.make realsense/CMakeFiles/subsVisualizeNew.cpp.dir/build
+.PHONY : subsVisualizeNew.cpp/fast
+
+#=============================================================================
+# Target rules for targets named subsRGB.cpp
+
+# Build rule for target.
+subsRGB.cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 subsRGB.cpp
+.PHONY : subsRGB.cpp
+
+# fast build rule for target.
+subsRGB.cpp/fast:
+	$(MAKE) -f realsense/CMakeFiles/subsRGB.cpp.dir/build.make realsense/CMakeFiles/subsRGB.cpp.dir/build
+.PHONY : subsRGB.cpp/fast
+
+#=============================================================================
+# Target rules for targets named publishRGBD.cpp
+
+# Build rule for target.
+publishRGBD.cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 publishRGBD.cpp
+.PHONY : publishRGBD.cpp
+
+# fast build rule for target.
+publishRGBD.cpp/fast:
+	$(MAKE) -f realsense/CMakeFiles/publishRGBD.cpp.dir/build.make realsense/CMakeFiles/publishRGBD.cpp.dir/build
+.PHONY : publishRGBD.cpp/fast
+
+#=============================================================================
+# Target rules for targets named grabPCLRGBD.cpp
+
+# Build rule for target.
+grabPCLRGBD.cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 grabPCLRGBD.cpp
+.PHONY : grabPCLRGBD.cpp
+
+# fast build rule for target.
+grabPCLRGBD.cpp/fast:
+	$(MAKE) -f realsense/CMakeFiles/grabPCLRGBD.cpp.dir/build.make realsense/CMakeFiles/grabPCLRGBD.cpp.dir/build
+.PHONY : grabPCLRGBD.cpp/fast
 
 #=============================================================================
 # Target rules for targets named pclVisualizer
@@ -1067,7 +1106,10 @@ help:
 	@echo "... pcd_pfh"
 	@echo "... pcd_narf"
 	@echo "... training"
-	@echo "... rs_pcl_color"
+	@echo "... subsVisualizeNew.cpp"
+	@echo "... subsRGB.cpp"
+	@echo "... publishRGBD.cpp"
+	@echo "... grabPCLRGBD.cpp"
 	@echo "... pclVisualizer"
 	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... geometry_msgs_generate_messages_eus"

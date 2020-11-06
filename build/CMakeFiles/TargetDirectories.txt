@@ -83,11 +83,14 @@
 /home/robo/ros/build/pcl/CMakeFiles/pcd_narf.dir
 /home/robo/ros/build/pcl/CMakeFiles/training.dir
 /home/robo/ros/build/realsense/CMakeFiles/install/strip.dir
-/home/robo/ros/build/realsense/CMakeFiles/list_install_components.dir
 /home/robo/ros/build/realsense/CMakeFiles/rebuild_cache.dir
 /home/robo/ros/build/realsense/CMakeFiles/edit_cache.dir
 /home/robo/ros/build/realsense/CMakeFiles/test.dir
-/home/robo/ros/build/realsense/CMakeFiles/rs_pcl_color.dir
+/home/robo/ros/build/realsense/CMakeFiles/subsVisualizeNew.cpp.dir
+/home/robo/ros/build/realsense/CMakeFiles/subsRGB.cpp.dir
+/home/robo/ros/build/realsense/CMakeFiles/publishRGBD.cpp.dir
+/home/robo/ros/build/realsense/CMakeFiles/list_install_components.dir
+/home/robo/ros/build/realsense/CMakeFiles/grabPCLRGBD.cpp.dir
 /home/robo/ros/build/realsense/CMakeFiles/pclVisualizer.dir
 /home/robo/ros/build/realsense/CMakeFiles/sensor_msgs_generate_messages_cpp.dir
 /home/robo/ros/build/realsense/CMakeFiles/install/local.dir

@@ -146,18 +146,49 @@ int main(int argc, char **argv){
 		rs_Frameset = RSCamera.wait_for_frames();
 	}
 
-	while (ros::ok()) {
+
+	// Create viewer object titled "Captured Frame"
+	// boost::shared_ptr<pcl::visualization::PCLVisualizer> viewer (new pcl::visualization::PCLVisualizer ("Captured Frame"));
+	// std::shared_ptr<pcl::visualization::PCLVisualizer> viewer(new pcl::visualization::PCLVisualizer("Captured Frame"));
+
+
+	cloud_pointer cloud (new point_cloud); 
+	// Set background of viewer to black
+	// viewer->setBackgroundColor (0, 0, 0); 
+	// // Default size for rendered points
+	// // viewer->addPointCloud<pcl::PointXYZRGB> (cloud, "Cloud");
+	// pcl::visualization::PointCloudColorHandlerRGBField<pcl::PointXYZRGB> rgb(cloud);
+	// viewer->addPointCloud<pcl::PointXYZRGB>(cloud, rgb);
+
+	// // viewer->setPointCloudRenderingProperties (pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 1, "Cloud");
+ 	// viewer->setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 1.5);
+	// viewer->addCoordinateSystem(1.0);
+	// // Viewer Properties
+	// viewer->initCameraParameters();  // Camera Parameters for ease of viewing
+
+	std::shared_ptr<pcl::visualization::PCLVisualizer> viewer(new pcl::visualization::PCLVisualizer("PCL RS 3D Viewer"));
+	viewer->setBackgroundColor(0.12, 0.12, 0.12);
+	pcl::visualization::PointCloudColorHandlerRGBField<pcl::PointXYZRGB> rgb(cloud);
+	viewer->addPointCloud<pcl::PointXYZRGB>(cloud, rgb);
+	viewer->setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 1.5);
+	viewer->addCoordinateSystem(1.0);
+	viewer->initCameraParameters();
+
+	// sensor_msgs::PointCloud2Ptr cloudMsg (new sensor_msgs::PointCloud2());
+
+	while (ros::ok() ) {
 		clockstart = clock();
-		rs_Frameset = RSCamera.wait_for_frames();
-		auto depth = rs_Frameset.get_depth_frame();
-		auto RGB = rs_Frameset.get_color_frame();
+		// rs_Frameset = RSCamera.wait_for_frames();
+		auto depth = RSCamera.wait_for_frames().get_depth_frame();
+		auto RGB = RSCamera.wait_for_frames().get_color_frame();
+
+		
 		
 		// acquiredImage = cv::Mat(cv::Size(640, 480), CV_8UC3, (void*)rs_Frame.get_data(), cv::Mat::AUTO_STEP);
 
 		// imageMsg = cv_bridge::CvImage(std_msgs::Header(), "bgr8", acquiredImage).toImageMsg();
 		// imgpub.publish(imageMsg);
 
-		// std::cout << "Acquire Computation Time: " << (double)((clock()-clockstart)/CLOCKS_PER_SEC) << " ms" << std::endl;
 
 		// ros::spinOnce();
 
@@ -169,33 +200,27 @@ int main(int argc, char **argv){
 		// 	break;
 		// }
 		pc.map_to(RGB);
-		auto points = pc.calculate(depth);
+		auto points = pc.calculate(0);//depth);
 
-        cloud_pointer clouda = PCL_Conversion(points, RGB);
+        cloud = PCL_Conversion(points, RGB);
 
+		// pcl::toROSMsg(*cloud, *cloudMsg);
+		// pclpub.publish(cloudMsg);
 
 		//==========================
 		// Pointcloud Visualization
 		//==========================
-		// Create viewer object titled "Captured Frame"
-		boost::shared_ptr<pcl::visualization::PCLVisualizer> viewer (new pcl::visualization::PCLVisualizer ("Captured Frame"));
 
-		// Set background of viewer to black
-		viewer->setBackgroundColor (0, 0, 0); 
+
 		// Add generated point cloud and identify with string "Cloud"
-		viewer->addPointCloud<pcl::PointXYZRGB> (clouda, "Cloud");
-		// Default size for rendered points
-		viewer->setPointCloudRenderingProperties (pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 1, "Cloud");
-		// Viewer Properties
-		viewer->initCameraParameters();  // Camera Parameters for ease of viewing
+  		viewer->updatePointCloud(cloud);
 
-		cout << endl;
-		cout << "Press [Q] in viewer to continue. " << endl;
 		
-		viewer->spin(); // Allow user to rotate point cloud and view it
-
+		viewer->spinOnce(); // Allow user to rotate point cloud and view it
+		// cloud->
 		// Note: No method to close PC visualizer, pressing Q to continue software flow only solution.
 	
+		std::cout << "Acquire Computation Time: " << (double)(clock()-clockstart)/CLOCKS_PER_SEC << " ms" << std::endl;
 	}
 
 	return EXIT_SUCCESS;

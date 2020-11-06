@@ -296,9 +296,62 @@ target_link_libraries(pclVisualizer
 
 
 
-add_executable(grabPCLRGBD.cpp src/grabPCLRGBD.cpp.cpp)
+add_executable(grabPCLRGBD.cpp src/grabPCLRGBD.cpp)
 # add_dependencies(grabPCLRGBD.cpp realsense)
 target_link_libraries(grabPCLRGBD.cpp
+  ${catkin_LIBRARIES}
+  ${PCL_LIBRARIES}
+  ${DEPENDENCIES}
+  ${realsense2_LIBRARY}
+  ${PCL_COMMON_LIBRARIES}
+  ${PCL_IO_LIBRARIES}
+  ${SPECIAL_OS_LIBS}
+  ${OpenCV_LIBRARIES}
+  ${OPENGL_LIBRARIES}
+  ${PCL_LIBRARIES}
+  ${OpenCV_LIBS}
+)
+
+
+
+add_executable(publishRGBD.cpp src/publishRGBD.cpp)
+# add_dependencies(publishRGBD.cpp realsense)
+target_link_libraries(publishRGBD.cpp
+  ${catkin_LIBRARIES}
+  ${PCL_LIBRARIES}
+  ${DEPENDENCIES}
+  ${realsense2_LIBRARY}
+  ${PCL_COMMON_LIBRARIES}
+  ${PCL_IO_LIBRARIES}
+  ${SPECIAL_OS_LIBS}
+  ${OpenCV_LIBRARIES}
+  ${OPENGL_LIBRARIES}
+  ${PCL_LIBRARIES}
+  ${OpenCV_LIBS}
+)
+
+
+
+add_executable(subsRGB.cpp src/subsRGB.cpp)
+# add_dependencies(subsRGB.cpp realsense)
+target_link_libraries(subsRGB.cpp
+  ${catkin_LIBRARIES}
+  ${PCL_LIBRARIES}
+  ${DEPENDENCIES}
+  ${realsense2_LIBRARY}
+  ${PCL_COMMON_LIBRARIES}
+  ${PCL_IO_LIBRARIES}
+  ${SPECIAL_OS_LIBS}
+  ${OpenCV_LIBRARIES}
+  ${OPENGL_LIBRARIES}
+  ${PCL_LIBRARIES}
+  ${OpenCV_LIBS}
+)
+
+
+add_executable(subsVisualizeNew.cpp src/subsVisualizeNew.cpp)
+# add_dependencies(subsVisualizeNew.cpp realsense)
+target_link_libraries(subsVisualizeNew.cpp
   ${catkin_LIBRARIES}
   ${PCL_LIBRARIES}
   ${DEPENDENCIES}

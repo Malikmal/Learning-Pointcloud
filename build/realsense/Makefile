@@ -68,16 +68,6 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -110,6 +100,16 @@ test:
 test/fast: test
 
 .PHONY : test/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -168,19 +168,64 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-realsense/CMakeFiles/rs_pcl_color.dir/rule:
-	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 realsense/CMakeFiles/rs_pcl_color.dir/rule
-.PHONY : realsense/CMakeFiles/rs_pcl_color.dir/rule
+realsense/CMakeFiles/subsVisualizeNew.cpp.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 realsense/CMakeFiles/subsVisualizeNew.cpp.dir/rule
+.PHONY : realsense/CMakeFiles/subsVisualizeNew.cpp.dir/rule
 
 # Convenience name for target.
-rs_pcl_color: realsense/CMakeFiles/rs_pcl_color.dir/rule
+subsVisualizeNew.cpp: realsense/CMakeFiles/subsVisualizeNew.cpp.dir/rule
 
-.PHONY : rs_pcl_color
+.PHONY : subsVisualizeNew.cpp
 
 # fast build rule for target.
-rs_pcl_color/fast:
-	cd /home/robo/ros/build && $(MAKE) -f realsense/CMakeFiles/rs_pcl_color.dir/build.make realsense/CMakeFiles/rs_pcl_color.dir/build
-.PHONY : rs_pcl_color/fast
+subsVisualizeNew.cpp/fast:
+	cd /home/robo/ros/build && $(MAKE) -f realsense/CMakeFiles/subsVisualizeNew.cpp.dir/build.make realsense/CMakeFiles/subsVisualizeNew.cpp.dir/build
+.PHONY : subsVisualizeNew.cpp/fast
+
+# Convenience name for target.
+realsense/CMakeFiles/subsRGB.cpp.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 realsense/CMakeFiles/subsRGB.cpp.dir/rule
+.PHONY : realsense/CMakeFiles/subsRGB.cpp.dir/rule
+
+# Convenience name for target.
+subsRGB.cpp: realsense/CMakeFiles/subsRGB.cpp.dir/rule
+
+.PHONY : subsRGB.cpp
+
+# fast build rule for target.
+subsRGB.cpp/fast:
+	cd /home/robo/ros/build && $(MAKE) -f realsense/CMakeFiles/subsRGB.cpp.dir/build.make realsense/CMakeFiles/subsRGB.cpp.dir/build
+.PHONY : subsRGB.cpp/fast
+
+# Convenience name for target.
+realsense/CMakeFiles/publishRGBD.cpp.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 realsense/CMakeFiles/publishRGBD.cpp.dir/rule
+.PHONY : realsense/CMakeFiles/publishRGBD.cpp.dir/rule
+
+# Convenience name for target.
+publishRGBD.cpp: realsense/CMakeFiles/publishRGBD.cpp.dir/rule
+
+.PHONY : publishRGBD.cpp
+
+# fast build rule for target.
+publishRGBD.cpp/fast:
+	cd /home/robo/ros/build && $(MAKE) -f realsense/CMakeFiles/publishRGBD.cpp.dir/build.make realsense/CMakeFiles/publishRGBD.cpp.dir/build
+.PHONY : publishRGBD.cpp/fast
+
+# Convenience name for target.
+realsense/CMakeFiles/grabPCLRGBD.cpp.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 realsense/CMakeFiles/grabPCLRGBD.cpp.dir/rule
+.PHONY : realsense/CMakeFiles/grabPCLRGBD.cpp.dir/rule
+
+# Convenience name for target.
+grabPCLRGBD.cpp: realsense/CMakeFiles/grabPCLRGBD.cpp.dir/rule
+
+.PHONY : grabPCLRGBD.cpp
+
+# fast build rule for target.
+grabPCLRGBD.cpp/fast:
+	cd /home/robo/ros/build && $(MAKE) -f realsense/CMakeFiles/grabPCLRGBD.cpp.dir/build.make realsense/CMakeFiles/grabPCLRGBD.cpp.dir/build
+.PHONY : grabPCLRGBD.cpp/fast
 
 # Convenience name for target.
 realsense/CMakeFiles/pclVisualizer.dir/rule:
@@ -446,6 +491,33 @@ src/grabDepth.cpp.s:
 	cd /home/robo/ros/build && $(MAKE) -f realsense/CMakeFiles/grabDepth.dir/build.make realsense/CMakeFiles/grabDepth.dir/src/grabDepth.cpp.s
 .PHONY : src/grabDepth.cpp.s
 
+src/grabPCLRGBD.o: src/grabPCLRGBD.cpp.o
+
+.PHONY : src/grabPCLRGBD.o
+
+# target to build an object file
+src/grabPCLRGBD.cpp.o:
+	cd /home/robo/ros/build && $(MAKE) -f realsense/CMakeFiles/grabPCLRGBD.cpp.dir/build.make realsense/CMakeFiles/grabPCLRGBD.cpp.dir/src/grabPCLRGBD.cpp.o
+.PHONY : src/grabPCLRGBD.cpp.o
+
+src/grabPCLRGBD.i: src/grabPCLRGBD.cpp.i
+
+.PHONY : src/grabPCLRGBD.i
+
+# target to preprocess a source file
+src/grabPCLRGBD.cpp.i:
+	cd /home/robo/ros/build && $(MAKE) -f realsense/CMakeFiles/grabPCLRGBD.cpp.dir/build.make realsense/CMakeFiles/grabPCLRGBD.cpp.dir/src/grabPCLRGBD.cpp.i
+.PHONY : src/grabPCLRGBD.cpp.i
+
+src/grabPCLRGBD.s: src/grabPCLRGBD.cpp.s
+
+.PHONY : src/grabPCLRGBD.s
+
+# target to generate assembly for a file
+src/grabPCLRGBD.cpp.s:
+	cd /home/robo/ros/build && $(MAKE) -f realsense/CMakeFiles/grabPCLRGBD.cpp.dir/build.make realsense/CMakeFiles/grabPCLRGBD.cpp.dir/src/grabPCLRGBD.cpp.s
+.PHONY : src/grabPCLRGBD.cpp.s
+
 src/grabRGB.o: src/grabRGB.cpp.o
 
 .PHONY : src/grabRGB.o
@@ -500,32 +572,86 @@ src/pclVisualizer.cpp.s:
 	cd /home/robo/ros/build && $(MAKE) -f realsense/CMakeFiles/pclVisualizer.dir/build.make realsense/CMakeFiles/pclVisualizer.dir/src/pclVisualizer.cpp.s
 .PHONY : src/pclVisualizer.cpp.s
 
-src/rs_pcl_color.o: src/rs_pcl_color.cpp.o
+src/publishRGBD.o: src/publishRGBD.cpp.o
 
-.PHONY : src/rs_pcl_color.o
+.PHONY : src/publishRGBD.o
 
 # target to build an object file
-src/rs_pcl_color.cpp.o:
-	cd /home/robo/ros/build && $(MAKE) -f realsense/CMakeFiles/rs_pcl_color.dir/build.make realsense/CMakeFiles/rs_pcl_color.dir/src/rs_pcl_color.cpp.o
-.PHONY : src/rs_pcl_color.cpp.o
+src/publishRGBD.cpp.o:
+	cd /home/robo/ros/build && $(MAKE) -f realsense/CMakeFiles/publishRGBD.cpp.dir/build.make realsense/CMakeFiles/publishRGBD.cpp.dir/src/publishRGBD.cpp.o
+.PHONY : src/publishRGBD.cpp.o
 
-src/rs_pcl_color.i: src/rs_pcl_color.cpp.i
+src/publishRGBD.i: src/publishRGBD.cpp.i
 
-.PHONY : src/rs_pcl_color.i
+.PHONY : src/publishRGBD.i
 
 # target to preprocess a source file
-src/rs_pcl_color.cpp.i:
-	cd /home/robo/ros/build && $(MAKE) -f realsense/CMakeFiles/rs_pcl_color.dir/build.make realsense/CMakeFiles/rs_pcl_color.dir/src/rs_pcl_color.cpp.i
-.PHONY : src/rs_pcl_color.cpp.i
+src/publishRGBD.cpp.i:
+	cd /home/robo/ros/build && $(MAKE) -f realsense/CMakeFiles/publishRGBD.cpp.dir/build.make realsense/CMakeFiles/publishRGBD.cpp.dir/src/publishRGBD.cpp.i
+.PHONY : src/publishRGBD.cpp.i
 
-src/rs_pcl_color.s: src/rs_pcl_color.cpp.s
+src/publishRGBD.s: src/publishRGBD.cpp.s
 
-.PHONY : src/rs_pcl_color.s
+.PHONY : src/publishRGBD.s
 
 # target to generate assembly for a file
-src/rs_pcl_color.cpp.s:
-	cd /home/robo/ros/build && $(MAKE) -f realsense/CMakeFiles/rs_pcl_color.dir/build.make realsense/CMakeFiles/rs_pcl_color.dir/src/rs_pcl_color.cpp.s
-.PHONY : src/rs_pcl_color.cpp.s
+src/publishRGBD.cpp.s:
+	cd /home/robo/ros/build && $(MAKE) -f realsense/CMakeFiles/publishRGBD.cpp.dir/build.make realsense/CMakeFiles/publishRGBD.cpp.dir/src/publishRGBD.cpp.s
+.PHONY : src/publishRGBD.cpp.s
+
+src/subsRGB.o: src/subsRGB.cpp.o
+
+.PHONY : src/subsRGB.o
+
+# target to build an object file
+src/subsRGB.cpp.o:
+	cd /home/robo/ros/build && $(MAKE) -f realsense/CMakeFiles/subsRGB.cpp.dir/build.make realsense/CMakeFiles/subsRGB.cpp.dir/src/subsRGB.cpp.o
+.PHONY : src/subsRGB.cpp.o
+
+src/subsRGB.i: src/subsRGB.cpp.i
+
+.PHONY : src/subsRGB.i
+
+# target to preprocess a source file
+src/subsRGB.cpp.i:
+	cd /home/robo/ros/build && $(MAKE) -f realsense/CMakeFiles/subsRGB.cpp.dir/build.make realsense/CMakeFiles/subsRGB.cpp.dir/src/subsRGB.cpp.i
+.PHONY : src/subsRGB.cpp.i
+
+src/subsRGB.s: src/subsRGB.cpp.s
+
+.PHONY : src/subsRGB.s
+
+# target to generate assembly for a file
+src/subsRGB.cpp.s:
+	cd /home/robo/ros/build && $(MAKE) -f realsense/CMakeFiles/subsRGB.cpp.dir/build.make realsense/CMakeFiles/subsRGB.cpp.dir/src/subsRGB.cpp.s
+.PHONY : src/subsRGB.cpp.s
+
+src/subsVisualizeNew.o: src/subsVisualizeNew.cpp.o
+
+.PHONY : src/subsVisualizeNew.o
+
+# target to build an object file
+src/subsVisualizeNew.cpp.o:
+	cd /home/robo/ros/build && $(MAKE) -f realsense/CMakeFiles/subsVisualizeNew.cpp.dir/build.make realsense/CMakeFiles/subsVisualizeNew.cpp.dir/src/subsVisualizeNew.cpp.o
+.PHONY : src/subsVisualizeNew.cpp.o
+
+src/subsVisualizeNew.i: src/subsVisualizeNew.cpp.i
+
+.PHONY : src/subsVisualizeNew.i
+
+# target to preprocess a source file
+src/subsVisualizeNew.cpp.i:
+	cd /home/robo/ros/build && $(MAKE) -f realsense/CMakeFiles/subsVisualizeNew.cpp.dir/build.make realsense/CMakeFiles/subsVisualizeNew.cpp.dir/src/subsVisualizeNew.cpp.i
+.PHONY : src/subsVisualizeNew.cpp.i
+
+src/subsVisualizeNew.s: src/subsVisualizeNew.cpp.s
+
+.PHONY : src/subsVisualizeNew.s
+
+# target to generate assembly for a file
+src/subsVisualizeNew.cpp.s:
+	cd /home/robo/ros/build && $(MAKE) -f realsense/CMakeFiles/subsVisualizeNew.cpp.dir/build.make realsense/CMakeFiles/subsVisualizeNew.cpp.dir/src/subsVisualizeNew.cpp.s
+.PHONY : src/subsVisualizeNew.cpp.s
 
 # Help Target
 help:
@@ -534,11 +660,14 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
-	@echo "... rs_pcl_color"
+	@echo "... subsVisualizeNew.cpp"
+	@echo "... subsRGB.cpp"
+	@echo "... publishRGBD.cpp"
+	@echo "... list_install_components"
+	@echo "... grabPCLRGBD.cpp"
 	@echo "... pclVisualizer"
 	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... install/local"
@@ -561,15 +690,24 @@ help:
 	@echo "... src/grabDepth.o"
 	@echo "... src/grabDepth.i"
 	@echo "... src/grabDepth.s"
+	@echo "... src/grabPCLRGBD.o"
+	@echo "... src/grabPCLRGBD.i"
+	@echo "... src/grabPCLRGBD.s"
 	@echo "... src/grabRGB.o"
 	@echo "... src/grabRGB.i"
 	@echo "... src/grabRGB.s"
 	@echo "... src/pclVisualizer.o"
 	@echo "... src/pclVisualizer.i"
 	@echo "... src/pclVisualizer.s"
-	@echo "... src/rs_pcl_color.o"
-	@echo "... src/rs_pcl_color.i"
-	@echo "... src/rs_pcl_color.s"
+	@echo "... src/publishRGBD.o"
+	@echo "... src/publishRGBD.i"
+	@echo "... src/publishRGBD.s"
+	@echo "... src/subsRGB.o"
+	@echo "... src/subsRGB.i"
+	@echo "... src/subsRGB.s"
+	@echo "... src/subsVisualizeNew.o"
+	@echo "... src/subsVisualizeNew.i"
+	@echo "... src/subsVisualizeNew.s"
 .PHONY : help
 
 
