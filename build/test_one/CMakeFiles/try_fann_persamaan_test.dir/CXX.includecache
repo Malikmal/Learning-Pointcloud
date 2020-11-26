@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/robo/ros/src/test_one/src/try_fann_persamaan_test.cpp
+stdio.h
+-
+floatfann.h
+/home/robo/ros/src/test_one/src/floatfann.h
+

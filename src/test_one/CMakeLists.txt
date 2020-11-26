@@ -303,3 +303,28 @@ target_link_libraries(complete_with_hv
     FLANN::FLANN ${HDF5_LIBRARIES}
     fann
 )
+
+
+
+
+
+# try_fann_persamaan_train node
+add_executable(try_fann_persamaan_train src/try_fann_persamaan_train.cpp)
+target_link_libraries(try_fann_persamaan_train 
+    ${catkin_LIBRARIES}
+    ${PCL_LIBRARIES}
+    ${Boost_LIBRARIES}
+    FLANN::FLANN ${HDF5_LIBRARIES}
+    fann
+)
+
+
+# try_fann_persamaan_test node
+add_executable(try_fann_persamaan_test src/try_fann_persamaan_test.cpp)
+target_link_libraries(try_fann_persamaan_test 
+    ${catkin_LIBRARIES}
+    ${PCL_LIBRARIES}
+    ${Boost_LIBRARIES}
+    FLANN::FLANN ${HDF5_LIBRARIES}
+    fann
+)

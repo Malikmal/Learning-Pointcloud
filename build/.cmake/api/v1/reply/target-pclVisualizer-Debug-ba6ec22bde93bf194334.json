@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "/home/robo/ros/devel/lib/realsense/subsVisualizeNew.cpp"
+			"path" : "/home/robo/ros/devel/lib/realsense/pclVisualizer"
 		}
 	],
 	"backtrace" : 1,
@@ -42,7 +42,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 352,
+				"line" : 281,
 				"parent" : 0
 			},
 			{
@@ -54,7 +54,7 @@
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 354,
+				"line" : 283,
 				"parent" : 0
 			},
 			{
@@ -313,7 +313,7 @@
 			]
 		}
 	],
-	"id" : "subsVisualizeNew.cpp::@aa5c365686d27a7b52b4",
+	"id" : "pclVisualizer::@aa5c365686d27a7b52b4",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -755,7 +755,7 @@
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "/usr/lib/x86_64-linux-gnu/librealsense2.so.2.39.0",
+				"fragment" : "/usr/lib/x86_64-linux-gnu/librealsense2.so.2.40.0",
 				"role" : "libraries"
 			},
 			{
@@ -1488,8 +1488,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "subsVisualizeNew.cpp",
-	"nameOnDisk" : "subsVisualizeNew.cpp",
+	"name" : "pclVisualizer",
+	"nameOnDisk" : "pclVisualizer",
 	"paths" : 
 	{
 		"build" : "realsense",
@@ -1510,7 +1510,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "realsense/src/subsVisualizeNew.cpp",
+			"path" : "realsense/src/pclVisualizer.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

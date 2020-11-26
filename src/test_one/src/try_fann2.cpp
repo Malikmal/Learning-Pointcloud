@@ -8,8 +8,8 @@ int main()
 
     struct fann *ann = fann_create_from_file("xor_float.net");
 
-    input[0] = -1;
-    input[1] = 10;
+    input[0] = -2;
+    input[1] = 4;
     calc_out = fann_run(ann, input);
 
     printf("xor test (%f,%f) -> %f\n", input[0], input[1], calc_out[0]);

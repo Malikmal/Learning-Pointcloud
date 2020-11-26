@@ -137,7 +137,7 @@
 						59,
 						62,
 						64,
-						67
+						69
 					]
 				},
 				{
@@ -191,7 +191,9 @@
 						23,
 						24,
 						65,
-						66
+						66,
+						67,
+						68
 					]
 				},
 				{
@@ -327,7 +329,7 @@
 						59,
 						62,
 						64,
-						67
+						69
 					]
 				},
 				{
@@ -375,7 +377,9 @@
 						23,
 						24,
 						65,
-						66
+						66,
+						67,
+						68
 					]
 				},
 				{
@@ -392,7 +396,7 @@
 				{
 					"directoryIndex" : 6,
 					"id" : "A_RSpclAcquisition::@aa5c365686d27a7b52b4",
-					"jsonFile" : "target-A_RSpclAcquisition-Debug-32bc8ea2e8912f7c83dc.json",
+					"jsonFile" : "target-A_RSpclAcquisition-Debug-4228ab7981c2f886dd57.json",
 					"name" : "A_RSpclAcquisition",
 					"projectIndex" : 6
 				},
@@ -511,21 +515,21 @@
 				{
 					"directoryIndex" : 6,
 					"id" : "grabDepth::@aa5c365686d27a7b52b4",
-					"jsonFile" : "target-grabDepth-Debug-4e1829656b87b7ee7e74.json",
+					"jsonFile" : "target-grabDepth-Debug-7211628c87bc60db848b.json",
 					"name" : "grabDepth",
 					"projectIndex" : 6
 				},
 				{
 					"directoryIndex" : 6,
 					"id" : "grabPCLRGBD.cpp::@aa5c365686d27a7b52b4",
-					"jsonFile" : "target-grabPCLRGBD.cpp-Debug-83ae67040ab1d7517db8.json",
+					"jsonFile" : "target-grabPCLRGBD.cpp-Debug-a31cb9c161b02b48031e.json",
 					"name" : "grabPCLRGBD.cpp",
 					"projectIndex" : 6
 				},
 				{
 					"directoryIndex" : 6,
 					"id" : "grabRGB::@aa5c365686d27a7b52b4",
-					"jsonFile" : "target-grabRGB-Debug-2e6cc71baab536ee1083.json",
+					"jsonFile" : "target-grabRGB-Debug-32106fb78f2c98acbbd0.json",
 					"name" : "grabRGB",
 					"projectIndex" : 6
 				},
@@ -637,7 +641,7 @@
 				{
 					"directoryIndex" : 6,
 					"id" : "pclVisualizer::@aa5c365686d27a7b52b4",
-					"jsonFile" : "target-pclVisualizer-Debug-f00684aa2e14035accf2.json",
+					"jsonFile" : "target-pclVisualizer-Debug-ba6ec22bde93bf194334.json",
 					"name" : "pclVisualizer",
 					"projectIndex" : 6
 				},
@@ -651,7 +655,7 @@
 				{
 					"directoryIndex" : 6,
 					"id" : "publishRGBD.cpp::@aa5c365686d27a7b52b4",
-					"jsonFile" : "target-publishRGBD.cpp-Debug-ea9fb8118b44d9870432.json",
+					"jsonFile" : "target-publishRGBD.cpp-Debug-159c440fdbd76ec691ed.json",
 					"name" : "publishRGBD.cpp",
 					"projectIndex" : 6
 				},
@@ -812,14 +816,14 @@
 				{
 					"directoryIndex" : 6,
 					"id" : "subsRGB.cpp::@aa5c365686d27a7b52b4",
-					"jsonFile" : "target-subsRGB.cpp-Debug-c68eeeb2c78bf9eb09a0.json",
+					"jsonFile" : "target-subsRGB.cpp-Debug-4d453de863546cca0739.json",
 					"name" : "subsRGB.cpp",
 					"projectIndex" : 6
 				},
 				{
 					"directoryIndex" : 6,
 					"id" : "subsVisualizeNew.cpp::@aa5c365686d27a7b52b4",
-					"jsonFile" : "target-subsVisualizeNew.cpp-Debug-aae8f3c7db5c3a66522c.json",
+					"jsonFile" : "target-subsVisualizeNew.cpp-Debug-51f809d9d7f852e9d064.json",
 					"name" : "subsVisualizeNew.cpp",
 					"projectIndex" : 6
 				},
@@ -856,6 +860,20 @@
 					"id" : "try_fann2::@29376d512786feb3ddce",
 					"jsonFile" : "target-try_fann2-Debug-9a7d14fb2ce56d72efa0.json",
 					"name" : "try_fann2",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "try_fann_persamaan_test::@29376d512786feb3ddce",
+					"jsonFile" : "target-try_fann_persamaan_test-Debug-681c639ef0c0881e56cc.json",
+					"name" : "try_fann_persamaan_test",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "try_fann_persamaan_train::@29376d512786feb3ddce",
+					"jsonFile" : "target-try_fann_persamaan_train-Debug-4c965664122606140808.json",
+					"name" : "try_fann_persamaan_train",
 					"projectIndex" : 7
 				},
 				{

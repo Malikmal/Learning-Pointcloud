@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "/home/robo/ros/devel/lib/realsense/publishRGBD.cpp"
+			"path" : "/home/robo/ros/devel/lib/realsense/subsVisualizeNew.cpp"
 		}
 	],
 	"backtrace" : 1,
@@ -42,7 +42,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 317,
+				"line" : 352,
 				"parent" : 0
 			},
 			{
@@ -54,7 +54,7 @@
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 319,
+				"line" : 354,
 				"parent" : 0
 			},
 			{
@@ -313,7 +313,7 @@
 			]
 		}
 	],
-	"id" : "publishRGBD.cpp::@aa5c365686d27a7b52b4",
+	"id" : "subsVisualizeNew.cpp::@aa5c365686d27a7b52b4",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -755,7 +755,7 @@
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "/usr/lib/x86_64-linux-gnu/librealsense2.so.2.39.0",
+				"fragment" : "/usr/lib/x86_64-linux-gnu/librealsense2.so.2.40.0",
 				"role" : "libraries"
 			},
 			{
@@ -1488,8 +1488,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "publishRGBD.cpp",
-	"nameOnDisk" : "publishRGBD.cpp",
+	"name" : "subsVisualizeNew.cpp",
+	"nameOnDisk" : "subsVisualizeNew.cpp",
 	"paths" : 
 	{
 		"build" : "realsense",
@@ -1510,7 +1510,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "realsense/src/publishRGBD.cpp",
+			"path" : "realsense/src/subsVisualizeNew.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

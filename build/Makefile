@@ -974,6 +974,19 @@ build_tree/fast:
 .PHONY : build_tree/fast
 
 #=============================================================================
+# Target rules for targets named try_fann_persamaan_test
+
+# Build rule for target.
+try_fann_persamaan_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 try_fann_persamaan_test
+.PHONY : try_fann_persamaan_test
+
+# fast build rule for target.
+try_fann_persamaan_test/fast:
+	$(MAKE) -f test_one/CMakeFiles/try_fann_persamaan_test.dir/build.make test_one/CMakeFiles/try_fann_persamaan_test.dir/build
+.PHONY : try_fann_persamaan_test/fast
+
+#=============================================================================
 # Target rules for targets named correspondence_grouping
 
 # Build rule for target.
@@ -1051,6 +1064,19 @@ try_fann/fast:
 	$(MAKE) -f test_one/CMakeFiles/try_fann.dir/build.make test_one/CMakeFiles/try_fann.dir/build
 .PHONY : try_fann/fast
 
+#=============================================================================
+# Target rules for targets named try_fann_persamaan_train
+
+# Build rule for target.
+try_fann_persamaan_train: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 try_fann_persamaan_train
+.PHONY : try_fann_persamaan_train
+
+# fast build rule for target.
+try_fann_persamaan_train/fast:
+	$(MAKE) -f test_one/CMakeFiles/try_fann_persamaan_train.dir/build.make test_one/CMakeFiles/try_fann_persamaan_train.dir/build
+.PHONY : try_fann_persamaan_train/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1126,12 +1152,14 @@ help:
 	@echo "... grabDepth"
 	@echo "... hello_world"
 	@echo "... build_tree"
+	@echo "... try_fann_persamaan_test"
 	@echo "... correspondence_grouping"
 	@echo "... try_fann2"
 	@echo "... complete_with_hv"
 	@echo "... just_test"
 	@echo "... nearest_neighbors"
 	@echo "... try_fann"
+	@echo "... try_fann_persamaan_train"
 .PHONY : help
 
 

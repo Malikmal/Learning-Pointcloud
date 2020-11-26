@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "/home/robo/ros/devel/lib/realsense/A_RSpclAcquisition"
+			"path" : "/home/robo/ros/devel/lib/realsense/grabDepth"
 		}
 	],
 	"backtrace" : 1,
@@ -42,7 +42,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 230,
+				"line" : 247,
 				"parent" : 0
 			},
 			{
@@ -54,7 +54,7 @@
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 232,
+				"line" : 249,
 				"parent" : 0
 			},
 			{
@@ -313,7 +313,7 @@
 			]
 		}
 	],
-	"id" : "A_RSpclAcquisition::@aa5c365686d27a7b52b4",
+	"id" : "grabDepth::@aa5c365686d27a7b52b4",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -755,7 +755,7 @@
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "/usr/lib/x86_64-linux-gnu/librealsense2.so.2.39.0",
+				"fragment" : "/usr/lib/x86_64-linux-gnu/librealsense2.so.2.40.0",
 				"role" : "libraries"
 			},
 			{
@@ -1488,8 +1488,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "A_RSpclAcquisition",
-	"nameOnDisk" : "A_RSpclAcquisition",
+	"name" : "grabDepth",
+	"nameOnDisk" : "grabDepth",
 	"paths" : 
 	{
 		"build" : "realsense",
@@ -1510,7 +1510,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "realsense/src/A_RSpclAcquisition.cpp",
+			"path" : "realsense/src/grabDepth.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

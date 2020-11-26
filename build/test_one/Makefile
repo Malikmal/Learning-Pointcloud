@@ -68,6 +68,28 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -112,28 +134,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -196,6 +196,21 @@ build_tree: test_one/CMakeFiles/build_tree.dir/rule
 build_tree/fast:
 	cd /home/robo/ros/build && $(MAKE) -f test_one/CMakeFiles/build_tree.dir/build.make test_one/CMakeFiles/build_tree.dir/build
 .PHONY : build_tree/fast
+
+# Convenience name for target.
+test_one/CMakeFiles/try_fann_persamaan_test.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 test_one/CMakeFiles/try_fann_persamaan_test.dir/rule
+.PHONY : test_one/CMakeFiles/try_fann_persamaan_test.dir/rule
+
+# Convenience name for target.
+try_fann_persamaan_test: test_one/CMakeFiles/try_fann_persamaan_test.dir/rule
+
+.PHONY : try_fann_persamaan_test
+
+# fast build rule for target.
+try_fann_persamaan_test/fast:
+	cd /home/robo/ros/build && $(MAKE) -f test_one/CMakeFiles/try_fann_persamaan_test.dir/build.make test_one/CMakeFiles/try_fann_persamaan_test.dir/build
+.PHONY : try_fann_persamaan_test/fast
 
 # Convenience name for target.
 test_one/CMakeFiles/correspondence_grouping.dir/rule:
@@ -286,6 +301,21 @@ try_fann: test_one/CMakeFiles/try_fann.dir/rule
 try_fann/fast:
 	cd /home/robo/ros/build && $(MAKE) -f test_one/CMakeFiles/try_fann.dir/build.make test_one/CMakeFiles/try_fann.dir/build
 .PHONY : try_fann/fast
+
+# Convenience name for target.
+test_one/CMakeFiles/try_fann_persamaan_train.dir/rule:
+	cd /home/robo/ros/build && $(MAKE) -f CMakeFiles/Makefile2 test_one/CMakeFiles/try_fann_persamaan_train.dir/rule
+.PHONY : test_one/CMakeFiles/try_fann_persamaan_train.dir/rule
+
+# Convenience name for target.
+try_fann_persamaan_train: test_one/CMakeFiles/try_fann_persamaan_train.dir/rule
+
+.PHONY : try_fann_persamaan_train
+
+# fast build rule for target.
+try_fann_persamaan_train/fast:
+	cd /home/robo/ros/build && $(MAKE) -f test_one/CMakeFiles/try_fann_persamaan_train.dir/build.make test_one/CMakeFiles/try_fann_persamaan_train.dir/build
+.PHONY : try_fann_persamaan_train/fast
 
 src/build_tree.o: src/build_tree.cpp.o
 
@@ -503,6 +533,60 @@ src/try_fann2.cpp.s:
 	cd /home/robo/ros/build && $(MAKE) -f test_one/CMakeFiles/try_fann2.dir/build.make test_one/CMakeFiles/try_fann2.dir/src/try_fann2.cpp.s
 .PHONY : src/try_fann2.cpp.s
 
+src/try_fann_persamaan_test.o: src/try_fann_persamaan_test.cpp.o
+
+.PHONY : src/try_fann_persamaan_test.o
+
+# target to build an object file
+src/try_fann_persamaan_test.cpp.o:
+	cd /home/robo/ros/build && $(MAKE) -f test_one/CMakeFiles/try_fann_persamaan_test.dir/build.make test_one/CMakeFiles/try_fann_persamaan_test.dir/src/try_fann_persamaan_test.cpp.o
+.PHONY : src/try_fann_persamaan_test.cpp.o
+
+src/try_fann_persamaan_test.i: src/try_fann_persamaan_test.cpp.i
+
+.PHONY : src/try_fann_persamaan_test.i
+
+# target to preprocess a source file
+src/try_fann_persamaan_test.cpp.i:
+	cd /home/robo/ros/build && $(MAKE) -f test_one/CMakeFiles/try_fann_persamaan_test.dir/build.make test_one/CMakeFiles/try_fann_persamaan_test.dir/src/try_fann_persamaan_test.cpp.i
+.PHONY : src/try_fann_persamaan_test.cpp.i
+
+src/try_fann_persamaan_test.s: src/try_fann_persamaan_test.cpp.s
+
+.PHONY : src/try_fann_persamaan_test.s
+
+# target to generate assembly for a file
+src/try_fann_persamaan_test.cpp.s:
+	cd /home/robo/ros/build && $(MAKE) -f test_one/CMakeFiles/try_fann_persamaan_test.dir/build.make test_one/CMakeFiles/try_fann_persamaan_test.dir/src/try_fann_persamaan_test.cpp.s
+.PHONY : src/try_fann_persamaan_test.cpp.s
+
+src/try_fann_persamaan_train.o: src/try_fann_persamaan_train.cpp.o
+
+.PHONY : src/try_fann_persamaan_train.o
+
+# target to build an object file
+src/try_fann_persamaan_train.cpp.o:
+	cd /home/robo/ros/build && $(MAKE) -f test_one/CMakeFiles/try_fann_persamaan_train.dir/build.make test_one/CMakeFiles/try_fann_persamaan_train.dir/src/try_fann_persamaan_train.cpp.o
+.PHONY : src/try_fann_persamaan_train.cpp.o
+
+src/try_fann_persamaan_train.i: src/try_fann_persamaan_train.cpp.i
+
+.PHONY : src/try_fann_persamaan_train.i
+
+# target to preprocess a source file
+src/try_fann_persamaan_train.cpp.i:
+	cd /home/robo/ros/build && $(MAKE) -f test_one/CMakeFiles/try_fann_persamaan_train.dir/build.make test_one/CMakeFiles/try_fann_persamaan_train.dir/src/try_fann_persamaan_train.cpp.i
+.PHONY : src/try_fann_persamaan_train.cpp.i
+
+src/try_fann_persamaan_train.s: src/try_fann_persamaan_train.cpp.s
+
+.PHONY : src/try_fann_persamaan_train.s
+
+# target to generate assembly for a file
+src/try_fann_persamaan_train.cpp.s:
+	cd /home/robo/ros/build && $(MAKE) -f test_one/CMakeFiles/try_fann_persamaan_train.dir/build.make test_one/CMakeFiles/try_fann_persamaan_train.dir/src/try_fann_persamaan_train.cpp.s
+.PHONY : src/try_fann_persamaan_train.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -510,9 +594,12 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
+	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... hello_world"
 	@echo "... install/local"
 	@echo "... build_tree"
+	@echo "... try_fann_persamaan_test"
 	@echo "... correspondence_grouping"
 	@echo "... try_fann2"
 	@echo "... complete_with_hv"
@@ -520,10 +607,9 @@ help:
 	@echo "... nearest_neighbors"
 	@echo "... try_fann"
 	@echo "... test"
+	@echo "... try_fann_persamaan_train"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... list_install_components"
-	@echo "... install"
 	@echo "... src/build_tree.o"
 	@echo "... src/build_tree.i"
 	@echo "... src/build_tree.s"
@@ -548,6 +634,12 @@ help:
 	@echo "... src/try_fann2.o"
 	@echo "... src/try_fann2.i"
 	@echo "... src/try_fann2.s"
+	@echo "... src/try_fann_persamaan_test.o"
+	@echo "... src/try_fann_persamaan_test.i"
+	@echo "... src/try_fann_persamaan_test.s"
+	@echo "... src/try_fann_persamaan_train.o"
+	@echo "... src/try_fann_persamaan_train.i"
+	@echo "... src/try_fann_persamaan_train.s"
 .PHONY : help
 
 

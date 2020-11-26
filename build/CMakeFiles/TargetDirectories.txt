@@ -108,9 +108,12 @@
 /home/robo/ros/build/realsense/CMakeFiles/sensor_msgs_generate_messages_eus.dir
 /home/robo/ros/build/realsense/CMakeFiles/grabDepth.dir
 /home/robo/ros/build/test_one/CMakeFiles/install/strip.dir
+/home/robo/ros/build/test_one/CMakeFiles/install.dir
+/home/robo/ros/build/test_one/CMakeFiles/list_install_components.dir
 /home/robo/ros/build/test_one/CMakeFiles/hello_world.dir
 /home/robo/ros/build/test_one/CMakeFiles/install/local.dir
 /home/robo/ros/build/test_one/CMakeFiles/build_tree.dir
+/home/robo/ros/build/test_one/CMakeFiles/try_fann_persamaan_test.dir
 /home/robo/ros/build/test_one/CMakeFiles/correspondence_grouping.dir
 /home/robo/ros/build/test_one/CMakeFiles/try_fann2.dir
 /home/robo/ros/build/test_one/CMakeFiles/complete_with_hv.dir
@@ -118,10 +121,9 @@
 /home/robo/ros/build/test_one/CMakeFiles/nearest_neighbors.dir
 /home/robo/ros/build/test_one/CMakeFiles/try_fann.dir
 /home/robo/ros/build/test_one/CMakeFiles/test.dir
+/home/robo/ros/build/test_one/CMakeFiles/try_fann_persamaan_train.dir
 /home/robo/ros/build/test_one/CMakeFiles/edit_cache.dir
 /home/robo/ros/build/test_one/CMakeFiles/rebuild_cache.dir
-/home/robo/ros/build/test_one/CMakeFiles/list_install_components.dir
-/home/robo/ros/build/test_one/CMakeFiles/install.dir
 /home/robo/ros/build/test_opencv/CMakeFiles/install/strip.dir
 /home/robo/ros/build/test_opencv/CMakeFiles/install/local.dir
 /home/robo/ros/build/test_opencv/CMakeFiles/install.dir

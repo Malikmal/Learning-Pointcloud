@@ -169,7 +169,7 @@ subsRGB_cpp_EXTERNAL_OBJECTS =
 /home/robo/ros/devel/lib/realsense/subsRGB.cpp: /usr/lib/x86_64-linux-gnu/libpng.so
 /home/robo/ros/devel/lib/realsense/subsRGB.cpp: /usr/lib/x86_64-linux-gnu/libtiff.so
 /home/robo/ros/devel/lib/realsense/subsRGB.cpp: /usr/lib/x86_64-linux-gnu/libexpat.so
-/home/robo/ros/devel/lib/realsense/subsRGB.cpp: /usr/lib/x86_64-linux-gnu/librealsense2.so.2.39.0
+/home/robo/ros/devel/lib/realsense/subsRGB.cpp: /usr/lib/x86_64-linux-gnu/librealsense2.so.2.40.0
 /home/robo/ros/devel/lib/realsense/subsRGB.cpp: /usr/lib/x86_64-linux-gnu/libGL.so
 /home/robo/ros/devel/lib/realsense/subsRGB.cpp: /usr/lib/x86_64-linux-gnu/libGLU.so
 /home/robo/ros/devel/lib/realsense/subsRGB.cpp: /usr/local/lib/libpcl_keypoints.so
