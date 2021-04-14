@@ -1,0 +1,90 @@
+[0.000000] (-) TimerEvent: {}
+[0.000240] (Project) JobQueued: {'identifier': 'Project', 'dependencies': OrderedDict()}
+[0.000852] (Project) JobStarted: {'identifier': 'Project'}
+[0.015904] (Project) JobProgress: {'identifier': 'Project', 'progress': 'cmake'}
+[0.016586] (Project) Command: {'cmd': ['/usr/bin/cmake', '/home/robo/ros/src', '-DCMAKE_INSTALL_PREFIX=/home/robo/ros/install/Project'], 'cwd': '/home/robo/ros/build/Project', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'robo'), ('LC_TIME', 'id_ID.UTF-8'), ('SSH_AGENT_PID', '1644'), ('ROS_PACKAGE_PATH', '/home/robo/ros/src:/opt/ros/noetic/share'), ('XDG_SESSION_TYPE', 'x11'), ('ROS_ETC_DIR', '/opt/ros/noetic/etc/ros'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/robo/ros/devel/lib:/opt/ros/noetic/lib'), ('HOME', '/home/robo'), ('OLDPWD', '/home/robo/ros/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'id_ID.UTF-8'), ('MANAGERPID', '1244'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'noetic'), ('LOGNAME', 'robo'), ('JOURNAL_STREAM', '8:44953'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '1'), ('PKG_CONFIG_PATH', '/home/robo/ros/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig'), ('HDF5_DIR', '/home/robo/hdf5-1.10.1/hdf5-1.10.1/build'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'robo'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/noetic/bin:/home/robo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/robo/Android/Sdk/tools:/home/robo/Android/Sdk/platform-tools:/home/robo/bin'), ('SESSION_MANAGER', 'local/Robo-Warior:@/tmp/.ICE-unix/1702,unix/Robo-Warior:/tmp/.ICE-unix/1702'), ('INVOCATION_ID', 'ca3e30e885ea4fdd9ef533e15dcfe9d2'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'id_ID.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/7292ea1e_d5f9_4a68_8e27_4aa68a69feee'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'id_ID.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('ROSLISP_PACKAGE_DIRECTORIES', '/home/robo/ros/devel/share/common-lisp'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.102'), ('ROS_ROOT', '/opt/ros/noetic/share/ros'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SHELL', '/bin/bash'), ('LC_NAME', 'id_ID.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('ROS_MASTER_URI', 'http://localhost:11311'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'id_ID.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'id_ID.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/robo/ros/build/Project'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('ANDROID_HOME', '/home/robo/Android/Sdk'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/noetic/lib/python3/dist-packages'), ('LC_NUMERIC', 'id_ID.UTF-8'), ('LC_PAPER', 'id_ID.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/robo/ros/devel:/opt/ros/noetic')]), 'shell': False}
+[0.099104] (-) TimerEvent: {}
+[0.121176] (Project) StdoutLine: {'line': b'-- The C compiler identification is GNU 7.5.0\n'}
+[0.199205] (-) TimerEvent: {}
+[0.219497] (Project) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 7.5.0\n'}
+[0.232365] (Project) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.299316] (-) TimerEvent: {}
+[0.327614] (Project) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.329952] (Project) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.399466] (-) TimerEvent: {}
+[0.420632] (Project) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.446464] (Project) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.447496] (Project) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.453702] (Project) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[0.499581] (-) TimerEvent: {}
+[0.600205] (-) TimerEvent: {}
+[0.609425] (Project) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[0.613537] (Project) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.700330] (-) TimerEvent: {}
+[0.754398] (Project) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.784335] (Project) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.785376] (Project) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.800412] (-) TimerEvent: {}
+[0.900687] (-) TimerEvent: {}
+[1.000976] (-) TimerEvent: {}
+[1.101410] (-) TimerEvent: {}
+[1.201803] (-) TimerEvent: {}
+[1.203657] (Project) StdoutLine: {'line': b'-- Using CATKIN_DEVEL_PREFIX: /home/robo/ros/build/Project/devel\n'}
+[1.204358] (Project) StdoutLine: {'line': b'-- Using CMAKE_PREFIX_PATH: /home/robo/ros/devel;/opt/ros/noetic\n'}
+[1.204742] (Project) StdoutLine: {'line': b'-- This workspace overlays: /opt/ros/noetic\n'}
+[1.249219] (Project) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.5", minimum required is "3") \n'}
+[1.249693] (Project) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.249888] (Project) StdoutLine: {'line': b'-- Using Debian Python package layout\n'}
+[1.302688] (-) TimerEvent: {}
+[1.333699] (Project) StdoutLine: {'line': b'-- Found PY_em: /usr/lib/python3/dist-packages/em.py  \n'}
+[1.334126] (Project) StdoutLine: {'line': b'-- Using empy: /usr/lib/python3/dist-packages/em.py\n'}
+[1.402807] (-) TimerEvent: {}
+[1.503274] (-) TimerEvent: {}
+[1.573927] (Project) StdoutLine: {'line': b'-- Using CATKIN_ENABLE_TESTING: ON\n'}
+[1.574284] (Project) StdoutLine: {'line': b'-- Call enable_testing()\n'}
+[1.577237] (Project) StdoutLine: {'line': b'-- Using CATKIN_TEST_RESULTS_DIR: /home/robo/ros/build/Project/test_results\n'}
+[1.603386] (-) TimerEvent: {}
+[1.703741] (-) TimerEvent: {}
+[1.804045] (-) TimerEvent: {}
+[1.904366] (-) TimerEvent: {}
+[1.993735] (Project) StdoutLine: {'line': b'-- Forcing gtest/gmock from source, though one was otherwise available.\n'}
+[1.994037] (Project) StdoutLine: {'line': b"-- Found gtest sources under '/usr/src/googletest': gtests will be built\n"}
+[1.994655] (Project) StdoutLine: {'line': b"-- Found gmock sources under '/usr/src/googletest': gmock will be built\n"}
+[2.004492] (-) TimerEvent: {}
+[2.035865] (Project) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.5") \n'}
+[2.038729] (Project) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[2.049745] (Project) StdoutLine: {'line': b'-- Using Python nosetests: /usr/bin/nosetests3\n'}
+[2.104589] (-) TimerEvent: {}
+[2.136506] (Project) StdoutLine: {'line': b'-- catkin 0.8.9\n'}
+[2.136798] (Project) StdoutLine: {'line': b'-- BUILD_SHARED_LIBS is on\n'}
+[2.204721] (-) TimerEvent: {}
+[2.305034] (-) TimerEvent: {}
+[2.350841] (Project) StdoutLine: {'line': b'-- BUILD_SHARED_LIBS is on\n'}
+[2.405172] (-) TimerEvent: {}
+[2.505643] (-) TimerEvent: {}
+[2.605935] (-) TimerEvent: {}
+[2.706226] (-) TimerEvent: {}
+[2.806602] (-) TimerEvent: {}
+[2.906885] (-) TimerEvent: {}
+[3.007195] (-) TimerEvent: {}
+[3.030913] (Project) StdoutLine: {'line': b'-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[3.031543] (Project) StdoutLine: {'line': b'-- ~~  traversing 4 packages in topological order:\n'}
+[3.031727] (Project) StdoutLine: {'line': b'-- ~~  - object_recognition_pkg\n'}
+[3.031907] (Project) StdoutLine: {'line': b'-- ~~  - test\n'}
+[3.032025] (Project) StdoutLine: {'line': b'-- ~~  - darknet_ros_msgs (plain cmake)\n'}
+[3.032148] (Project) StdoutLine: {'line': b'-- ~~  - darknet_ros (plain cmake)\n'}
+[3.032341] (Project) StdoutLine: {'line': b'-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[3.033874] (Project) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[3.034118] (Project) StdoutLine: {'line': b'See also "/home/robo/ros/build/Project/CMakeFiles/CMakeOutput.log".\n'}
+[3.034280] (Project) StdoutLine: {'line': b'See also "/home/robo/ros/build/Project/CMakeFiles/CMakeError.log".\n'}
+[3.034384] (Project) StderrLine: {'line': b'CMake Error at /opt/ros/noetic/share/catkin/cmake/catkin_workspace.cmake:100 (message):\n'}
+[3.034513] (Project) StderrLine: {'line': b'  This workspace contains non-catkin packages in it, and catkin cannot build\n'}
+[3.034605] (Project) StderrLine: {'line': b'  a non-homogeneous workspace without isolation.  Try the\n'}
+[3.034751] (Project) StderrLine: {'line': b"  'catkin_make_isolated' command instead.\n"}
+[3.034862] (Project) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[3.034953] (Project) StderrLine: {'line': b'  CMakeLists.txt:69 (catkin_workspace)\n'}
+[3.035041] (Project) StderrLine: {'line': b'\n'}
+[3.035142] (Project) StderrLine: {'line': b'\n'}
+[3.042208] (Project) CommandEnded: {'returncode': 1}
+[3.044158] (Project) JobEnded: {'identifier': 'Project', 'rc': 1}
+[3.054866] (-) EventReactorShutdown: {}

@@ -1,0 +1,2 @@
+Invoking command in '/home/robo/ros/build/Project': /usr/bin/cmake /home/robo/ros/src -DCMAKE_INSTALL_PREFIX=/home/robo/ros/install/Project
+Invoked command in '/home/robo/ros/build/Project' returned '1': /usr/bin/cmake /home/robo/ros/src -DCMAKE_INSTALL_PREFIX=/home/robo/ros/install/Project

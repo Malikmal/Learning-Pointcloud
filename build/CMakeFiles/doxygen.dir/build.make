@@ -67,6 +67,6 @@ CMakeFiles/doxygen.dir/clean:
 .PHONY : CMakeFiles/doxygen.dir/clean
 
 CMakeFiles/doxygen.dir/depend:
-	cd /home/robo/ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robo/ros/src /home/robo/ros/src /home/robo/ros/build /home/robo/ros/build /home/robo/ros/build/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/robo/ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robo/ros/src /home/robo/ros/src /home/robo/ros/build /home/robo/ros/build /home/robo/ros/build/CMakeFiles/doxygen.dir/DependInfo.cmake
 .PHONY : CMakeFiles/doxygen.dir/depend
 

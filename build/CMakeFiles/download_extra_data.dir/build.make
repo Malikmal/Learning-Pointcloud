@@ -67,6 +67,6 @@ CMakeFiles/download_extra_data.dir/clean:
 .PHONY : CMakeFiles/download_extra_data.dir/clean
 
 CMakeFiles/download_extra_data.dir/depend:
-	cd /home/robo/ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robo/ros/src /home/robo/ros/src /home/robo/ros/build /home/robo/ros/build /home/robo/ros/build/CMakeFiles/download_extra_data.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/robo/ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robo/ros/src /home/robo/ros/src /home/robo/ros/build /home/robo/ros/build /home/robo/ros/build/CMakeFiles/download_extra_data.dir/DependInfo.cmake
 .PHONY : CMakeFiles/download_extra_data.dir/depend
 

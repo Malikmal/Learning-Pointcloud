@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/robo/ros/install/setup.sh
+    local-name: /usr/local/setup.sh

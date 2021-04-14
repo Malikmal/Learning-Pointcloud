@@ -1,1 +1,1 @@
-/bin/g++-7 -fPIC -g  -shared -Wl,-soname,libgmock_maind.so -o ../../lib/libgmock_maind.so CMakeFiles/gmock_main.dir/src/gmock_main.cc.o  -Wl,-rpath,/home/robo/ros/build/lib ../../lib/libgmockd.so ../../lib/libgtestd.so -lpthread 
+/usr/bin/c++ -fPIC   -shared -Wl,-soname,libgmock_main.so -o libgmock_main.so CMakeFiles/gmock_main.dir/src/gmock_main.cc.o  -Wl,-rpath,/home/robo/ros/build/gtest/googlemock:/home/robo/ros/build/gtest/googletest libgmock.so ../googletest/libgtest.so 

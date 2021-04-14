@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: object_recognition_pkg
+Description: Description of object_recognition_pkg
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

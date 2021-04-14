@@ -1,1 +1,1 @@
-/bin/g++-7 -fPIC -g  -shared -Wl,-soname,libgtestd.so -o ../../lib/libgtestd.so CMakeFiles/gtest.dir/src/gtest-all.cc.o  -lpthread 
+/usr/bin/c++ -fPIC   -shared -Wl,-soname,libgtest.so -o libgtest.so CMakeFiles/gtest.dir/src/gtest-all.cc.o 

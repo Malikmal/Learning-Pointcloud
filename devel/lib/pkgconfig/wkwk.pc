@@ -1,8 +1,0 @@
-prefix=/home/robo/ros/devel
-
-Name: wkwk
-Description: Description of wkwk
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

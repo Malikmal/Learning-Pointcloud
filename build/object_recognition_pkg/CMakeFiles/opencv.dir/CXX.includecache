@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/robo/ros/src/object_recognition_pkg/src/opencv.cpp
+iostream
+/home/robo/ros/src/object_recognition_pkg/src/iostream
+cmath
+-
+opencv4/opencv2/opencv.hpp
+-
+opencv4/opencv2/highgui/highgui.hpp
+-
+

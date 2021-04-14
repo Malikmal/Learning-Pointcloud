@@ -1,2 +1,2 @@
-filtering:pcl:realsense:test_one:test_opencv
+object_recognition_pkg:test
 -DCATKIN_DEVEL_PREFIX=/home/robo/ros/devel -DCMAKE_INSTALL_PREFIX=/home/robo/ros/install -G Unix Makefiles

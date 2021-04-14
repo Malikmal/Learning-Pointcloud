@@ -67,6 +67,6 @@ CMakeFiles/run_tests.dir/clean:
 .PHONY : CMakeFiles/run_tests.dir/clean
 
 CMakeFiles/run_tests.dir/depend:
-	cd /home/robo/ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robo/ros/src /home/robo/ros/src /home/robo/ros/build /home/robo/ros/build /home/robo/ros/build/CMakeFiles/run_tests.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/robo/ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robo/ros/src /home/robo/ros/src /home/robo/ros/build /home/robo/ros/build /home/robo/ros/build/CMakeFiles/run_tests.dir/DependInfo.cmake
 .PHONY : CMakeFiles/run_tests.dir/depend
 

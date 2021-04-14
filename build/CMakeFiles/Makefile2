@@ -53,22 +53,21 @@ CMAKE_BINARY_DIR = /home/robo/ros/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/doxygen.dir/all
+all: CMakeFiles/run_tests.dir/all
+all: CMakeFiles/clean_test_results.dir/all
+all: CMakeFiles/tests.dir/all
+all: CMakeFiles/download_extra_data.dir/all
 all: gtest/all
-all: filtering/all
-all: pcl/all
-all: realsense/all
-all: test_one/all
-all: test_opencv/all
+all: object_recognition_pkg/all
+all: test/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: gtest/preinstall
-preinstall: filtering/preinstall
-preinstall: pcl/preinstall
-preinstall: realsense/preinstall
-preinstall: test_one/preinstall
-preinstall: test_opencv/preinstall
+preinstall: object_recognition_pkg/preinstall
+preinstall: test/preinstall
 
 .PHONY : preinstall
 
@@ -79,36 +78,10 @@ clean: CMakeFiles/clean_test_results.dir/clean
 clean: CMakeFiles/tests.dir/clean
 clean: CMakeFiles/download_extra_data.dir/clean
 clean: gtest/clean
-clean: filtering/clean
-clean: pcl/clean
-clean: realsense/clean
-clean: test_one/clean
-clean: test_opencv/clean
+clean: object_recognition_pkg/clean
+clean: test/clean
 
 .PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory filtering
-
-# Recursive "all" directory target.
-filtering/all: filtering/CMakeFiles/project_inliers.dir/all
-filtering/all: filtering/CMakeFiles/outlier_removal.dir/all
-filtering/all: filtering/CMakeFiles/passthrough.dir/all
-
-.PHONY : filtering/all
-
-# Recursive "preinstall" directory target.
-filtering/preinstall:
-
-.PHONY : filtering/preinstall
-
-# Recursive "clean" directory target.
-filtering/clean: filtering/CMakeFiles/project_inliers.dir/clean
-filtering/clean: filtering/CMakeFiles/outlier_removal.dir/clean
-filtering/clean: filtering/CMakeFiles/passthrough.dir/clean
-filtering/clean: filtering/CMakeFiles/_catkin_empty_exported_target.dir/clean
-
-.PHONY : filtering/clean
 
 #=============================================================================
 # Directory level rules for directory gtest
@@ -132,6 +105,8 @@ gtest/clean: gtest/googlemock/clean
 # Directory level rules for directory gtest/googlemock
 
 # Recursive "all" directory target.
+gtest/googlemock/all: gtest/googlemock/CMakeFiles/gmock_main.dir/all
+gtest/googlemock/all: gtest/googlemock/CMakeFiles/gmock.dir/all
 gtest/googlemock/all: gtest/googletest/all
 
 .PHONY : gtest/googlemock/all
@@ -152,7 +127,8 @@ gtest/googlemock/clean: gtest/googletest/clean
 # Directory level rules for directory gtest/googletest
 
 # Recursive "all" directory target.
-gtest/googletest/all:
+gtest/googletest/all: gtest/googletest/CMakeFiles/gtest_main.dir/all
+gtest/googletest/all: gtest/googletest/CMakeFiles/gtest.dir/all
 
 .PHONY : gtest/googletest/all
 
@@ -168,159 +144,106 @@ gtest/googletest/clean: gtest/googletest/CMakeFiles/gtest.dir/clean
 .PHONY : gtest/googletest/clean
 
 #=============================================================================
-# Directory level rules for directory pcl
+# Directory level rules for directory object_recognition_pkg
 
 # Recursive "all" directory target.
-pcl/all: pcl/CMakeFiles/test_hello.dir/all
-pcl/all: pcl/CMakeFiles/pcd_vfh.dir/all
-pcl/all: pcl/CMakeFiles/pcd_normal.dir/all
-pcl/all: pcl/CMakeFiles/pcd_correspondence.dir/all
-pcl/all: pcl/CMakeFiles/write_file.dir/all
-pcl/all: pcl/CMakeFiles/read_file.dir/all
-pcl/all: pcl/CMakeFiles/convert_file.dir/all
-pcl/all: pcl/CMakeFiles/pcd_cropping.dir/all
-pcl/all: pcl/CMakeFiles/pcd_fpfh.dir/all
-pcl/all: pcl/CMakeFiles/euclidian_cluster.dir/all
-pcl/all: pcl/CMakeFiles/pcd_shot.dir/all
-pcl/all: pcl/CMakeFiles/pcd_pfh.dir/all
-pcl/all: pcl/CMakeFiles/pcd_narf.dir/all
-pcl/all: pcl/CMakeFiles/training.dir/all
+object_recognition_pkg/all: object_recognition_pkg/CMakeFiles/opencv.dir/all
+object_recognition_pkg/all: object_recognition_pkg/CMakeFiles/try_kinect.dir/all
+object_recognition_pkg/all: object_recognition_pkg/CMakeFiles/learnfann.dir/all
+object_recognition_pkg/all: object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+object_recognition_pkg/all: object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
+object_recognition_pkg/all: object_recognition_pkg/CMakeFiles/segmentation.dir/all
+object_recognition_pkg/all: object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+object_recognition_pkg/all: object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+object_recognition_pkg/all: object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
+object_recognition_pkg/all: object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+object_recognition_pkg/all: object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
+object_recognition_pkg/all: object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
+object_recognition_pkg/all: object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+object_recognition_pkg/all: object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+object_recognition_pkg/all: object_recognition_pkg/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+object_recognition_pkg/all: object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+object_recognition_pkg/all: object_recognition_pkg/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+object_recognition_pkg/all: object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
+object_recognition_pkg/all: object_recognition_pkg/CMakeFiles/roscpp_generate_messages_py.dir/all
+object_recognition_pkg/all: object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
+object_recognition_pkg/all: object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/all
+object_recognition_pkg/all: object_recognition_pkg/CMakeFiles/main_trainning.dir/all
+object_recognition_pkg/all: object_recognition_pkg/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+object_recognition_pkg/all: object_recognition_pkg/CMakeFiles/_catkin_empty_exported_target.dir/all
+object_recognition_pkg/all: object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+object_recognition_pkg/all: object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+object_recognition_pkg/all: object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
+object_recognition_pkg/all: object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+object_recognition_pkg/all: object_recognition_pkg/CMakeFiles/roscpp_generate_messages_eus.dir/all
+object_recognition_pkg/all: object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+object_recognition_pkg/all: object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+object_recognition_pkg/all: object_recognition_pkg/CMakeFiles/main.dir/all
+object_recognition_pkg/all: object_recognition_pkg/CMakeFiles/extract_feature.dir/all
+object_recognition_pkg/all: object_recognition_pkg/CMakeFiles/main_trainning_testing.dir/all
 
-.PHONY : pcl/all
+.PHONY : object_recognition_pkg/all
 
 # Recursive "preinstall" directory target.
-pcl/preinstall:
+object_recognition_pkg/preinstall:
 
-.PHONY : pcl/preinstall
+.PHONY : object_recognition_pkg/preinstall
 
 # Recursive "clean" directory target.
-pcl/clean: pcl/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
-pcl/clean: pcl/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
-pcl/clean: pcl/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
-pcl/clean: pcl/CMakeFiles/test_hello.dir/clean
-pcl/clean: pcl/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
-pcl/clean: pcl/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
-pcl/clean: pcl/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
-pcl/clean: pcl/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
-pcl/clean: pcl/CMakeFiles/roscpp_generate_messages_py.dir/clean
-pcl/clean: pcl/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
-pcl/clean: pcl/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
-pcl/clean: pcl/CMakeFiles/roscpp_generate_messages_eus.dir/clean
-pcl/clean: pcl/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
-pcl/clean: pcl/CMakeFiles/pcd_vfh.dir/clean
-pcl/clean: pcl/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
-pcl/clean: pcl/CMakeFiles/pcd_normal.dir/clean
-pcl/clean: pcl/CMakeFiles/pcd_correspondence.dir/clean
-pcl/clean: pcl/CMakeFiles/std_msgs_generate_messages_py.dir/clean
-pcl/clean: pcl/CMakeFiles/write_file.dir/clean
-pcl/clean: pcl/CMakeFiles/read_file.dir/clean
-pcl/clean: pcl/CMakeFiles/convert_file.dir/clean
-pcl/clean: pcl/CMakeFiles/pcd_cropping.dir/clean
-pcl/clean: pcl/CMakeFiles/pcd_fpfh.dir/clean
-pcl/clean: pcl/CMakeFiles/euclidian_cluster.dir/clean
-pcl/clean: pcl/CMakeFiles/pcd_shot.dir/clean
-pcl/clean: pcl/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
-pcl/clean: pcl/CMakeFiles/pcd_pfh.dir/clean
-pcl/clean: pcl/CMakeFiles/pcd_narf.dir/clean
-pcl/clean: pcl/CMakeFiles/training.dir/clean
+object_recognition_pkg/clean: object_recognition_pkg/CMakeFiles/opencv.dir/clean
+object_recognition_pkg/clean: object_recognition_pkg/CMakeFiles/try_kinect.dir/clean
+object_recognition_pkg/clean: object_recognition_pkg/CMakeFiles/learnfann.dir/clean
+object_recognition_pkg/clean: object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+object_recognition_pkg/clean: object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
+object_recognition_pkg/clean: object_recognition_pkg/CMakeFiles/segmentation.dir/clean
+object_recognition_pkg/clean: object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
+object_recognition_pkg/clean: object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+object_recognition_pkg/clean: object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
+object_recognition_pkg/clean: object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
+object_recognition_pkg/clean: object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
+object_recognition_pkg/clean: object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
+object_recognition_pkg/clean: object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
+object_recognition_pkg/clean: object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
+object_recognition_pkg/clean: object_recognition_pkg/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
+object_recognition_pkg/clean: object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+object_recognition_pkg/clean: object_recognition_pkg/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+object_recognition_pkg/clean: object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
+object_recognition_pkg/clean: object_recognition_pkg/CMakeFiles/roscpp_generate_messages_py.dir/clean
+object_recognition_pkg/clean: object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
+object_recognition_pkg/clean: object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/clean
+object_recognition_pkg/clean: object_recognition_pkg/CMakeFiles/main_trainning.dir/clean
+object_recognition_pkg/clean: object_recognition_pkg/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+object_recognition_pkg/clean: object_recognition_pkg/CMakeFiles/_catkin_empty_exported_target.dir/clean
+object_recognition_pkg/clean: object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+object_recognition_pkg/clean: object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
+object_recognition_pkg/clean: object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
+object_recognition_pkg/clean: object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
+object_recognition_pkg/clean: object_recognition_pkg/CMakeFiles/roscpp_generate_messages_eus.dir/clean
+object_recognition_pkg/clean: object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+object_recognition_pkg/clean: object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
+object_recognition_pkg/clean: object_recognition_pkg/CMakeFiles/main.dir/clean
+object_recognition_pkg/clean: object_recognition_pkg/CMakeFiles/extract_feature.dir/clean
+object_recognition_pkg/clean: object_recognition_pkg/CMakeFiles/main_trainning_testing.dir/clean
 
-.PHONY : pcl/clean
+.PHONY : object_recognition_pkg/clean
 
 #=============================================================================
-# Directory level rules for directory realsense
+# Directory level rules for directory test
 
 # Recursive "all" directory target.
-realsense/all: realsense/CMakeFiles/subsVisualizeNew.cpp.dir/all
-realsense/all: realsense/CMakeFiles/subsRGB.cpp.dir/all
-realsense/all: realsense/CMakeFiles/publishRGBD.cpp.dir/all
-realsense/all: realsense/CMakeFiles/grabPCLRGBD.cpp.dir/all
-realsense/all: realsense/CMakeFiles/pclVisualizer.dir/all
-realsense/all: realsense/CMakeFiles/A_RSpclAcquisition.dir/all
-realsense/all: realsense/CMakeFiles/grabRGB.dir/all
-realsense/all: realsense/CMakeFiles/grabDepth.dir/all
+test/all:
 
-.PHONY : realsense/all
+.PHONY : test/all
 
 # Recursive "preinstall" directory target.
-realsense/preinstall:
+test/preinstall:
 
-.PHONY : realsense/preinstall
-
-# Recursive "clean" directory target.
-realsense/clean: realsense/CMakeFiles/subsVisualizeNew.cpp.dir/clean
-realsense/clean: realsense/CMakeFiles/subsRGB.cpp.dir/clean
-realsense/clean: realsense/CMakeFiles/publishRGBD.cpp.dir/clean
-realsense/clean: realsense/CMakeFiles/grabPCLRGBD.cpp.dir/clean
-realsense/clean: realsense/CMakeFiles/pclVisualizer.dir/clean
-realsense/clean: realsense/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
-realsense/clean: realsense/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
-realsense/clean: realsense/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
-realsense/clean: realsense/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
-realsense/clean: realsense/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
-realsense/clean: realsense/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
-realsense/clean: realsense/CMakeFiles/A_RSpclAcquisition.dir/clean
-realsense/clean: realsense/CMakeFiles/grabRGB.dir/clean
-realsense/clean: realsense/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
-realsense/clean: realsense/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
-realsense/clean: realsense/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
-realsense/clean: realsense/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
-realsense/clean: realsense/CMakeFiles/grabDepth.dir/clean
-
-.PHONY : realsense/clean
-
-#=============================================================================
-# Directory level rules for directory test_one
-
-# Recursive "all" directory target.
-test_one/all: test_one/CMakeFiles/hello_world.dir/all
-test_one/all: test_one/CMakeFiles/build_tree.dir/all
-test_one/all: test_one/CMakeFiles/try_fann_persamaan_test.dir/all
-test_one/all: test_one/CMakeFiles/correspondence_grouping.dir/all
-test_one/all: test_one/CMakeFiles/try_fann2.dir/all
-test_one/all: test_one/CMakeFiles/complete_with_hv.dir/all
-test_one/all: test_one/CMakeFiles/just_test.dir/all
-test_one/all: test_one/CMakeFiles/nearest_neighbors.dir/all
-test_one/all: test_one/CMakeFiles/try_fann.dir/all
-test_one/all: test_one/CMakeFiles/try_fann_persamaan_train.dir/all
-
-.PHONY : test_one/all
-
-# Recursive "preinstall" directory target.
-test_one/preinstall:
-
-.PHONY : test_one/preinstall
+.PHONY : test/preinstall
 
 # Recursive "clean" directory target.
-test_one/clean: test_one/CMakeFiles/hello_world.dir/clean
-test_one/clean: test_one/CMakeFiles/build_tree.dir/clean
-test_one/clean: test_one/CMakeFiles/try_fann_persamaan_test.dir/clean
-test_one/clean: test_one/CMakeFiles/correspondence_grouping.dir/clean
-test_one/clean: test_one/CMakeFiles/try_fann2.dir/clean
-test_one/clean: test_one/CMakeFiles/complete_with_hv.dir/clean
-test_one/clean: test_one/CMakeFiles/just_test.dir/clean
-test_one/clean: test_one/CMakeFiles/nearest_neighbors.dir/clean
-test_one/clean: test_one/CMakeFiles/try_fann.dir/clean
-test_one/clean: test_one/CMakeFiles/try_fann_persamaan_train.dir/clean
+test/clean:
 
-.PHONY : test_one/clean
-
-#=============================================================================
-# Directory level rules for directory test_opencv
-
-# Recursive "all" directory target.
-test_opencv/all:
-
-.PHONY : test_opencv/all
-
-# Recursive "preinstall" directory target.
-test_opencv/preinstall:
-
-.PHONY : test_opencv/preinstall
-
-# Recursive "clean" directory target.
-test_opencv/clean:
-
-.PHONY : test_opencv/clean
+.PHONY : test/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/doxygen.dir
@@ -465,7 +388,7 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googlemock/CMakeFiles/gmoc
 gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=15,16 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=5,6 "Built target gmock_main"
 .PHONY : gtest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -492,7 +415,7 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/clean:
 gtest/googlemock/CMakeFiles/gmock.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=13,14 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=3,4 "Built target gmock"
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -519,7 +442,7 @@ gtest/googlemock/CMakeFiles/gmock.dir/clean:
 gtest/googletest/CMakeFiles/gtest_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=25,26 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=9,10 "Built target gtest_main"
 .PHONY : gtest/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -546,7 +469,7 @@ gtest/googletest/CMakeFiles/gtest_main.dir/clean:
 gtest/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=23,24 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=7,8 "Built target gtest"
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -567,1651 +490,922 @@ gtest/googletest/CMakeFiles/gtest.dir/clean:
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/clean
 
 #=============================================================================
-# Target rules for target filtering/CMakeFiles/project_inliers.dir
+# Target rules for target object_recognition_pkg/CMakeFiles/opencv.dir
 
 # All Build rule for target.
-filtering/CMakeFiles/project_inliers.dir/all:
-	$(MAKE) -f filtering/CMakeFiles/project_inliers.dir/build.make filtering/CMakeFiles/project_inliers.dir/depend
-	$(MAKE) -f filtering/CMakeFiles/project_inliers.dir/build.make filtering/CMakeFiles/project_inliers.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=55,56 "Built target project_inliers"
-.PHONY : filtering/CMakeFiles/project_inliers.dir/all
+object_recognition_pkg/CMakeFiles/opencv.dir/all:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/opencv.dir/build.make object_recognition_pkg/CMakeFiles/opencv.dir/depend
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/opencv.dir/build.make object_recognition_pkg/CMakeFiles/opencv.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=19,20 "Built target opencv"
+.PHONY : object_recognition_pkg/CMakeFiles/opencv.dir/all
 
 # Build rule for subdir invocation for target.
-filtering/CMakeFiles/project_inliers.dir/rule: cmake_check_build_system
+object_recognition_pkg/CMakeFiles/opencv.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 filtering/CMakeFiles/project_inliers.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 object_recognition_pkg/CMakeFiles/opencv.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : filtering/CMakeFiles/project_inliers.dir/rule
+.PHONY : object_recognition_pkg/CMakeFiles/opencv.dir/rule
 
 # Convenience name for target.
-project_inliers: filtering/CMakeFiles/project_inliers.dir/rule
+opencv: object_recognition_pkg/CMakeFiles/opencv.dir/rule
 
-.PHONY : project_inliers
+.PHONY : opencv
 
 # clean rule for target.
-filtering/CMakeFiles/project_inliers.dir/clean:
-	$(MAKE) -f filtering/CMakeFiles/project_inliers.dir/build.make filtering/CMakeFiles/project_inliers.dir/clean
-.PHONY : filtering/CMakeFiles/project_inliers.dir/clean
+object_recognition_pkg/CMakeFiles/opencv.dir/clean:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/opencv.dir/build.make object_recognition_pkg/CMakeFiles/opencv.dir/clean
+.PHONY : object_recognition_pkg/CMakeFiles/opencv.dir/clean
 
 #=============================================================================
-# Target rules for target filtering/CMakeFiles/outlier_removal.dir
+# Target rules for target object_recognition_pkg/CMakeFiles/try_kinect.dir
 
 # All Build rule for target.
-filtering/CMakeFiles/outlier_removal.dir/all:
-	$(MAKE) -f filtering/CMakeFiles/outlier_removal.dir/build.make filtering/CMakeFiles/outlier_removal.dir/depend
-	$(MAKE) -f filtering/CMakeFiles/outlier_removal.dir/build.make filtering/CMakeFiles/outlier_removal.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=33,34 "Built target outlier_removal"
-.PHONY : filtering/CMakeFiles/outlier_removal.dir/all
+object_recognition_pkg/CMakeFiles/try_kinect.dir/all:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/try_kinect.dir/build.make object_recognition_pkg/CMakeFiles/try_kinect.dir/depend
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/try_kinect.dir/build.make object_recognition_pkg/CMakeFiles/try_kinect.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=23,24 "Built target try_kinect"
+.PHONY : object_recognition_pkg/CMakeFiles/try_kinect.dir/all
 
 # Build rule for subdir invocation for target.
-filtering/CMakeFiles/outlier_removal.dir/rule: cmake_check_build_system
+object_recognition_pkg/CMakeFiles/try_kinect.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 filtering/CMakeFiles/outlier_removal.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 object_recognition_pkg/CMakeFiles/try_kinect.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : filtering/CMakeFiles/outlier_removal.dir/rule
+.PHONY : object_recognition_pkg/CMakeFiles/try_kinect.dir/rule
 
 # Convenience name for target.
-outlier_removal: filtering/CMakeFiles/outlier_removal.dir/rule
+try_kinect: object_recognition_pkg/CMakeFiles/try_kinect.dir/rule
 
-.PHONY : outlier_removal
+.PHONY : try_kinect
 
 # clean rule for target.
-filtering/CMakeFiles/outlier_removal.dir/clean:
-	$(MAKE) -f filtering/CMakeFiles/outlier_removal.dir/build.make filtering/CMakeFiles/outlier_removal.dir/clean
-.PHONY : filtering/CMakeFiles/outlier_removal.dir/clean
+object_recognition_pkg/CMakeFiles/try_kinect.dir/clean:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/try_kinect.dir/build.make object_recognition_pkg/CMakeFiles/try_kinect.dir/clean
+.PHONY : object_recognition_pkg/CMakeFiles/try_kinect.dir/clean
 
 #=============================================================================
-# Target rules for target filtering/CMakeFiles/passthrough.dir
+# Target rules for target object_recognition_pkg/CMakeFiles/learnfann.dir
 
 # All Build rule for target.
-filtering/CMakeFiles/passthrough.dir/all:
-	$(MAKE) -f filtering/CMakeFiles/passthrough.dir/build.make filtering/CMakeFiles/passthrough.dir/depend
-	$(MAKE) -f filtering/CMakeFiles/passthrough.dir/build.make filtering/CMakeFiles/passthrough.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=35,36 "Built target passthrough"
-.PHONY : filtering/CMakeFiles/passthrough.dir/all
+object_recognition_pkg/CMakeFiles/learnfann.dir/all:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/learnfann.dir/build.make object_recognition_pkg/CMakeFiles/learnfann.dir/depend
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/learnfann.dir/build.make object_recognition_pkg/CMakeFiles/learnfann.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=11,12 "Built target learnfann"
+.PHONY : object_recognition_pkg/CMakeFiles/learnfann.dir/all
 
 # Build rule for subdir invocation for target.
-filtering/CMakeFiles/passthrough.dir/rule: cmake_check_build_system
+object_recognition_pkg/CMakeFiles/learnfann.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 filtering/CMakeFiles/passthrough.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 object_recognition_pkg/CMakeFiles/learnfann.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : filtering/CMakeFiles/passthrough.dir/rule
+.PHONY : object_recognition_pkg/CMakeFiles/learnfann.dir/rule
 
 # Convenience name for target.
-passthrough: filtering/CMakeFiles/passthrough.dir/rule
+learnfann: object_recognition_pkg/CMakeFiles/learnfann.dir/rule
 
-.PHONY : passthrough
-
-# clean rule for target.
-filtering/CMakeFiles/passthrough.dir/clean:
-	$(MAKE) -f filtering/CMakeFiles/passthrough.dir/build.make filtering/CMakeFiles/passthrough.dir/clean
-.PHONY : filtering/CMakeFiles/passthrough.dir/clean
-
-#=============================================================================
-# Target rules for target filtering/CMakeFiles/_catkin_empty_exported_target.dir
-
-# All Build rule for target.
-filtering/CMakeFiles/_catkin_empty_exported_target.dir/all:
-	$(MAKE) -f filtering/CMakeFiles/_catkin_empty_exported_target.dir/build.make filtering/CMakeFiles/_catkin_empty_exported_target.dir/depend
-	$(MAKE) -f filtering/CMakeFiles/_catkin_empty_exported_target.dir/build.make filtering/CMakeFiles/_catkin_empty_exported_target.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target _catkin_empty_exported_target"
-.PHONY : filtering/CMakeFiles/_catkin_empty_exported_target.dir/all
-
-# Build rule for subdir invocation for target.
-filtering/CMakeFiles/_catkin_empty_exported_target.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 filtering/CMakeFiles/_catkin_empty_exported_target.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : filtering/CMakeFiles/_catkin_empty_exported_target.dir/rule
-
-# Convenience name for target.
-_catkin_empty_exported_target: filtering/CMakeFiles/_catkin_empty_exported_target.dir/rule
-
-.PHONY : _catkin_empty_exported_target
+.PHONY : learnfann
 
 # clean rule for target.
-filtering/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	$(MAKE) -f filtering/CMakeFiles/_catkin_empty_exported_target.dir/build.make filtering/CMakeFiles/_catkin_empty_exported_target.dir/clean
-.PHONY : filtering/CMakeFiles/_catkin_empty_exported_target.dir/clean
+object_recognition_pkg/CMakeFiles/learnfann.dir/clean:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/learnfann.dir/build.make object_recognition_pkg/CMakeFiles/learnfann.dir/clean
+.PHONY : object_recognition_pkg/CMakeFiles/learnfann.dir/clean
 
 #=============================================================================
-# Target rules for target pcl/CMakeFiles/rosgraph_msgs_generate_messages_py.dir
+# Target rules for target object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir
 
 # All Build rule for target.
-pcl/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all:
-	$(MAKE) -f pcl/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make pcl/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend
-	$(MAKE) -f pcl/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make pcl/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_py"
-.PHONY : pcl/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-
-# Build rule for subdir invocation for target.
-pcl/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : pcl/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_py: pcl/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# clean rule for target.
-pcl/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
-	$(MAKE) -f pcl/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make pcl/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
-.PHONY : pcl/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
-
-#=============================================================================
-# Target rules for target pcl/CMakeFiles/roscpp_generate_messages_lisp.dir
-
-# All Build rule for target.
-pcl/CMakeFiles/roscpp_generate_messages_lisp.dir/all:
-	$(MAKE) -f pcl/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make pcl/CMakeFiles/roscpp_generate_messages_lisp.dir/depend
-	$(MAKE) -f pcl/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make pcl/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_lisp"
-.PHONY : pcl/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-pcl/CMakeFiles/roscpp_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : pcl/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_lisp: pcl/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-.PHONY : roscpp_generate_messages_lisp
-
-# clean rule for target.
-pcl/CMakeFiles/roscpp_generate_messages_lisp.dir/clean:
-	$(MAKE) -f pcl/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make pcl/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
-.PHONY : pcl/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
-
-#=============================================================================
-# Target rules for target pcl/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir
-
-# All Build rule for target.
-pcl/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all:
-	$(MAKE) -f pcl/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make pcl/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/depend
-	$(MAKE) -f pcl/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make pcl/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_eus"
-.PHONY : pcl/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-
-# Build rule for subdir invocation for target.
-pcl/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : pcl/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_eus: pcl/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_eus
-
-# clean rule for target.
-pcl/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean:
-	$(MAKE) -f pcl/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make pcl/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
-.PHONY : pcl/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
-
-#=============================================================================
-# Target rules for target pcl/CMakeFiles/test_hello.dir
-
-# All Build rule for target.
-pcl/CMakeFiles/test_hello.dir/all:
-	$(MAKE) -f pcl/CMakeFiles/test_hello.dir/build.make pcl/CMakeFiles/test_hello.dir/depend
-	$(MAKE) -f pcl/CMakeFiles/test_hello.dir/build.make pcl/CMakeFiles/test_hello.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=65,66 "Built target test_hello"
-.PHONY : pcl/CMakeFiles/test_hello.dir/all
-
-# Build rule for subdir invocation for target.
-pcl/CMakeFiles/test_hello.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/test_hello.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : pcl/CMakeFiles/test_hello.dir/rule
-
-# Convenience name for target.
-test_hello: pcl/CMakeFiles/test_hello.dir/rule
-
-.PHONY : test_hello
-
-# clean rule for target.
-pcl/CMakeFiles/test_hello.dir/clean:
-	$(MAKE) -f pcl/CMakeFiles/test_hello.dir/build.make pcl/CMakeFiles/test_hello.dir/clean
-.PHONY : pcl/CMakeFiles/test_hello.dir/clean
-
-#=============================================================================
-# Target rules for target pcl/CMakeFiles/std_msgs_generate_messages_cpp.dir
-
-# All Build rule for target.
-pcl/CMakeFiles/std_msgs_generate_messages_cpp.dir/all:
-	$(MAKE) -f pcl/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make pcl/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend
-	$(MAKE) -f pcl/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make pcl/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_cpp"
-.PHONY : pcl/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+.PHONY : object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
-pcl/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : pcl/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+.PHONY : object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_cpp: pcl/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+std_msgs_generate_messages_cpp: object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 
 .PHONY : std_msgs_generate_messages_cpp
 
 # clean rule for target.
-pcl/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean:
-	$(MAKE) -f pcl/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make pcl/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
-.PHONY : pcl/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+.PHONY : object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
 
 #=============================================================================
-# Target rules for target pcl/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
+# Target rules for target object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir
 
 # All Build rule for target.
-pcl/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all:
-	$(MAKE) -f pcl/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make pcl/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/depend
-	$(MAKE) -f pcl/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make pcl/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_cpp"
-.PHONY : pcl/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-
-# Build rule for subdir invocation for target.
-pcl/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : pcl/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: pcl/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# clean rule for target.
-pcl/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean:
-	$(MAKE) -f pcl/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make pcl/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
-.PHONY : pcl/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
-
-#=============================================================================
-# Target rules for target pcl/CMakeFiles/roscpp_generate_messages_nodejs.dir
-
-# All Build rule for target.
-pcl/CMakeFiles/roscpp_generate_messages_nodejs.dir/all:
-	$(MAKE) -f pcl/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make pcl/CMakeFiles/roscpp_generate_messages_nodejs.dir/depend
-	$(MAKE) -f pcl/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make pcl/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_nodejs"
-.PHONY : pcl/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-
-# Build rule for subdir invocation for target.
-pcl/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : pcl/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_nodejs: pcl/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-.PHONY : roscpp_generate_messages_nodejs
-
-# clean rule for target.
-pcl/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f pcl/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make pcl/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
-.PHONY : pcl/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
-
-#=============================================================================
-# Target rules for target pcl/CMakeFiles/std_msgs_generate_messages_eus.dir
-
-# All Build rule for target.
-pcl/CMakeFiles/std_msgs_generate_messages_eus.dir/all:
-	$(MAKE) -f pcl/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make pcl/CMakeFiles/std_msgs_generate_messages_eus.dir/depend
-	$(MAKE) -f pcl/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make pcl/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_eus"
-.PHONY : pcl/CMakeFiles/std_msgs_generate_messages_eus.dir/all
-
-# Build rule for subdir invocation for target.
-pcl/CMakeFiles/std_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/std_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : pcl/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_eus: pcl/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-.PHONY : std_msgs_generate_messages_eus
-
-# clean rule for target.
-pcl/CMakeFiles/std_msgs_generate_messages_eus.dir/clean:
-	$(MAKE) -f pcl/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make pcl/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
-.PHONY : pcl/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
-
-#=============================================================================
-# Target rules for target pcl/CMakeFiles/roscpp_generate_messages_py.dir
-
-# All Build rule for target.
-pcl/CMakeFiles/roscpp_generate_messages_py.dir/all:
-	$(MAKE) -f pcl/CMakeFiles/roscpp_generate_messages_py.dir/build.make pcl/CMakeFiles/roscpp_generate_messages_py.dir/depend
-	$(MAKE) -f pcl/CMakeFiles/roscpp_generate_messages_py.dir/build.make pcl/CMakeFiles/roscpp_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_py"
-.PHONY : pcl/CMakeFiles/roscpp_generate_messages_py.dir/all
-
-# Build rule for subdir invocation for target.
-pcl/CMakeFiles/roscpp_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/roscpp_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : pcl/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_py: pcl/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-.PHONY : roscpp_generate_messages_py
-
-# clean rule for target.
-pcl/CMakeFiles/roscpp_generate_messages_py.dir/clean:
-	$(MAKE) -f pcl/CMakeFiles/roscpp_generate_messages_py.dir/build.make pcl/CMakeFiles/roscpp_generate_messages_py.dir/clean
-.PHONY : pcl/CMakeFiles/roscpp_generate_messages_py.dir/clean
-
-#=============================================================================
-# Target rules for target pcl/CMakeFiles/std_msgs_generate_messages_lisp.dir
-
-# All Build rule for target.
-pcl/CMakeFiles/std_msgs_generate_messages_lisp.dir/all:
-	$(MAKE) -f pcl/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make pcl/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend
-	$(MAKE) -f pcl/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make pcl/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_lisp"
-.PHONY : pcl/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-pcl/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : pcl/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: pcl/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : std_msgs_generate_messages_lisp
-
-# clean rule for target.
-pcl/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean:
-	$(MAKE) -f pcl/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make pcl/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
-.PHONY : pcl/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
-
-#=============================================================================
-# Target rules for target pcl/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir
-
-# All Build rule for target.
-pcl/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all:
-	$(MAKE) -f pcl/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make pcl/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/depend
-	$(MAKE) -f pcl/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make pcl/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_nodejs"
-.PHONY : pcl/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-
-# Build rule for subdir invocation for target.
-pcl/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : pcl/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_nodejs: pcl/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_nodejs
-
-# clean rule for target.
-pcl/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f pcl/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make pcl/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
-.PHONY : pcl/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
-
-#=============================================================================
-# Target rules for target pcl/CMakeFiles/roscpp_generate_messages_eus.dir
-
-# All Build rule for target.
-pcl/CMakeFiles/roscpp_generate_messages_eus.dir/all:
-	$(MAKE) -f pcl/CMakeFiles/roscpp_generate_messages_eus.dir/build.make pcl/CMakeFiles/roscpp_generate_messages_eus.dir/depend
-	$(MAKE) -f pcl/CMakeFiles/roscpp_generate_messages_eus.dir/build.make pcl/CMakeFiles/roscpp_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_eus"
-.PHONY : pcl/CMakeFiles/roscpp_generate_messages_eus.dir/all
-
-# Build rule for subdir invocation for target.
-pcl/CMakeFiles/roscpp_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/roscpp_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : pcl/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_eus: pcl/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-.PHONY : roscpp_generate_messages_eus
-
-# clean rule for target.
-pcl/CMakeFiles/roscpp_generate_messages_eus.dir/clean:
-	$(MAKE) -f pcl/CMakeFiles/roscpp_generate_messages_eus.dir/build.make pcl/CMakeFiles/roscpp_generate_messages_eus.dir/clean
-.PHONY : pcl/CMakeFiles/roscpp_generate_messages_eus.dir/clean
-
-#=============================================================================
-# Target rules for target pcl/CMakeFiles/roscpp_generate_messages_cpp.dir
-
-# All Build rule for target.
-pcl/CMakeFiles/roscpp_generate_messages_cpp.dir/all:
-	$(MAKE) -f pcl/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make pcl/CMakeFiles/roscpp_generate_messages_cpp.dir/depend
-	$(MAKE) -f pcl/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make pcl/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_cpp"
-.PHONY : pcl/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-
-# Build rule for subdir invocation for target.
-pcl/CMakeFiles/roscpp_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : pcl/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_cpp: pcl/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-.PHONY : roscpp_generate_messages_cpp
-
-# clean rule for target.
-pcl/CMakeFiles/roscpp_generate_messages_cpp.dir/clean:
-	$(MAKE) -f pcl/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make pcl/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
-.PHONY : pcl/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
-
-#=============================================================================
-# Target rules for target pcl/CMakeFiles/pcd_vfh.dir
-
-# All Build rule for target.
-pcl/CMakeFiles/pcd_vfh.dir/all:
-	$(MAKE) -f pcl/CMakeFiles/pcd_vfh.dir/build.make pcl/CMakeFiles/pcd_vfh.dir/depend
-	$(MAKE) -f pcl/CMakeFiles/pcd_vfh.dir/build.make pcl/CMakeFiles/pcd_vfh.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=51,52 "Built target pcd_vfh"
-.PHONY : pcl/CMakeFiles/pcd_vfh.dir/all
-
-# Build rule for subdir invocation for target.
-pcl/CMakeFiles/pcd_vfh.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/pcd_vfh.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : pcl/CMakeFiles/pcd_vfh.dir/rule
-
-# Convenience name for target.
-pcd_vfh: pcl/CMakeFiles/pcd_vfh.dir/rule
-
-.PHONY : pcd_vfh
-
-# clean rule for target.
-pcl/CMakeFiles/pcd_vfh.dir/clean:
-	$(MAKE) -f pcl/CMakeFiles/pcd_vfh.dir/build.make pcl/CMakeFiles/pcd_vfh.dir/clean
-.PHONY : pcl/CMakeFiles/pcd_vfh.dir/clean
-
-#=============================================================================
-# Target rules for target pcl/CMakeFiles/std_msgs_generate_messages_nodejs.dir
-
-# All Build rule for target.
-pcl/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all:
-	$(MAKE) -f pcl/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make pcl/CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend
-	$(MAKE) -f pcl/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make pcl/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_nodejs"
-.PHONY : pcl/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-
-# Build rule for subdir invocation for target.
-pcl/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : pcl/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_nodejs: pcl/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : std_msgs_generate_messages_nodejs
-
-# clean rule for target.
-pcl/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f pcl/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make pcl/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
-.PHONY : pcl/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
-
-#=============================================================================
-# Target rules for target pcl/CMakeFiles/pcd_normal.dir
-
-# All Build rule for target.
-pcl/CMakeFiles/pcd_normal.dir/all:
-	$(MAKE) -f pcl/CMakeFiles/pcd_normal.dir/build.make pcl/CMakeFiles/pcd_normal.dir/depend
-	$(MAKE) -f pcl/CMakeFiles/pcd_normal.dir/build.make pcl/CMakeFiles/pcd_normal.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=45,46 "Built target pcd_normal"
-.PHONY : pcl/CMakeFiles/pcd_normal.dir/all
-
-# Build rule for subdir invocation for target.
-pcl/CMakeFiles/pcd_normal.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/pcd_normal.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : pcl/CMakeFiles/pcd_normal.dir/rule
-
-# Convenience name for target.
-pcd_normal: pcl/CMakeFiles/pcd_normal.dir/rule
-
-.PHONY : pcd_normal
-
-# clean rule for target.
-pcl/CMakeFiles/pcd_normal.dir/clean:
-	$(MAKE) -f pcl/CMakeFiles/pcd_normal.dir/build.make pcl/CMakeFiles/pcd_normal.dir/clean
-.PHONY : pcl/CMakeFiles/pcd_normal.dir/clean
-
-#=============================================================================
-# Target rules for target pcl/CMakeFiles/pcd_correspondence.dir
-
-# All Build rule for target.
-pcl/CMakeFiles/pcd_correspondence.dir/all:
-	$(MAKE) -f pcl/CMakeFiles/pcd_correspondence.dir/build.make pcl/CMakeFiles/pcd_correspondence.dir/depend
-	$(MAKE) -f pcl/CMakeFiles/pcd_correspondence.dir/build.make pcl/CMakeFiles/pcd_correspondence.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=37,38 "Built target pcd_correspondence"
-.PHONY : pcl/CMakeFiles/pcd_correspondence.dir/all
-
-# Build rule for subdir invocation for target.
-pcl/CMakeFiles/pcd_correspondence.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/pcd_correspondence.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : pcl/CMakeFiles/pcd_correspondence.dir/rule
-
-# Convenience name for target.
-pcd_correspondence: pcl/CMakeFiles/pcd_correspondence.dir/rule
-
-.PHONY : pcd_correspondence
-
-# clean rule for target.
-pcl/CMakeFiles/pcd_correspondence.dir/clean:
-	$(MAKE) -f pcl/CMakeFiles/pcd_correspondence.dir/build.make pcl/CMakeFiles/pcd_correspondence.dir/clean
-.PHONY : pcl/CMakeFiles/pcd_correspondence.dir/clean
-
-#=============================================================================
-# Target rules for target pcl/CMakeFiles/std_msgs_generate_messages_py.dir
-
-# All Build rule for target.
-pcl/CMakeFiles/std_msgs_generate_messages_py.dir/all:
-	$(MAKE) -f pcl/CMakeFiles/std_msgs_generate_messages_py.dir/build.make pcl/CMakeFiles/std_msgs_generate_messages_py.dir/depend
-	$(MAKE) -f pcl/CMakeFiles/std_msgs_generate_messages_py.dir/build.make pcl/CMakeFiles/std_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_py"
-.PHONY : pcl/CMakeFiles/std_msgs_generate_messages_py.dir/all
-
-# Build rule for subdir invocation for target.
-pcl/CMakeFiles/std_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/std_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : pcl/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_py: pcl/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-.PHONY : std_msgs_generate_messages_py
-
-# clean rule for target.
-pcl/CMakeFiles/std_msgs_generate_messages_py.dir/clean:
-	$(MAKE) -f pcl/CMakeFiles/std_msgs_generate_messages_py.dir/build.make pcl/CMakeFiles/std_msgs_generate_messages_py.dir/clean
-.PHONY : pcl/CMakeFiles/std_msgs_generate_messages_py.dir/clean
-
-#=============================================================================
-# Target rules for target pcl/CMakeFiles/write_file.dir
-
-# All Build rule for target.
-pcl/CMakeFiles/write_file.dir/all:
-	$(MAKE) -f pcl/CMakeFiles/write_file.dir/build.make pcl/CMakeFiles/write_file.dir/depend
-	$(MAKE) -f pcl/CMakeFiles/write_file.dir/build.make pcl/CMakeFiles/write_file.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=77,78 "Built target write_file"
-.PHONY : pcl/CMakeFiles/write_file.dir/all
-
-# Build rule for subdir invocation for target.
-pcl/CMakeFiles/write_file.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/write_file.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : pcl/CMakeFiles/write_file.dir/rule
-
-# Convenience name for target.
-write_file: pcl/CMakeFiles/write_file.dir/rule
-
-.PHONY : write_file
-
-# clean rule for target.
-pcl/CMakeFiles/write_file.dir/clean:
-	$(MAKE) -f pcl/CMakeFiles/write_file.dir/build.make pcl/CMakeFiles/write_file.dir/clean
-.PHONY : pcl/CMakeFiles/write_file.dir/clean
-
-#=============================================================================
-# Target rules for target pcl/CMakeFiles/read_file.dir
-
-# All Build rule for target.
-pcl/CMakeFiles/read_file.dir/all:
-	$(MAKE) -f pcl/CMakeFiles/read_file.dir/build.make pcl/CMakeFiles/read_file.dir/depend
-	$(MAKE) -f pcl/CMakeFiles/read_file.dir/build.make pcl/CMakeFiles/read_file.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=59,60 "Built target read_file"
-.PHONY : pcl/CMakeFiles/read_file.dir/all
-
-# Build rule for subdir invocation for target.
-pcl/CMakeFiles/read_file.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/read_file.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : pcl/CMakeFiles/read_file.dir/rule
-
-# Convenience name for target.
-read_file: pcl/CMakeFiles/read_file.dir/rule
-
-.PHONY : read_file
-
-# clean rule for target.
-pcl/CMakeFiles/read_file.dir/clean:
-	$(MAKE) -f pcl/CMakeFiles/read_file.dir/build.make pcl/CMakeFiles/read_file.dir/clean
-.PHONY : pcl/CMakeFiles/read_file.dir/clean
-
-#=============================================================================
-# Target rules for target pcl/CMakeFiles/convert_file.dir
-
-# All Build rule for target.
-pcl/CMakeFiles/convert_file.dir/all:
-	$(MAKE) -f pcl/CMakeFiles/convert_file.dir/build.make pcl/CMakeFiles/convert_file.dir/depend
-	$(MAKE) -f pcl/CMakeFiles/convert_file.dir/build.make pcl/CMakeFiles/convert_file.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=7,8 "Built target convert_file"
-.PHONY : pcl/CMakeFiles/convert_file.dir/all
-
-# Build rule for subdir invocation for target.
-pcl/CMakeFiles/convert_file.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/convert_file.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : pcl/CMakeFiles/convert_file.dir/rule
-
-# Convenience name for target.
-convert_file: pcl/CMakeFiles/convert_file.dir/rule
-
-.PHONY : convert_file
-
-# clean rule for target.
-pcl/CMakeFiles/convert_file.dir/clean:
-	$(MAKE) -f pcl/CMakeFiles/convert_file.dir/build.make pcl/CMakeFiles/convert_file.dir/clean
-.PHONY : pcl/CMakeFiles/convert_file.dir/clean
-
-#=============================================================================
-# Target rules for target pcl/CMakeFiles/pcd_cropping.dir
-
-# All Build rule for target.
-pcl/CMakeFiles/pcd_cropping.dir/all:
-	$(MAKE) -f pcl/CMakeFiles/pcd_cropping.dir/build.make pcl/CMakeFiles/pcd_cropping.dir/depend
-	$(MAKE) -f pcl/CMakeFiles/pcd_cropping.dir/build.make pcl/CMakeFiles/pcd_cropping.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=39,40 "Built target pcd_cropping"
-.PHONY : pcl/CMakeFiles/pcd_cropping.dir/all
-
-# Build rule for subdir invocation for target.
-pcl/CMakeFiles/pcd_cropping.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/pcd_cropping.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : pcl/CMakeFiles/pcd_cropping.dir/rule
-
-# Convenience name for target.
-pcd_cropping: pcl/CMakeFiles/pcd_cropping.dir/rule
-
-.PHONY : pcd_cropping
-
-# clean rule for target.
-pcl/CMakeFiles/pcd_cropping.dir/clean:
-	$(MAKE) -f pcl/CMakeFiles/pcd_cropping.dir/build.make pcl/CMakeFiles/pcd_cropping.dir/clean
-.PHONY : pcl/CMakeFiles/pcd_cropping.dir/clean
-
-#=============================================================================
-# Target rules for target pcl/CMakeFiles/pcd_fpfh.dir
-
-# All Build rule for target.
-pcl/CMakeFiles/pcd_fpfh.dir/all:
-	$(MAKE) -f pcl/CMakeFiles/pcd_fpfh.dir/build.make pcl/CMakeFiles/pcd_fpfh.dir/depend
-	$(MAKE) -f pcl/CMakeFiles/pcd_fpfh.dir/build.make pcl/CMakeFiles/pcd_fpfh.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=41,42 "Built target pcd_fpfh"
-.PHONY : pcl/CMakeFiles/pcd_fpfh.dir/all
-
-# Build rule for subdir invocation for target.
-pcl/CMakeFiles/pcd_fpfh.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/pcd_fpfh.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : pcl/CMakeFiles/pcd_fpfh.dir/rule
-
-# Convenience name for target.
-pcd_fpfh: pcl/CMakeFiles/pcd_fpfh.dir/rule
-
-.PHONY : pcd_fpfh
-
-# clean rule for target.
-pcl/CMakeFiles/pcd_fpfh.dir/clean:
-	$(MAKE) -f pcl/CMakeFiles/pcd_fpfh.dir/build.make pcl/CMakeFiles/pcd_fpfh.dir/clean
-.PHONY : pcl/CMakeFiles/pcd_fpfh.dir/clean
-
-#=============================================================================
-# Target rules for target pcl/CMakeFiles/euclidian_cluster.dir
-
-# All Build rule for target.
-pcl/CMakeFiles/euclidian_cluster.dir/all:
-	$(MAKE) -f pcl/CMakeFiles/euclidian_cluster.dir/build.make pcl/CMakeFiles/euclidian_cluster.dir/depend
-	$(MAKE) -f pcl/CMakeFiles/euclidian_cluster.dir/build.make pcl/CMakeFiles/euclidian_cluster.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=11,12 "Built target euclidian_cluster"
-.PHONY : pcl/CMakeFiles/euclidian_cluster.dir/all
-
-# Build rule for subdir invocation for target.
-pcl/CMakeFiles/euclidian_cluster.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/euclidian_cluster.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : pcl/CMakeFiles/euclidian_cluster.dir/rule
-
-# Convenience name for target.
-euclidian_cluster: pcl/CMakeFiles/euclidian_cluster.dir/rule
-
-.PHONY : euclidian_cluster
-
-# clean rule for target.
-pcl/CMakeFiles/euclidian_cluster.dir/clean:
-	$(MAKE) -f pcl/CMakeFiles/euclidian_cluster.dir/build.make pcl/CMakeFiles/euclidian_cluster.dir/clean
-.PHONY : pcl/CMakeFiles/euclidian_cluster.dir/clean
-
-#=============================================================================
-# Target rules for target pcl/CMakeFiles/pcd_shot.dir
-
-# All Build rule for target.
-pcl/CMakeFiles/pcd_shot.dir/all:
-	$(MAKE) -f pcl/CMakeFiles/pcd_shot.dir/build.make pcl/CMakeFiles/pcd_shot.dir/depend
-	$(MAKE) -f pcl/CMakeFiles/pcd_shot.dir/build.make pcl/CMakeFiles/pcd_shot.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=49,50 "Built target pcd_shot"
-.PHONY : pcl/CMakeFiles/pcd_shot.dir/all
-
-# Build rule for subdir invocation for target.
-pcl/CMakeFiles/pcd_shot.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/pcd_shot.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : pcl/CMakeFiles/pcd_shot.dir/rule
-
-# Convenience name for target.
-pcd_shot: pcl/CMakeFiles/pcd_shot.dir/rule
-
-.PHONY : pcd_shot
-
-# clean rule for target.
-pcl/CMakeFiles/pcd_shot.dir/clean:
-	$(MAKE) -f pcl/CMakeFiles/pcd_shot.dir/build.make pcl/CMakeFiles/pcd_shot.dir/clean
-.PHONY : pcl/CMakeFiles/pcd_shot.dir/clean
-
-#=============================================================================
-# Target rules for target pcl/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
-
-# All Build rule for target.
-pcl/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all:
-	$(MAKE) -f pcl/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make pcl/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/depend
-	$(MAKE) -f pcl/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make pcl/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_lisp"
-.PHONY : pcl/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-pcl/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : pcl/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: pcl/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# clean rule for target.
-pcl/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean:
-	$(MAKE) -f pcl/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make pcl/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
-.PHONY : pcl/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
-
-#=============================================================================
-# Target rules for target pcl/CMakeFiles/pcd_pfh.dir
-
-# All Build rule for target.
-pcl/CMakeFiles/pcd_pfh.dir/all:
-	$(MAKE) -f pcl/CMakeFiles/pcd_pfh.dir/build.make pcl/CMakeFiles/pcd_pfh.dir/depend
-	$(MAKE) -f pcl/CMakeFiles/pcd_pfh.dir/build.make pcl/CMakeFiles/pcd_pfh.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=47,48 "Built target pcd_pfh"
-.PHONY : pcl/CMakeFiles/pcd_pfh.dir/all
-
-# Build rule for subdir invocation for target.
-pcl/CMakeFiles/pcd_pfh.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/pcd_pfh.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : pcl/CMakeFiles/pcd_pfh.dir/rule
-
-# Convenience name for target.
-pcd_pfh: pcl/CMakeFiles/pcd_pfh.dir/rule
-
-.PHONY : pcd_pfh
-
-# clean rule for target.
-pcl/CMakeFiles/pcd_pfh.dir/clean:
-	$(MAKE) -f pcl/CMakeFiles/pcd_pfh.dir/build.make pcl/CMakeFiles/pcd_pfh.dir/clean
-.PHONY : pcl/CMakeFiles/pcd_pfh.dir/clean
-
-#=============================================================================
-# Target rules for target pcl/CMakeFiles/pcd_narf.dir
-
-# All Build rule for target.
-pcl/CMakeFiles/pcd_narf.dir/all:
-	$(MAKE) -f pcl/CMakeFiles/pcd_narf.dir/build.make pcl/CMakeFiles/pcd_narf.dir/depend
-	$(MAKE) -f pcl/CMakeFiles/pcd_narf.dir/build.make pcl/CMakeFiles/pcd_narf.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=43,44 "Built target pcd_narf"
-.PHONY : pcl/CMakeFiles/pcd_narf.dir/all
-
-# Build rule for subdir invocation for target.
-pcl/CMakeFiles/pcd_narf.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/pcd_narf.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : pcl/CMakeFiles/pcd_narf.dir/rule
-
-# Convenience name for target.
-pcd_narf: pcl/CMakeFiles/pcd_narf.dir/rule
-
-.PHONY : pcd_narf
-
-# clean rule for target.
-pcl/CMakeFiles/pcd_narf.dir/clean:
-	$(MAKE) -f pcl/CMakeFiles/pcd_narf.dir/build.make pcl/CMakeFiles/pcd_narf.dir/clean
-.PHONY : pcl/CMakeFiles/pcd_narf.dir/clean
-
-#=============================================================================
-# Target rules for target pcl/CMakeFiles/training.dir
-
-# All Build rule for target.
-pcl/CMakeFiles/training.dir/all:
-	$(MAKE) -f pcl/CMakeFiles/training.dir/build.make pcl/CMakeFiles/training.dir/depend
-	$(MAKE) -f pcl/CMakeFiles/training.dir/build.make pcl/CMakeFiles/training.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=67,68 "Built target training"
-.PHONY : pcl/CMakeFiles/training.dir/all
-
-# Build rule for subdir invocation for target.
-pcl/CMakeFiles/training.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/training.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : pcl/CMakeFiles/training.dir/rule
-
-# Convenience name for target.
-training: pcl/CMakeFiles/training.dir/rule
-
-.PHONY : training
-
-# clean rule for target.
-pcl/CMakeFiles/training.dir/clean:
-	$(MAKE) -f pcl/CMakeFiles/training.dir/build.make pcl/CMakeFiles/training.dir/clean
-.PHONY : pcl/CMakeFiles/training.dir/clean
-
-#=============================================================================
-# Target rules for target realsense/CMakeFiles/subsVisualizeNew.cpp.dir
-
-# All Build rule for target.
-realsense/CMakeFiles/subsVisualizeNew.cpp.dir/all:
-	$(MAKE) -f realsense/CMakeFiles/subsVisualizeNew.cpp.dir/build.make realsense/CMakeFiles/subsVisualizeNew.cpp.dir/depend
-	$(MAKE) -f realsense/CMakeFiles/subsVisualizeNew.cpp.dir/build.make realsense/CMakeFiles/subsVisualizeNew.cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=63,64 "Built target subsVisualizeNew.cpp"
-.PHONY : realsense/CMakeFiles/subsVisualizeNew.cpp.dir/all
-
-# Build rule for subdir invocation for target.
-realsense/CMakeFiles/subsVisualizeNew.cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 realsense/CMakeFiles/subsVisualizeNew.cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : realsense/CMakeFiles/subsVisualizeNew.cpp.dir/rule
-
-# Convenience name for target.
-subsVisualizeNew.cpp: realsense/CMakeFiles/subsVisualizeNew.cpp.dir/rule
-
-.PHONY : subsVisualizeNew.cpp
-
-# clean rule for target.
-realsense/CMakeFiles/subsVisualizeNew.cpp.dir/clean:
-	$(MAKE) -f realsense/CMakeFiles/subsVisualizeNew.cpp.dir/build.make realsense/CMakeFiles/subsVisualizeNew.cpp.dir/clean
-.PHONY : realsense/CMakeFiles/subsVisualizeNew.cpp.dir/clean
-
-#=============================================================================
-# Target rules for target realsense/CMakeFiles/subsRGB.cpp.dir
-
-# All Build rule for target.
-realsense/CMakeFiles/subsRGB.cpp.dir/all:
-	$(MAKE) -f realsense/CMakeFiles/subsRGB.cpp.dir/build.make realsense/CMakeFiles/subsRGB.cpp.dir/depend
-	$(MAKE) -f realsense/CMakeFiles/subsRGB.cpp.dir/build.make realsense/CMakeFiles/subsRGB.cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=61,62 "Built target subsRGB.cpp"
-.PHONY : realsense/CMakeFiles/subsRGB.cpp.dir/all
-
-# Build rule for subdir invocation for target.
-realsense/CMakeFiles/subsRGB.cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 realsense/CMakeFiles/subsRGB.cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : realsense/CMakeFiles/subsRGB.cpp.dir/rule
-
-# Convenience name for target.
-subsRGB.cpp: realsense/CMakeFiles/subsRGB.cpp.dir/rule
-
-.PHONY : subsRGB.cpp
-
-# clean rule for target.
-realsense/CMakeFiles/subsRGB.cpp.dir/clean:
-	$(MAKE) -f realsense/CMakeFiles/subsRGB.cpp.dir/build.make realsense/CMakeFiles/subsRGB.cpp.dir/clean
-.PHONY : realsense/CMakeFiles/subsRGB.cpp.dir/clean
-
-#=============================================================================
-# Target rules for target realsense/CMakeFiles/publishRGBD.cpp.dir
-
-# All Build rule for target.
-realsense/CMakeFiles/publishRGBD.cpp.dir/all:
-	$(MAKE) -f realsense/CMakeFiles/publishRGBD.cpp.dir/build.make realsense/CMakeFiles/publishRGBD.cpp.dir/depend
-	$(MAKE) -f realsense/CMakeFiles/publishRGBD.cpp.dir/build.make realsense/CMakeFiles/publishRGBD.cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=57,58 "Built target publishRGBD.cpp"
-.PHONY : realsense/CMakeFiles/publishRGBD.cpp.dir/all
-
-# Build rule for subdir invocation for target.
-realsense/CMakeFiles/publishRGBD.cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 realsense/CMakeFiles/publishRGBD.cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : realsense/CMakeFiles/publishRGBD.cpp.dir/rule
-
-# Convenience name for target.
-publishRGBD.cpp: realsense/CMakeFiles/publishRGBD.cpp.dir/rule
-
-.PHONY : publishRGBD.cpp
-
-# clean rule for target.
-realsense/CMakeFiles/publishRGBD.cpp.dir/clean:
-	$(MAKE) -f realsense/CMakeFiles/publishRGBD.cpp.dir/build.make realsense/CMakeFiles/publishRGBD.cpp.dir/clean
-.PHONY : realsense/CMakeFiles/publishRGBD.cpp.dir/clean
-
-#=============================================================================
-# Target rules for target realsense/CMakeFiles/grabPCLRGBD.cpp.dir
-
-# All Build rule for target.
-realsense/CMakeFiles/grabPCLRGBD.cpp.dir/all:
-	$(MAKE) -f realsense/CMakeFiles/grabPCLRGBD.cpp.dir/build.make realsense/CMakeFiles/grabPCLRGBD.cpp.dir/depend
-	$(MAKE) -f realsense/CMakeFiles/grabPCLRGBD.cpp.dir/build.make realsense/CMakeFiles/grabPCLRGBD.cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=19,20 "Built target grabPCLRGBD.cpp"
-.PHONY : realsense/CMakeFiles/grabPCLRGBD.cpp.dir/all
-
-# Build rule for subdir invocation for target.
-realsense/CMakeFiles/grabPCLRGBD.cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 realsense/CMakeFiles/grabPCLRGBD.cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : realsense/CMakeFiles/grabPCLRGBD.cpp.dir/rule
-
-# Convenience name for target.
-grabPCLRGBD.cpp: realsense/CMakeFiles/grabPCLRGBD.cpp.dir/rule
-
-.PHONY : grabPCLRGBD.cpp
-
-# clean rule for target.
-realsense/CMakeFiles/grabPCLRGBD.cpp.dir/clean:
-	$(MAKE) -f realsense/CMakeFiles/grabPCLRGBD.cpp.dir/build.make realsense/CMakeFiles/grabPCLRGBD.cpp.dir/clean
-.PHONY : realsense/CMakeFiles/grabPCLRGBD.cpp.dir/clean
-
-#=============================================================================
-# Target rules for target realsense/CMakeFiles/pclVisualizer.dir
-
-# All Build rule for target.
-realsense/CMakeFiles/pclVisualizer.dir/all:
-	$(MAKE) -f realsense/CMakeFiles/pclVisualizer.dir/build.make realsense/CMakeFiles/pclVisualizer.dir/depend
-	$(MAKE) -f realsense/CMakeFiles/pclVisualizer.dir/build.make realsense/CMakeFiles/pclVisualizer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=53,54 "Built target pclVisualizer"
-.PHONY : realsense/CMakeFiles/pclVisualizer.dir/all
-
-# Build rule for subdir invocation for target.
-realsense/CMakeFiles/pclVisualizer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 realsense/CMakeFiles/pclVisualizer.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : realsense/CMakeFiles/pclVisualizer.dir/rule
-
-# Convenience name for target.
-pclVisualizer: realsense/CMakeFiles/pclVisualizer.dir/rule
-
-.PHONY : pclVisualizer
-
-# clean rule for target.
-realsense/CMakeFiles/pclVisualizer.dir/clean:
-	$(MAKE) -f realsense/CMakeFiles/pclVisualizer.dir/build.make realsense/CMakeFiles/pclVisualizer.dir/clean
-.PHONY : realsense/CMakeFiles/pclVisualizer.dir/clean
-
-#=============================================================================
-# Target rules for target realsense/CMakeFiles/sensor_msgs_generate_messages_cpp.dir
-
-# All Build rule for target.
-realsense/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all:
-	$(MAKE) -f realsense/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make realsense/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/depend
-	$(MAKE) -f realsense/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make realsense/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_cpp"
-.PHONY : realsense/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
-
-# Build rule for subdir invocation for target.
-realsense/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 realsense/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : realsense/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_cpp: realsense/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_cpp
-
-# clean rule for target.
-realsense/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean:
-	$(MAKE) -f realsense/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make realsense/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
-.PHONY : realsense/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
-
-#=============================================================================
-# Target rules for target realsense/CMakeFiles/geometry_msgs_generate_messages_eus.dir
-
-# All Build rule for target.
-realsense/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all:
-	$(MAKE) -f realsense/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make realsense/CMakeFiles/geometry_msgs_generate_messages_eus.dir/depend
-	$(MAKE) -f realsense/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make realsense/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_eus"
-.PHONY : realsense/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
-
-# Build rule for subdir invocation for target.
-realsense/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 realsense/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : realsense/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_eus: realsense/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_eus
-
-# clean rule for target.
-realsense/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean:
-	$(MAKE) -f realsense/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make realsense/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
-.PHONY : realsense/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
-
-#=============================================================================
-# Target rules for target realsense/CMakeFiles/geometry_msgs_generate_messages_lisp.dir
-
-# All Build rule for target.
-realsense/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all:
-	$(MAKE) -f realsense/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make realsense/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/depend
-	$(MAKE) -f realsense/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make realsense/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_lisp"
-.PHONY : realsense/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-realsense/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 realsense/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : realsense/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_lisp: realsense/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_lisp
-
-# clean rule for target.
-realsense/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean:
-	$(MAKE) -f realsense/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make realsense/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
-.PHONY : realsense/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
-
-#=============================================================================
-# Target rules for target realsense/CMakeFiles/sensor_msgs_generate_messages_lisp.dir
-
-# All Build rule for target.
-realsense/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all:
-	$(MAKE) -f realsense/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make realsense/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/depend
-	$(MAKE) -f realsense/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make realsense/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_lisp"
-.PHONY : realsense/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-realsense/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 realsense/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : realsense/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_lisp: realsense/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_lisp
-
-# clean rule for target.
-realsense/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean:
-	$(MAKE) -f realsense/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make realsense/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
-.PHONY : realsense/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
-
-#=============================================================================
-# Target rules for target realsense/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir
-
-# All Build rule for target.
-realsense/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all:
-	$(MAKE) -f realsense/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make realsense/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/depend
-	$(MAKE) -f realsense/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make realsense/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_nodejs"
-.PHONY : realsense/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
-
-# Build rule for subdir invocation for target.
-realsense/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 realsense/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : realsense/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_nodejs: realsense/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_nodejs
-
-# clean rule for target.
-realsense/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f realsense/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make realsense/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
-.PHONY : realsense/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
-
-#=============================================================================
-# Target rules for target realsense/CMakeFiles/geometry_msgs_generate_messages_py.dir
-
-# All Build rule for target.
-realsense/CMakeFiles/geometry_msgs_generate_messages_py.dir/all:
-	$(MAKE) -f realsense/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make realsense/CMakeFiles/geometry_msgs_generate_messages_py.dir/depend
-	$(MAKE) -f realsense/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make realsense/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_py"
-.PHONY : realsense/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
-
-# Build rule for subdir invocation for target.
-realsense/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 realsense/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : realsense/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_py: realsense/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_py
-
-# clean rule for target.
-realsense/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean:
-	$(MAKE) -f realsense/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make realsense/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
-.PHONY : realsense/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
-
-#=============================================================================
-# Target rules for target realsense/CMakeFiles/A_RSpclAcquisition.dir
-
-# All Build rule for target.
-realsense/CMakeFiles/A_RSpclAcquisition.dir/all:
-	$(MAKE) -f realsense/CMakeFiles/A_RSpclAcquisition.dir/build.make realsense/CMakeFiles/A_RSpclAcquisition.dir/depend
-	$(MAKE) -f realsense/CMakeFiles/A_RSpclAcquisition.dir/build.make realsense/CMakeFiles/A_RSpclAcquisition.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=1,2 "Built target A_RSpclAcquisition"
-.PHONY : realsense/CMakeFiles/A_RSpclAcquisition.dir/all
-
-# Build rule for subdir invocation for target.
-realsense/CMakeFiles/A_RSpclAcquisition.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 realsense/CMakeFiles/A_RSpclAcquisition.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : realsense/CMakeFiles/A_RSpclAcquisition.dir/rule
-
-# Convenience name for target.
-A_RSpclAcquisition: realsense/CMakeFiles/A_RSpclAcquisition.dir/rule
-
-.PHONY : A_RSpclAcquisition
-
-# clean rule for target.
-realsense/CMakeFiles/A_RSpclAcquisition.dir/clean:
-	$(MAKE) -f realsense/CMakeFiles/A_RSpclAcquisition.dir/build.make realsense/CMakeFiles/A_RSpclAcquisition.dir/clean
-.PHONY : realsense/CMakeFiles/A_RSpclAcquisition.dir/clean
-
-#=============================================================================
-# Target rules for target realsense/CMakeFiles/grabRGB.dir
-
-# All Build rule for target.
-realsense/CMakeFiles/grabRGB.dir/all:
-	$(MAKE) -f realsense/CMakeFiles/grabRGB.dir/build.make realsense/CMakeFiles/grabRGB.dir/depend
-	$(MAKE) -f realsense/CMakeFiles/grabRGB.dir/build.make realsense/CMakeFiles/grabRGB.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=21,22 "Built target grabRGB"
-.PHONY : realsense/CMakeFiles/grabRGB.dir/all
-
-# Build rule for subdir invocation for target.
-realsense/CMakeFiles/grabRGB.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 realsense/CMakeFiles/grabRGB.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : realsense/CMakeFiles/grabRGB.dir/rule
-
-# Convenience name for target.
-grabRGB: realsense/CMakeFiles/grabRGB.dir/rule
-
-.PHONY : grabRGB
-
-# clean rule for target.
-realsense/CMakeFiles/grabRGB.dir/clean:
-	$(MAKE) -f realsense/CMakeFiles/grabRGB.dir/build.make realsense/CMakeFiles/grabRGB.dir/clean
-.PHONY : realsense/CMakeFiles/grabRGB.dir/clean
-
-#=============================================================================
-# Target rules for target realsense/CMakeFiles/sensor_msgs_generate_messages_py.dir
-
-# All Build rule for target.
-realsense/CMakeFiles/sensor_msgs_generate_messages_py.dir/all:
-	$(MAKE) -f realsense/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make realsense/CMakeFiles/sensor_msgs_generate_messages_py.dir/depend
-	$(MAKE) -f realsense/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make realsense/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_py"
-.PHONY : realsense/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
-
-# Build rule for subdir invocation for target.
-realsense/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 realsense/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : realsense/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_py: realsense/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_py
-
-# clean rule for target.
-realsense/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean:
-	$(MAKE) -f realsense/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make realsense/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
-.PHONY : realsense/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
-
-#=============================================================================
-# Target rules for target realsense/CMakeFiles/geometry_msgs_generate_messages_cpp.dir
-
-# All Build rule for target.
-realsense/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all:
-	$(MAKE) -f realsense/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make realsense/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/depend
-	$(MAKE) -f realsense/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make realsense/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_cpp"
-.PHONY : realsense/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
-
-# Build rule for subdir invocation for target.
-realsense/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 realsense/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : realsense/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_cpp: realsense/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_cpp
-
-# clean rule for target.
-realsense/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean:
-	$(MAKE) -f realsense/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make realsense/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
-.PHONY : realsense/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
-
-#=============================================================================
-# Target rules for target realsense/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir
-
-# All Build rule for target.
-realsense/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all:
-	$(MAKE) -f realsense/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make realsense/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/depend
-	$(MAKE) -f realsense/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make realsense/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_nodejs"
-.PHONY : realsense/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
+.PHONY : object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
-realsense/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 realsense/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : realsense/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+.PHONY : object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-geometry_msgs_generate_messages_nodejs: realsense/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+geometry_msgs_generate_messages_nodejs: object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
 
 .PHONY : geometry_msgs_generate_messages_nodejs
 
 # clean rule for target.
-realsense/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f realsense/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make realsense/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
-.PHONY : realsense/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
+object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
+.PHONY : object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
 
 #=============================================================================
-# Target rules for target realsense/CMakeFiles/sensor_msgs_generate_messages_eus.dir
+# Target rules for target object_recognition_pkg/CMakeFiles/segmentation.dir
 
 # All Build rule for target.
-realsense/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all:
-	$(MAKE) -f realsense/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make realsense/CMakeFiles/sensor_msgs_generate_messages_eus.dir/depend
-	$(MAKE) -f realsense/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make realsense/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_eus"
-.PHONY : realsense/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
+object_recognition_pkg/CMakeFiles/segmentation.dir/all:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/segmentation.dir/build.make object_recognition_pkg/CMakeFiles/segmentation.dir/depend
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/segmentation.dir/build.make object_recognition_pkg/CMakeFiles/segmentation.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=21,22 "Built target segmentation"
+.PHONY : object_recognition_pkg/CMakeFiles/segmentation.dir/all
 
 # Build rule for subdir invocation for target.
-realsense/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+object_recognition_pkg/CMakeFiles/segmentation.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 object_recognition_pkg/CMakeFiles/segmentation.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 realsense/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : realsense/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+.PHONY : object_recognition_pkg/CMakeFiles/segmentation.dir/rule
 
 # Convenience name for target.
-sensor_msgs_generate_messages_eus: realsense/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+segmentation: object_recognition_pkg/CMakeFiles/segmentation.dir/rule
+
+.PHONY : segmentation
+
+# clean rule for target.
+object_recognition_pkg/CMakeFiles/segmentation.dir/clean:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/segmentation.dir/build.make object_recognition_pkg/CMakeFiles/segmentation.dir/clean
+.PHONY : object_recognition_pkg/CMakeFiles/segmentation.dir/clean
+
+#=============================================================================
+# Target rules for target object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir
+
+# All Build rule for target.
+object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_cpp"
+.PHONY : object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+.PHONY : object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_cpp: object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_cpp
+
+# clean rule for target.
+object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
+.PHONY : object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir
+
+# All Build rule for target.
+object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_py"
+.PHONY : object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+.PHONY : object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_py: object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_py
+
+# clean rule for target.
+object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+.PHONY : object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+
+#=============================================================================
+# Target rules for target object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_py.dir
+
+# All Build rule for target.
+object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_py"
+.PHONY : object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+.PHONY : object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_py: object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_py
+
+# clean rule for target.
+object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
+.PHONY : object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
+
+#=============================================================================
+# Target rules for target object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_py.dir
+
+# All Build rule for target.
+object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_py"
+.PHONY : object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+.PHONY : object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_py: object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_py
+
+# clean rule for target.
+object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
+.PHONY : object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
+
+#=============================================================================
+# Target rules for target object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir
+
+# All Build rule for target.
+object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_nodejs"
+.PHONY : object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+.PHONY : object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_nodejs: object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_nodejs
+
+# clean rule for target.
+object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
+.PHONY : object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_lisp"
+.PHONY : object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+.PHONY : object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_lisp: object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_lisp
+
+# clean rule for target.
+object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
+.PHONY : object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_lisp"
+.PHONY : object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+.PHONY : object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_lisp: object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_lisp
+
+# clean rule for target.
+object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
+.PHONY : object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir
+
+# All Build rule for target.
+object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/all:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/depend
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_eus"
+.PHONY : object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+.PHONY : object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_eus: object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+
+.PHONY : std_msgs_generate_messages_eus
+
+# clean rule for target.
+object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
+.PHONY : object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target object_recognition_pkg/CMakeFiles/roscpp_generate_messages_nodejs.dir
+
+# All Build rule for target.
+object_recognition_pkg/CMakeFiles/roscpp_generate_messages_nodejs.dir/all:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make object_recognition_pkg/CMakeFiles/roscpp_generate_messages_nodejs.dir/depend
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make object_recognition_pkg/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_nodejs"
+.PHONY : object_recognition_pkg/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+object_recognition_pkg/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 object_recognition_pkg/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+.PHONY : object_recognition_pkg/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_nodejs: object_recognition_pkg/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+
+.PHONY : roscpp_generate_messages_nodejs
+
+# clean rule for target.
+object_recognition_pkg/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make object_recognition_pkg/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
+.PHONY : object_recognition_pkg/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
+
+# All Build rule for target.
+object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_cpp"
+.PHONY : object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+.PHONY : object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_cpp: object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# clean rule for target.
+object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+.PHONY : object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target object_recognition_pkg/CMakeFiles/roscpp_generate_messages_cpp.dir
+
+# All Build rule for target.
+object_recognition_pkg/CMakeFiles/roscpp_generate_messages_cpp.dir/all:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make object_recognition_pkg/CMakeFiles/roscpp_generate_messages_cpp.dir/depend
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make object_recognition_pkg/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_cpp"
+.PHONY : object_recognition_pkg/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+object_recognition_pkg/CMakeFiles/roscpp_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 object_recognition_pkg/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+.PHONY : object_recognition_pkg/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_cpp: object_recognition_pkg/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+.PHONY : roscpp_generate_messages_cpp
+
+# clean rule for target.
+object_recognition_pkg/CMakeFiles/roscpp_generate_messages_cpp.dir/clean:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make object_recognition_pkg/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+.PHONY : object_recognition_pkg/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_eus.dir
+
+# All Build rule for target.
+object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_eus.dir/depend
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_eus"
+.PHONY : object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+.PHONY : object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_eus: object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
 
 .PHONY : sensor_msgs_generate_messages_eus
 
 # clean rule for target.
-realsense/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean:
-	$(MAKE) -f realsense/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make realsense/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
-.PHONY : realsense/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
+object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
+.PHONY : object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
 
 #=============================================================================
-# Target rules for target realsense/CMakeFiles/grabDepth.dir
+# Target rules for target object_recognition_pkg/CMakeFiles/roscpp_generate_messages_py.dir
 
 # All Build rule for target.
-realsense/CMakeFiles/grabDepth.dir/all:
-	$(MAKE) -f realsense/CMakeFiles/grabDepth.dir/build.make realsense/CMakeFiles/grabDepth.dir/depend
-	$(MAKE) -f realsense/CMakeFiles/grabDepth.dir/build.make realsense/CMakeFiles/grabDepth.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=17,18 "Built target grabDepth"
-.PHONY : realsense/CMakeFiles/grabDepth.dir/all
+object_recognition_pkg/CMakeFiles/roscpp_generate_messages_py.dir/all:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/roscpp_generate_messages_py.dir/build.make object_recognition_pkg/CMakeFiles/roscpp_generate_messages_py.dir/depend
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/roscpp_generate_messages_py.dir/build.make object_recognition_pkg/CMakeFiles/roscpp_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_py"
+.PHONY : object_recognition_pkg/CMakeFiles/roscpp_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
-realsense/CMakeFiles/grabDepth.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 realsense/CMakeFiles/grabDepth.dir/all
+object_recognition_pkg/CMakeFiles/roscpp_generate_messages_py.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : realsense/CMakeFiles/grabDepth.dir/rule
+	$(MAKE) -f CMakeFiles/Makefile2 object_recognition_pkg/CMakeFiles/roscpp_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+.PHONY : object_recognition_pkg/CMakeFiles/roscpp_generate_messages_py.dir/rule
 
 # Convenience name for target.
-grabDepth: realsense/CMakeFiles/grabDepth.dir/rule
+roscpp_generate_messages_py: object_recognition_pkg/CMakeFiles/roscpp_generate_messages_py.dir/rule
 
-.PHONY : grabDepth
+.PHONY : roscpp_generate_messages_py
 
 # clean rule for target.
-realsense/CMakeFiles/grabDepth.dir/clean:
-	$(MAKE) -f realsense/CMakeFiles/grabDepth.dir/build.make realsense/CMakeFiles/grabDepth.dir/clean
-.PHONY : realsense/CMakeFiles/grabDepth.dir/clean
+object_recognition_pkg/CMakeFiles/roscpp_generate_messages_py.dir/clean:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/roscpp_generate_messages_py.dir/build.make object_recognition_pkg/CMakeFiles/roscpp_generate_messages_py.dir/clean
+.PHONY : object_recognition_pkg/CMakeFiles/roscpp_generate_messages_py.dir/clean
 
 #=============================================================================
-# Target rules for target test_one/CMakeFiles/hello_world.dir
+# Target rules for target object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir
 
 # All Build rule for target.
-test_one/CMakeFiles/hello_world.dir/all:
-	$(MAKE) -f test_one/CMakeFiles/hello_world.dir/build.make test_one/CMakeFiles/hello_world.dir/depend
-	$(MAKE) -f test_one/CMakeFiles/hello_world.dir/build.make test_one/CMakeFiles/hello_world.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=27,28 "Built target hello_world"
-.PHONY : test_one/CMakeFiles/hello_world.dir/all
+object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_cpp"
+.PHONY : object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
-test_one/CMakeFiles/hello_world.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 test_one/CMakeFiles/hello_world.dir/all
+object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : test_one/CMakeFiles/hello_world.dir/rule
+	$(MAKE) -f CMakeFiles/Makefile2 object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+.PHONY : object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-hello_world: test_one/CMakeFiles/hello_world.dir/rule
+sensor_msgs_generate_messages_cpp: object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 
-.PHONY : hello_world
+.PHONY : sensor_msgs_generate_messages_cpp
 
 # clean rule for target.
-test_one/CMakeFiles/hello_world.dir/clean:
-	$(MAKE) -f test_one/CMakeFiles/hello_world.dir/build.make test_one/CMakeFiles/hello_world.dir/clean
-.PHONY : test_one/CMakeFiles/hello_world.dir/clean
+object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
+.PHONY : object_recognition_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
 
 #=============================================================================
-# Target rules for target test_one/CMakeFiles/build_tree.dir
+# Target rules for target object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_py.dir
 
 # All Build rule for target.
-test_one/CMakeFiles/build_tree.dir/all:
-	$(MAKE) -f test_one/CMakeFiles/build_tree.dir/build.make test_one/CMakeFiles/build_tree.dir/depend
-	$(MAKE) -f test_one/CMakeFiles/build_tree.dir/build.make test_one/CMakeFiles/build_tree.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=3,4 "Built target build_tree"
-.PHONY : test_one/CMakeFiles/build_tree.dir/all
+object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/build.make object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/build.make object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_py"
+.PHONY : object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
-test_one/CMakeFiles/build_tree.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 test_one/CMakeFiles/build_tree.dir/all
+object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : test_one/CMakeFiles/build_tree.dir/rule
+	$(MAKE) -f CMakeFiles/Makefile2 object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+.PHONY : object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-build_tree: test_one/CMakeFiles/build_tree.dir/rule
+std_msgs_generate_messages_py: object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 
-.PHONY : build_tree
+.PHONY : std_msgs_generate_messages_py
 
 # clean rule for target.
-test_one/CMakeFiles/build_tree.dir/clean:
-	$(MAKE) -f test_one/CMakeFiles/build_tree.dir/build.make test_one/CMakeFiles/build_tree.dir/clean
-.PHONY : test_one/CMakeFiles/build_tree.dir/clean
+object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/build.make object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/clean
+.PHONY : object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/clean
 
 #=============================================================================
-# Target rules for target test_one/CMakeFiles/try_fann_persamaan_test.dir
+# Target rules for target object_recognition_pkg/CMakeFiles/main_trainning.dir
 
 # All Build rule for target.
-test_one/CMakeFiles/try_fann_persamaan_test.dir/all:
-	$(MAKE) -f test_one/CMakeFiles/try_fann_persamaan_test.dir/build.make test_one/CMakeFiles/try_fann_persamaan_test.dir/depend
-	$(MAKE) -f test_one/CMakeFiles/try_fann_persamaan_test.dir/build.make test_one/CMakeFiles/try_fann_persamaan_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=73,74 "Built target try_fann_persamaan_test"
-.PHONY : test_one/CMakeFiles/try_fann_persamaan_test.dir/all
+object_recognition_pkg/CMakeFiles/main_trainning.dir/all:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/main_trainning.dir/build.make object_recognition_pkg/CMakeFiles/main_trainning.dir/depend
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/main_trainning.dir/build.make object_recognition_pkg/CMakeFiles/main_trainning.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=15,16 "Built target main_trainning"
+.PHONY : object_recognition_pkg/CMakeFiles/main_trainning.dir/all
 
 # Build rule for subdir invocation for target.
-test_one/CMakeFiles/try_fann_persamaan_test.dir/rule: cmake_check_build_system
+object_recognition_pkg/CMakeFiles/main_trainning.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 test_one/CMakeFiles/try_fann_persamaan_test.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 object_recognition_pkg/CMakeFiles/main_trainning.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : test_one/CMakeFiles/try_fann_persamaan_test.dir/rule
+.PHONY : object_recognition_pkg/CMakeFiles/main_trainning.dir/rule
 
 # Convenience name for target.
-try_fann_persamaan_test: test_one/CMakeFiles/try_fann_persamaan_test.dir/rule
+main_trainning: object_recognition_pkg/CMakeFiles/main_trainning.dir/rule
 
-.PHONY : try_fann_persamaan_test
+.PHONY : main_trainning
 
 # clean rule for target.
-test_one/CMakeFiles/try_fann_persamaan_test.dir/clean:
-	$(MAKE) -f test_one/CMakeFiles/try_fann_persamaan_test.dir/build.make test_one/CMakeFiles/try_fann_persamaan_test.dir/clean
-.PHONY : test_one/CMakeFiles/try_fann_persamaan_test.dir/clean
+object_recognition_pkg/CMakeFiles/main_trainning.dir/clean:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/main_trainning.dir/build.make object_recognition_pkg/CMakeFiles/main_trainning.dir/clean
+.PHONY : object_recognition_pkg/CMakeFiles/main_trainning.dir/clean
 
 #=============================================================================
-# Target rules for target test_one/CMakeFiles/correspondence_grouping.dir
+# Target rules for target object_recognition_pkg/CMakeFiles/roscpp_generate_messages_lisp.dir
 
 # All Build rule for target.
-test_one/CMakeFiles/correspondence_grouping.dir/all:
-	$(MAKE) -f test_one/CMakeFiles/correspondence_grouping.dir/build.make test_one/CMakeFiles/correspondence_grouping.dir/depend
-	$(MAKE) -f test_one/CMakeFiles/correspondence_grouping.dir/build.make test_one/CMakeFiles/correspondence_grouping.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=9,10 "Built target correspondence_grouping"
-.PHONY : test_one/CMakeFiles/correspondence_grouping.dir/all
+object_recognition_pkg/CMakeFiles/roscpp_generate_messages_lisp.dir/all:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make object_recognition_pkg/CMakeFiles/roscpp_generate_messages_lisp.dir/depend
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make object_recognition_pkg/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_lisp"
+.PHONY : object_recognition_pkg/CMakeFiles/roscpp_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
-test_one/CMakeFiles/correspondence_grouping.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 test_one/CMakeFiles/correspondence_grouping.dir/all
+object_recognition_pkg/CMakeFiles/roscpp_generate_messages_lisp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : test_one/CMakeFiles/correspondence_grouping.dir/rule
+	$(MAKE) -f CMakeFiles/Makefile2 object_recognition_pkg/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+.PHONY : object_recognition_pkg/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-correspondence_grouping: test_one/CMakeFiles/correspondence_grouping.dir/rule
+roscpp_generate_messages_lisp: object_recognition_pkg/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 
-.PHONY : correspondence_grouping
+.PHONY : roscpp_generate_messages_lisp
 
 # clean rule for target.
-test_one/CMakeFiles/correspondence_grouping.dir/clean:
-	$(MAKE) -f test_one/CMakeFiles/correspondence_grouping.dir/build.make test_one/CMakeFiles/correspondence_grouping.dir/clean
-.PHONY : test_one/CMakeFiles/correspondence_grouping.dir/clean
+object_recognition_pkg/CMakeFiles/roscpp_generate_messages_lisp.dir/clean:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make object_recognition_pkg/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+.PHONY : object_recognition_pkg/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
 
 #=============================================================================
-# Target rules for target test_one/CMakeFiles/try_fann2.dir
+# Target rules for target object_recognition_pkg/CMakeFiles/_catkin_empty_exported_target.dir
 
 # All Build rule for target.
-test_one/CMakeFiles/try_fann2.dir/all:
-	$(MAKE) -f test_one/CMakeFiles/try_fann2.dir/build.make test_one/CMakeFiles/try_fann2.dir/depend
-	$(MAKE) -f test_one/CMakeFiles/try_fann2.dir/build.make test_one/CMakeFiles/try_fann2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=71,72 "Built target try_fann2"
-.PHONY : test_one/CMakeFiles/try_fann2.dir/all
+object_recognition_pkg/CMakeFiles/_catkin_empty_exported_target.dir/all:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/_catkin_empty_exported_target.dir/build.make object_recognition_pkg/CMakeFiles/_catkin_empty_exported_target.dir/depend
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/_catkin_empty_exported_target.dir/build.make object_recognition_pkg/CMakeFiles/_catkin_empty_exported_target.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target _catkin_empty_exported_target"
+.PHONY : object_recognition_pkg/CMakeFiles/_catkin_empty_exported_target.dir/all
 
 # Build rule for subdir invocation for target.
-test_one/CMakeFiles/try_fann2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 test_one/CMakeFiles/try_fann2.dir/all
+object_recognition_pkg/CMakeFiles/_catkin_empty_exported_target.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : test_one/CMakeFiles/try_fann2.dir/rule
+	$(MAKE) -f CMakeFiles/Makefile2 object_recognition_pkg/CMakeFiles/_catkin_empty_exported_target.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+.PHONY : object_recognition_pkg/CMakeFiles/_catkin_empty_exported_target.dir/rule
 
 # Convenience name for target.
-try_fann2: test_one/CMakeFiles/try_fann2.dir/rule
+_catkin_empty_exported_target: object_recognition_pkg/CMakeFiles/_catkin_empty_exported_target.dir/rule
 
-.PHONY : try_fann2
+.PHONY : _catkin_empty_exported_target
 
 # clean rule for target.
-test_one/CMakeFiles/try_fann2.dir/clean:
-	$(MAKE) -f test_one/CMakeFiles/try_fann2.dir/build.make test_one/CMakeFiles/try_fann2.dir/clean
-.PHONY : test_one/CMakeFiles/try_fann2.dir/clean
+object_recognition_pkg/CMakeFiles/_catkin_empty_exported_target.dir/clean:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/_catkin_empty_exported_target.dir/build.make object_recognition_pkg/CMakeFiles/_catkin_empty_exported_target.dir/clean
+.PHONY : object_recognition_pkg/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 #=============================================================================
-# Target rules for target test_one/CMakeFiles/complete_with_hv.dir
+# Target rules for target object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir
 
 # All Build rule for target.
-test_one/CMakeFiles/complete_with_hv.dir/all:
-	$(MAKE) -f test_one/CMakeFiles/complete_with_hv.dir/build.make test_one/CMakeFiles/complete_with_hv.dir/depend
-	$(MAKE) -f test_one/CMakeFiles/complete_with_hv.dir/build.make test_one/CMakeFiles/complete_with_hv.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=5,6 "Built target complete_with_hv"
-.PHONY : test_one/CMakeFiles/complete_with_hv.dir/all
+object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/depend
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_eus"
+.PHONY : object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
-test_one/CMakeFiles/complete_with_hv.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 test_one/CMakeFiles/complete_with_hv.dir/all
+object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : test_one/CMakeFiles/complete_with_hv.dir/rule
+	$(MAKE) -f CMakeFiles/Makefile2 object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+.PHONY : object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-complete_with_hv: test_one/CMakeFiles/complete_with_hv.dir/rule
+rosgraph_msgs_generate_messages_eus: object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
 
-.PHONY : complete_with_hv
+.PHONY : rosgraph_msgs_generate_messages_eus
 
 # clean rule for target.
-test_one/CMakeFiles/complete_with_hv.dir/clean:
-	$(MAKE) -f test_one/CMakeFiles/complete_with_hv.dir/build.make test_one/CMakeFiles/complete_with_hv.dir/clean
-.PHONY : test_one/CMakeFiles/complete_with_hv.dir/clean
+object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+.PHONY : object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
 
 #=============================================================================
-# Target rules for target test_one/CMakeFiles/just_test.dir
+# Target rules for target object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir
 
 # All Build rule for target.
-test_one/CMakeFiles/just_test.dir/all:
-	$(MAKE) -f test_one/CMakeFiles/just_test.dir/build.make test_one/CMakeFiles/just_test.dir/depend
-	$(MAKE) -f test_one/CMakeFiles/just_test.dir/build.make test_one/CMakeFiles/just_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=29,30 "Built target just_test"
-.PHONY : test_one/CMakeFiles/just_test.dir/all
+object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_lisp"
+.PHONY : object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
-test_one/CMakeFiles/just_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 test_one/CMakeFiles/just_test.dir/all
+object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : test_one/CMakeFiles/just_test.dir/rule
+	$(MAKE) -f CMakeFiles/Makefile2 object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+.PHONY : object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-just_test: test_one/CMakeFiles/just_test.dir/rule
+std_msgs_generate_messages_lisp: object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 
-.PHONY : just_test
+.PHONY : std_msgs_generate_messages_lisp
 
 # clean rule for target.
-test_one/CMakeFiles/just_test.dir/clean:
-	$(MAKE) -f test_one/CMakeFiles/just_test.dir/build.make test_one/CMakeFiles/just_test.dir/clean
-.PHONY : test_one/CMakeFiles/just_test.dir/clean
+object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
+.PHONY : object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
 
 #=============================================================================
-# Target rules for target test_one/CMakeFiles/nearest_neighbors.dir
+# Target rules for target object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_eus.dir
 
 # All Build rule for target.
-test_one/CMakeFiles/nearest_neighbors.dir/all:
-	$(MAKE) -f test_one/CMakeFiles/nearest_neighbors.dir/build.make test_one/CMakeFiles/nearest_neighbors.dir/depend
-	$(MAKE) -f test_one/CMakeFiles/nearest_neighbors.dir/build.make test_one/CMakeFiles/nearest_neighbors.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=31,32 "Built target nearest_neighbors"
-.PHONY : test_one/CMakeFiles/nearest_neighbors.dir/all
+object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_eus.dir/depend
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_eus"
+.PHONY : object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
-test_one/CMakeFiles/nearest_neighbors.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 test_one/CMakeFiles/nearest_neighbors.dir/all
+object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : test_one/CMakeFiles/nearest_neighbors.dir/rule
+	$(MAKE) -f CMakeFiles/Makefile2 object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+.PHONY : object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-nearest_neighbors: test_one/CMakeFiles/nearest_neighbors.dir/rule
+geometry_msgs_generate_messages_eus: object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
 
-.PHONY : nearest_neighbors
+.PHONY : geometry_msgs_generate_messages_eus
 
 # clean rule for target.
-test_one/CMakeFiles/nearest_neighbors.dir/clean:
-	$(MAKE) -f test_one/CMakeFiles/nearest_neighbors.dir/build.make test_one/CMakeFiles/nearest_neighbors.dir/clean
-.PHONY : test_one/CMakeFiles/nearest_neighbors.dir/clean
+object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
+.PHONY : object_recognition_pkg/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
 
 #=============================================================================
-# Target rules for target test_one/CMakeFiles/try_fann.dir
+# Target rules for target object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir
 
 # All Build rule for target.
-test_one/CMakeFiles/try_fann.dir/all:
-	$(MAKE) -f test_one/CMakeFiles/try_fann.dir/build.make test_one/CMakeFiles/try_fann.dir/depend
-	$(MAKE) -f test_one/CMakeFiles/try_fann.dir/build.make test_one/CMakeFiles/try_fann.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=69,70 "Built target try_fann"
-.PHONY : test_one/CMakeFiles/try_fann.dir/all
+object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_nodejs"
+.PHONY : object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
-test_one/CMakeFiles/try_fann.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 test_one/CMakeFiles/try_fann.dir/all
+object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : test_one/CMakeFiles/try_fann.dir/rule
+	$(MAKE) -f CMakeFiles/Makefile2 object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+.PHONY : object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-try_fann: test_one/CMakeFiles/try_fann.dir/rule
+std_msgs_generate_messages_nodejs: object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
 
-.PHONY : try_fann
+.PHONY : std_msgs_generate_messages_nodejs
 
 # clean rule for target.
-test_one/CMakeFiles/try_fann.dir/clean:
-	$(MAKE) -f test_one/CMakeFiles/try_fann.dir/build.make test_one/CMakeFiles/try_fann.dir/clean
-.PHONY : test_one/CMakeFiles/try_fann.dir/clean
+object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
+.PHONY : object_recognition_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
 
 #=============================================================================
-# Target rules for target test_one/CMakeFiles/try_fann_persamaan_train.dir
+# Target rules for target object_recognition_pkg/CMakeFiles/roscpp_generate_messages_eus.dir
 
 # All Build rule for target.
-test_one/CMakeFiles/try_fann_persamaan_train.dir/all:
-	$(MAKE) -f test_one/CMakeFiles/try_fann_persamaan_train.dir/build.make test_one/CMakeFiles/try_fann_persamaan_train.dir/depend
-	$(MAKE) -f test_one/CMakeFiles/try_fann_persamaan_train.dir/build.make test_one/CMakeFiles/try_fann_persamaan_train.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=75,76 "Built target try_fann_persamaan_train"
-.PHONY : test_one/CMakeFiles/try_fann_persamaan_train.dir/all
+object_recognition_pkg/CMakeFiles/roscpp_generate_messages_eus.dir/all:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/roscpp_generate_messages_eus.dir/build.make object_recognition_pkg/CMakeFiles/roscpp_generate_messages_eus.dir/depend
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/roscpp_generate_messages_eus.dir/build.make object_recognition_pkg/CMakeFiles/roscpp_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_eus"
+.PHONY : object_recognition_pkg/CMakeFiles/roscpp_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
-test_one/CMakeFiles/try_fann_persamaan_train.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 test_one/CMakeFiles/try_fann_persamaan_train.dir/all
+object_recognition_pkg/CMakeFiles/roscpp_generate_messages_eus.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
-.PHONY : test_one/CMakeFiles/try_fann_persamaan_train.dir/rule
+	$(MAKE) -f CMakeFiles/Makefile2 object_recognition_pkg/CMakeFiles/roscpp_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+.PHONY : object_recognition_pkg/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-try_fann_persamaan_train: test_one/CMakeFiles/try_fann_persamaan_train.dir/rule
+roscpp_generate_messages_eus: object_recognition_pkg/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 
-.PHONY : try_fann_persamaan_train
+.PHONY : roscpp_generate_messages_eus
 
 # clean rule for target.
-test_one/CMakeFiles/try_fann_persamaan_train.dir/clean:
-	$(MAKE) -f test_one/CMakeFiles/try_fann_persamaan_train.dir/build.make test_one/CMakeFiles/try_fann_persamaan_train.dir/clean
-.PHONY : test_one/CMakeFiles/try_fann_persamaan_train.dir/clean
+object_recognition_pkg/CMakeFiles/roscpp_generate_messages_eus.dir/clean:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/roscpp_generate_messages_eus.dir/build.make object_recognition_pkg/CMakeFiles/roscpp_generate_messages_eus.dir/clean
+.PHONY : object_recognition_pkg/CMakeFiles/roscpp_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_lisp"
+.PHONY : object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+.PHONY : object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_lisp: object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_lisp
+
+# clean rule for target.
+object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+.PHONY : object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir
+
+# All Build rule for target.
+object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_nodejs"
+.PHONY : object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+.PHONY : object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_nodejs: object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_nodejs
+
+# clean rule for target.
+object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
+.PHONY : object_recognition_pkg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target object_recognition_pkg/CMakeFiles/main.dir
+
+# All Build rule for target.
+object_recognition_pkg/CMakeFiles/main.dir/all:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/main.dir/build.make object_recognition_pkg/CMakeFiles/main.dir/depend
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/main.dir/build.make object_recognition_pkg/CMakeFiles/main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=13,14 "Built target main"
+.PHONY : object_recognition_pkg/CMakeFiles/main.dir/all
+
+# Build rule for subdir invocation for target.
+object_recognition_pkg/CMakeFiles/main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 object_recognition_pkg/CMakeFiles/main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+.PHONY : object_recognition_pkg/CMakeFiles/main.dir/rule
+
+# Convenience name for target.
+main: object_recognition_pkg/CMakeFiles/main.dir/rule
+
+.PHONY : main
+
+# clean rule for target.
+object_recognition_pkg/CMakeFiles/main.dir/clean:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/main.dir/build.make object_recognition_pkg/CMakeFiles/main.dir/clean
+.PHONY : object_recognition_pkg/CMakeFiles/main.dir/clean
+
+#=============================================================================
+# Target rules for target object_recognition_pkg/CMakeFiles/extract_feature.dir
+
+# All Build rule for target.
+object_recognition_pkg/CMakeFiles/extract_feature.dir/all:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/extract_feature.dir/build.make object_recognition_pkg/CMakeFiles/extract_feature.dir/depend
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/extract_feature.dir/build.make object_recognition_pkg/CMakeFiles/extract_feature.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=1,2 "Built target extract_feature"
+.PHONY : object_recognition_pkg/CMakeFiles/extract_feature.dir/all
+
+# Build rule for subdir invocation for target.
+object_recognition_pkg/CMakeFiles/extract_feature.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 object_recognition_pkg/CMakeFiles/extract_feature.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+.PHONY : object_recognition_pkg/CMakeFiles/extract_feature.dir/rule
+
+# Convenience name for target.
+extract_feature: object_recognition_pkg/CMakeFiles/extract_feature.dir/rule
+
+.PHONY : extract_feature
+
+# clean rule for target.
+object_recognition_pkg/CMakeFiles/extract_feature.dir/clean:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/extract_feature.dir/build.make object_recognition_pkg/CMakeFiles/extract_feature.dir/clean
+.PHONY : object_recognition_pkg/CMakeFiles/extract_feature.dir/clean
+
+#=============================================================================
+# Target rules for target object_recognition_pkg/CMakeFiles/main_trainning_testing.dir
+
+# All Build rule for target.
+object_recognition_pkg/CMakeFiles/main_trainning_testing.dir/all:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/main_trainning_testing.dir/build.make object_recognition_pkg/CMakeFiles/main_trainning_testing.dir/depend
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/main_trainning_testing.dir/build.make object_recognition_pkg/CMakeFiles/main_trainning_testing.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robo/ros/build/CMakeFiles --progress-num=17,18 "Built target main_trainning_testing"
+.PHONY : object_recognition_pkg/CMakeFiles/main_trainning_testing.dir/all
+
+# Build rule for subdir invocation for target.
+object_recognition_pkg/CMakeFiles/main_trainning_testing.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 object_recognition_pkg/CMakeFiles/main_trainning_testing.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ros/build/CMakeFiles 0
+.PHONY : object_recognition_pkg/CMakeFiles/main_trainning_testing.dir/rule
+
+# Convenience name for target.
+main_trainning_testing: object_recognition_pkg/CMakeFiles/main_trainning_testing.dir/rule
+
+.PHONY : main_trainning_testing
+
+# clean rule for target.
+object_recognition_pkg/CMakeFiles/main_trainning_testing.dir/clean:
+	$(MAKE) -f object_recognition_pkg/CMakeFiles/main_trainning_testing.dir/build.make object_recognition_pkg/CMakeFiles/main_trainning_testing.dir/clean
+.PHONY : object_recognition_pkg/CMakeFiles/main_trainning_testing.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

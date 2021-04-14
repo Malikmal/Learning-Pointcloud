@@ -5,9 +5,9 @@
 # it emulates the modifications of the setup script without recurring computations
 
 # new environment variables
-export CMAKE_PREFIX_PATH="/home/robo/ros/devel"
-export LD_LIBRARY_PATH="/home/robo/ros/devel/lib"
-export PKG_CONFIG_PATH="/home/robo/ros/devel/lib/pkgconfig"
-export PYTHONPATH="/home/robo/ros/devel/lib/python3/dist-packages"
 
 # modified environment variables
+export CMAKE_PREFIX_PATH="/home/robo/ros/build/devel:$CMAKE_PREFIX_PATH"
+export PWD='/home/robo/ros/build'
+export ROSLISP_PACKAGE_DIRECTORIES="/home/robo/ros/build/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export ROS_PACKAGE_PATH="/home/robo/ros/src:$ROS_PACKAGE_PATH"

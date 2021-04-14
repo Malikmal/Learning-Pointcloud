@@ -1,8 +1,0 @@
-prefix=/home/robo/ros/build/devel
-
-Name: test_opencv
-Description: Description of test_opencv
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

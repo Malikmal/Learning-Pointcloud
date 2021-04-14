@@ -5,8 +5,5 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
-subdirs("filtering")
-subdirs("pcl")
-subdirs("realsense")
-subdirs("test_one")
-subdirs("test_opencv")
+subdirs("object_recognition_pkg")
+subdirs("test")
