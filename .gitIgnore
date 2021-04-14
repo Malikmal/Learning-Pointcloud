@@ -1,7 +1,9 @@
 devel/
 logs/
+log/
 build/
 bin/
+backup/
 lib/
 msg_gen/
 srv_gen/
@@ -51,5 +53,11 @@ qtcreator-*
 CATKIN_IGNORE
 
 dataset/
+dataset_washington/
+Graph/
 
 backup/
+
+# for final project different repository
+# https://github.com/Malikmal/object-recognition-ros-pointcloud.git
+# src/object_detection_recognition
